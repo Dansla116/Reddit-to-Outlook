@@ -1,0 +1,280 @@
+/*** Root / Subreddit / Multis ****************************************************/
+/*** 8/5/19 ***********************************************************************/
+/*** Regex: .*reddit\.com\/($|(r|[^user]|user\/.+\/m)\/.+\/)                   ****/
+/**********************************************************************************/
+/*** Mailbox **********************************************************************/
+/* BOOKMARK: Mailbox 1 */
+/* Fix this if the whole post background (without a post) and a portion of the right
+   turns black */
+div.f3kbjo-0.jsptSt > :nth-child(1) {
+    display: none;
+}
+
+/* Subreddit Banner */
+div.f3kbjo-0.jsptSt > :nth-child(2) > :nth-child(1) {
+    display: none;
+}
+
+/* BOOKMARK: Mailbox 2 */
+div.u1x7p5-0.iJYBDq {
+    position: fixed;
+    margin-top: 8px;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    padding-right: 21px;
+    padding-top: 72px;
+    left: var(--folders-width);
+    top: var(--banner-height);
+    height: calc(var(--content-height) - 80px);
+    min-height: calc(var(--content-height) - 80px);
+    max-height: calc(var(--content-height) - 80px);
+    overflow-y: scroll;
+    width: calc(var(--mailbox-width) - 15px);
+    background-color: var(--background-color) !important;
+}
+
+    div.u1x7p5-0.iJYBDq > :nth-child(1) {
+        left: calc(var(--folders-width));
+        top: calc(var(--banner-height) + 80px);
+        height: calc(var(--content-height) - 80px);
+        min-height: calc(var(--content-height) - 80px);
+        max-height: calc(var(--content-height) - 80px);
+        overflow-y: scroll;
+        width: calc(var(--mailbox-width) - 15px);
+        background-color: var(--background-color) !important;
+    }
+
+        div.u1x7p5-0.iJYBDq > :nth-child(1)::before {
+            content: url(https://i.imgur.com/uiXG0I4.png);
+            position: fixed;
+            z-index: 1;
+            left: calc(var(--folders-width) + 1px);
+            top: calc(var(--banner-height) + 1px);
+            background-color: var(--background-color);
+        }
+
+        div.u1x7p5-0.iJYBDq > :nth-child(1):hover {
+            width: calc(var(--mailbox-width));
+        }
+
+            /* Scrollbar */
+            div.u1x7p5-0.iJYBDq > :nth-child(1):hover::-webkit-scrollbar {
+                display: block;
+                width: 15px;
+            }
+
+            div.u1x7p5-0.iJYBDq > :nth-child(1):hover::-webkit-scrollbar-track {
+                background: #343434;
+            }
+
+            div.u1x7p5-0.iJYBDq > :nth-child(1):hover::-webkit-scrollbar-thumb,
+            div.u1x7p5-0.iJYBDq > :nth-child(1):hover::-webkit-scrollbar-button {
+                border: 1px solid #3B3B3B;
+                background: #575757;
+            }
+
+                div.u1x7p5-0.iJYBDq > :nth-child(1):hover::-webkit-scrollbar-thumb:hover {
+                    border-color: #101010;
+                    background: #808080;
+                }
+
+                div.u1x7p5-0.iJYBDq > :nth-child(1):hover::-webkit-scrollbar-button:hover {
+                    border: 1px solid #3B3B3B;
+                    background: #707070;
+                }
+
+    /* Unrendered Posts */
+    div.u1x7p5-0.iJYBDq > :nth-child(2) {
+        display: none;
+    }
+
+/*** Mailbox > View / Sort ********************************************************/
+#view--layout--FUE {
+    visibility: visible;
+    position: fixed;
+    top: var(--banner-height);
+    right: 0;
+    width: calc(var(--actions-width) - 10px);
+    height: 20px;
+    padding: 10px 0 0 10px;
+    background-color: var(--background-color);
+    z-index: 50;
+}
+
+button#ListingSort--SortPicker {
+    visibility: visible;
+    position: fixed;
+    top: 193px;
+    left: 400px;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 20px;
+    background-color: var(--background-color);
+    text-transform: capitalize;
+}
+
+    button#ListingSort--SortPicker:hover {
+        background-color: #0072C6;
+    }
+
+    button#ListingSort--SortPicker > :nth-child(1) {
+        display: none;
+    }
+
+    button#ListingSort--SortPicker > span {
+        color: #F0F0F0;
+        font-family: "Segoe UI", IBMPlexSans, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 100;
+    }
+
+        button#ListingSort--SortPicker > span::before {
+            content: "By ";
+        }
+/******************************************************** View / Sort < Mailbox ***/
+/*** Mailbox > Individual Messages ************************************************/
+div.s1nu6uif-0.GsVvZ > :nth-child(2) > :nth-child(4) {
+    padding: 0;
+}
+
+    div.s1nu6uif-0.GsVvZ > :nth-child(2) > :nth-child(4) > :nth-child(1) > :nth-child(1) > div {
+        border-bottom: 1px solid #626262;
+        border-left: 0;
+        border-right: 0;
+        border-collapse: collapse;
+        margin-left: 9px;
+        margin-right: 3px;
+        height: 62px;
+    }
+
+        div.s1nu6uif-0.GsVvZ > :nth-child(2) > :nth-child(4) > :nth-child(1) > :nth-child(1) > div > div {
+            height: 62px;
+        }
+
+
+
+
+
+/* Hover */
+/*** Mailbox > Individual Messages > Content **************************************/
+.scrollerItem.Post {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    height: 62px;
+}
+    /* Cumbersome upvote/downvote thing */
+    .scrollerItem.Post > div > :nth-child(1) {
+        display: none;
+    }
+
+    /* Everything Else */
+    .scrollerItem.Post > div > :nth-child(2) {
+        border-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: var(--background-color) !important;
+    }
+
+        .scrollerItem.Post > div > :nth-child(2) > div {
+            padding-left: 24px;
+            height: 61px;
+        }
+            /* Icon */
+            .scrollerItem.Post > div > :nth-child(2) > div > a,
+            .scrollerItem.Post > div > :nth-child(2) > div > button {
+                position: absolute;
+                right: 0;
+                padding: 0;
+                margin: 0;
+            }
+
+            /* Body */
+            .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] {
+            }
+
+                .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] div:nth-child(3) {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                }
+
+                /* Awards */
+                .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] div:nth-child(5) {
+                    position: absolute;
+                    right: 20%;
+                    bottom: 0;
+                    padding: 0;
+                }
+
+                /* Post Title */
+                .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] h3 {
+                    color: #F0F0F0;
+                    font-family: "Segoe UI";
+                    font-size: 10pt;
+                    font-weight: 100;
+                    line-height: 10pt;
+                }
+
+                /* Subreddit */
+                .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] [data-click-id="subreddit"] {
+                    color: #F0F0F0;
+                    font-family: "Segoe UI";
+                    font-size: 10pt;
+                    font-weight: 100;
+                    line-height: 10pt;
+                }
+
+                /* Stupid-ass bullet point */
+                .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] [role="presentation"] {
+                    display: none;
+                }
+
+                /* Username */
+                .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] [href*="user"] {
+                    color: #F0F0F0 !important;
+                    font-family: "Segoe UI";
+                    font-size: 10pt;
+                    font-weight: 100;
+                    line-height: 10pt;
+                }
+
+                /* Flair */
+                .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] a[href*="flair_name"] {
+                    display: none;
+                }
+
+                /* Timestamp */
+                .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] [data-click-id="timestamp"] {
+                    position: absolute;
+                    right: 0;
+                }
+
+            /* Coments & "..." */
+            .scrollerItem.Post > div > :nth-child(2) > div > :nth-child(3) {
+                position: absolute;
+                right: 0;
+                top: 33%;
+            }
+
+                /* Comments */
+                .scrollerItem.Post > div > :nth-child(2) > div > :nth-child(3),
+                .scrollerItem.Post > div > :nth-child(2) > div > :nth-child(3) a {
+                    padding: 0;
+                    width: auto;
+                }
+
+    /* Hover */
+    .scrollerItem.Post:hover > div > :nth-child(2) > div {
+        background-color: #383838;
+        box-shadow: inset 2px 0 #383838, inset 0 2px #383838, inset 0 -2px #383838, inset 5px 0 #C4C4C4;
+    }
+
+    /* Link */
+    .scrollerItem.Post [rel="noopener noreferrer"] {
+        display: none;
+    }
+/************************************** Content < Individual Messages < Mailbox ***/
+/************************************************ Individual Messages < Mailbox ***/
+/********************************************************************** Mailbox ***/
