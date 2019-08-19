@@ -1,98 +1,96 @@
 /*** Root *************************************************************************/
-/*** 8/5/19 ***********************************************************************/
 /*** Regex: .*reddit\.com.*                                                    ****/
 /**********************************************************************************/
 html::-webkit-scrollbar {
     width: 0;
-    background: transparent;
+	background: transparent;
 }
-
 html *::-webkit-scrollbar {
     width: 0;
-    background: transparent;
+	background: transparent;
 }
 
 :root {
-    --folders-width: 226px;
-    --mailbox-width: 314px;
-    --actions-width: 249px;
-    --left-side-width: calc(var(--folders-width) + var(--mailbox-width));
-    --content-width: calc(100vw - (var(--folders-width) + var(--mailbox-width) + var(--actions-width)));
-    --banner-height: 157px;
-    --footer-height: 21px;
-    --content-height: calc(100vh - (var(--banner-height) + var(--footer-height)));
-    --background-color: #262626;
-    --border-color: #444444;
-    --folders-color: background: linear-gradient(to bottom, var(--background-color) 0%,#1b1b1b 100%);
+  --folders-width: 226px;
+  --mailbox-width: 314px;
+  --actions-width: 249px;
+  --left-side-width: calc(var(--folders-width) + var(--mailbox-width));
+  --content-width: calc(100vw - (var(--folders-width) + var(--mailbox-width) + var(--actions-width)));
+  
+  --banner-height: 157px;
+  --footer-height: 21px;
+  --content-height: calc(100vh - (var(--banner-height) + var(--footer-height)));
+  
+  
+  --background-color: #262626;
+  --border-color: #444444;
+  --folders-color: background: linear-gradient(to bottom, var(--background-color) 0%,#1b1b1b 100%);
 }
 
 /*** Background Color *************************************************************/
 [id="2x-container"] > div {
-    background-color: var(--background-color);
+	background-color: var(--background-color);
 }
 /************************************************************* Background Color ***/
 
 /*** Header ***********************************************************************/
 header {
-    display: none;
-    visibility: hidden;
+	display: none;
+	visibility: hidden;
 }
 
-    header::before {
-        content: url("https://i.imgur.com/sCePtwf.png");
-        visibility: visible;
-        position: fixed;
-        z-index: -1;
-        top: 0;
-    }
+	header::before {
+		content: url("https://i.imgur.com/sCePtwf.png");
+		visibility: visible;
+		position: fixed;
+	    z-index: -1;
+	    top: 0;
+	}
 
 /* Search Bar (Fixed Positioned to Top of Mailbox) */
 #SearchDropdown {
-    visibility: visible;
-    position: fixed;
+	visibility: visible;
+	position: fixed;
     left: var(--folders-width);
     top: var(--banner-height);
     margin-left: 20px;
     margin-top: 8px;
-    height: 20px;
+	height: 20px;
     pointer-events: all;
 }
+	#SearchDropdown > label {
+		position: absolute;
+	    top: 0;
+	    right: 0;
+		margin-top: 0;
+		margin-right: 10px;
+	}
+		#SearchDropdown > label > svg {
+			position: absolute;
+		    top: 0;
+		    right: 0;
+			fill: #3676B7;
+		    transform: scaleY(0.68) scaleX(-0.68);
+		}
 
-    #SearchDropdown > label {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin-top: 0;
-        margin-right: 10px;
-    }
-
-        #SearchDropdown > label > svg {
-            position: absolute;
-            top: 0;
-            right: 0;
-            fill: #3676B7;
-            transform: scaleY(0.68) scaleX(-0.68);
-        }
-
-    #SearchDropdown > form > input {
-        border-color: #686868;
-        border-radius: 0;
-        padding-left: 7px;
-        height: 20px;
-        width: 173px;
-        background-color: #363636;
-        font-family: "Segoe UI";
-        font-size: 8pt;
-    }
-
-        #SearchDropdown > form > input::placeholder {
-            color: #9E9E9E;
-        }
+	#SearchDropdown > form > input {
+		border-color: #686868;
+    	border-radius: 0;
+    	padding-left: 7px;
+		height: 20px;
+    	width: 173px;
+    	background-color: #363636;
+    	font-family: "Segoe UI";
+    	font-size: 8pt;
+	}
+		#SearchDropdown > form > input::placeholder {
+			color: #9E9E9E;
+		}
 
 /* Popular / All / OC (Fixed Positioned to Bottom of Folders) */
 header > :nth-child(1) > :nth-child(2) > div {
-    visibility: visible;
-    position: fixed;
+	visibility: visible;
+	position: fixed;
     bottom: var(--footer-height);
     margin: 0;
     border: 0;
@@ -101,64 +99,58 @@ header > :nth-child(1) > :nth-child(2) > div {
     pointer-events: all;
     background-color: #383838;
 }
+	header > :nth-child(1) > :nth-child(2) > div:nth-child(1) {
+		left: 0px;
+	}
+	header > :nth-child(1) > :nth-child(2) > div:nth-child(2) {
+		left: calc(var(--folders-width) / 2);
+	}
 
-    header > :nth-child(1) > :nth-child(2) > div:nth-child(1) {
-        left: 0px;
+	header > :nth-child(1) > :nth-child(2) > div span {
+    	margin-left: 0;
     }
-
-    header > :nth-child(1) > :nth-child(2) > div:nth-child(2) {
-        left: calc(var(--folders-width) / 2);
-    }
-
-    header > :nth-child(1) > :nth-child(2) > div span {
-        margin-left: 0;
-    }
-
-    header > :nth-child(1) > :nth-child(2) > div a {
-        margin-left: 0 !important;
-        padding-top: 13.5px;
-        padding-bottom: 13.5px;
-        padding-left: 10.5px;
-        padding-right: 10.5px;
-        transition: background-color 0.5s;
-    }
-
-        header > :nth-child(1) > :nth-child(2) > div a:hover {
-            background-color: #0072C6;
-        }
+	header > :nth-child(1) > :nth-child(2) > div a {
+		margin-left: 0 !important;
+		padding-top: 13.5px;
+	    padding-bottom: 13.5px;
+	    padding-left: 10.5px;
+	    padding-right: 10.5px;
+	    transition: background-color 0.5s;
+	}
+		header > :nth-child(1) > :nth-child(2) > div a:hover {
+			background-color: #0072C6;
+		}
 
 /* Profile Picture and Dropdown */
 .header-user-dropdown {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 /* User Name (Fixed Positioned to Top of Header) */
 #email-collection-tooltip-id > :nth-child(2) > :nth-child(1) {
-    visibility: visible;
+	visibility: visible;
     position: fixed;
     top: 0;
     left: 0;
     padding-top: 8px;
-    width: 100vw;
+	width: 100vw;
     text-align: center;
     pointer-events: none;
-    color: white;
+	color: white;
     font-family: "Segoe UI";
     font-weight: 400;
 }
-
-    #email-collection-tooltip-id > :nth-child(2) > :nth-child(1)::before {
-        content: "Inbox  -  u/";
-    }
-
-    #email-collection-tooltip-id > :nth-child(2) > :nth-child(1)::after {
-        content: "@reddit.com  -  Outlook";
-    }
-
+	#email-collection-tooltip-id > :nth-child(2) > :nth-child(1)::before {
+		content: "Inbox  -  u/";
+	}
+	#email-collection-tooltip-id > :nth-child(2) > :nth-child(1)::after {
+		content: "@reddit.com  -  Outlook";
+	}
+    
 /* Karma (Fixed Positioned to Bottom Left of Status Bar) */
 #email-collection-tooltip-id > span {
-    visibility: visible;
-    position: fixed;
+	visibility: visible;
+	position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
@@ -180,112 +172,143 @@ header > :nth-child(1) > :nth-child(2) > div {
 #header-subreddit-filter,
 [role="menuitem"] svg,
 [role="menuitem"] img {
-    display: none;
+	display: none;
     visibility: hidden;
 }
 /*** Folder Pane > Containers *****************************************************/
 /* BOOKMARK: Folder Pane - parent of [role="menu"] */
 ._20fGT0XJD3MvX9yBsVeKMn.zoWOQnp55WuhEugRSwfw1 {
-    top: var(--banner-height);
+	top: var(--banner-height);
     margin-top: 8px;
-    width: var(--folders-width) !important;
+	width: var(--folders-width) !important;
     border-right: 1px solid var(--border-color);
     background: linear-gradient(to bottom, var(--background-color) 0%, #1b1b1b 100%);
 }
 
 [role="menu"] {
-    position: fixed;
+	position: fixed;
     z-index: 2;
-    top: var(--banner-height);
-    max-height: calc(var(--content-height) - 46px);
-    width: calc(var(--folders-width) - 6px);
+	top: var(--banner-height);
+	max-height: calc(var(--content-height) - 46px);
+	width: calc(var(--folders-width) - 6px);
     overflow-y: scroll;
     background: linear-gradient(to bottom, var(--background-color) 0%, #1b1b1b 100%);
 }
-/* Scrollbar */
-div[role="menu"]::-webkit-scrollbar {
-    display: none;
-    width: 15px;
-}
+    /* Scrollbar */
+	div[role="menu"]::-webkit-scrollbar {
+		display: none;
+        width: 15px;
+	}
+		div[role="menu"]::-webkit-scrollbar-track {
+            background: #343434;
+        }
+		div[role="menu"]::-webkit-scrollbar-thumb,
+        div[role="menu"]::-webkit-scrollbar-button {
+            border: 1px solid #3B3B3B;
+            background: #575757; 
+        }
+        div[role="menu"]::-webkit-scrollbar-thumb:hover {
+            border-color: #101010;
+            background: #808080;
+        }
+        div[role="menu"]::-webkit-scrollbar-button:hover {
+            border: 1px solid #3B3B3B;
+            background: #707070; 
+        }
 
-div[role="menu"]::-webkit-scrollbar-track {
-    background: #343434;
-}
-
-div[role="menu"]::-webkit-scrollbar-thumb,
-div[role="menu"]::-webkit-scrollbar-button {
-    border: 1px solid #3B3B3B;
-    background: #575757;
-}
-
-    div[role="menu"]::-webkit-scrollbar-thumb:hover {
-        border-color: #101010;
-        background: #808080;
-    }
-
-    div[role="menu"]::-webkit-scrollbar-button:hover {
-        border: 1px solid #3B3B3B;
-        background: #707070;
-    }
-
-div[role="menu"]:hover::-webkit-scrollbar {
-    display: block;
-}
+        div[role="menu"]:hover::-webkit-scrollbar {
+			display: block;
+		}
 /***************************************************** Containers < Folder Pane ***/
 /*** Folder Pane > Content ********************************************************/
 [role="menu"] [role="heading"] {
-    margin-left: 6px;
-    padding-top: 4.5px;
-    padding-bottom: 4.5px;
-    padding-left: 17px;
+	margin-left: 6px;
+	padding-top: 4.5px;
+	padding-bottom: 4.5px;
+	padding-left: 17px;
     padding-right: 0;
     cursor: default;
-    color: #F0F0F0;
+	color: #F0F0F0;
     font-family: "Segoe UI";
-    font-size: 10pt;
+	font-size: 10pt;
     font-weight: 400;
     text-transform: capitalize;
 }
-
 div[role="menu"] [role="menuitem"] {
-    margin-left: 6px;
-    padding-top: 4.5px;
-    padding-bottom: 4.5px;
-    padding-left: 26px;
+	margin-left: 6px;
+	padding-top: 4.5px;
+	padding-bottom: 4.5px;
+	padding-left: 26px;
     padding-right: 0px;
     cursor: default;
-    color: #F0F0F0;
+	color: #F0F0F0;
 }
-
-    div[role="menu"] [role="menuitem"] > span {
-        padding: 0;
-        font-family: "Segoe UI";
-        font-size: 10pt;
-        font-weight: 400;
-    }
-
+	div[role="menu"] [role="menuitem"] > span {
+		padding: 0;
+    	font-family: "Segoe UI";
+		font-size: 10pt;
+    	font-weight: 400;
+	}
     div[role="menu"] [role="heading"]:active,
     div[role="menu"] [role="menuitem"]:active {
-        background-color: #0067B0;
-    }
-
+		background-color: #0067B0;
+	}
     div[role="menu"] [role="heading"]:hover,
     div[role="menu"] [role="menuitem"]:hover {
-        background-color: #505050;
-    }
-
-    div[role="menu"] [role="heading"]:focus,
-    div[role="menu"] [role="menuitem"]:focus {
-        outline: none;
-        background-color: var(--border-color);
-    }
+		background-color: #505050;
+	}
+   div[role="menu"] [role="heading"]:focus,
+   div[role="menu"] [role="menuitem"]:focus {
+	    outline: none;
+		background-color: var(--border-color);
+	}
 /******************************************************** Content < Folder Pane ***/
 /****************************************************************** Folder Pane ***/
+/*** Mailbox > View / Sort ********************************************************/
+#view--layout--FUE {
+	visibility: visible;
+    position: fixed;
+    top: var(--banner-height);
+    right: 0;
+    width: calc(var(--actions-width) - 10px);
+    height: 20px;
+    padding: 10px 0 0 10px;
+    background-color: var(--background-color);
+    z-index: 50;
+}
 
+button#ListingSort--SortPicker {
+	visibility: visible;
+    position: fixed;
+    top: 193px;
+    left: 400px;
+	margin: 0;
+    padding: 0;
+    width: auto;
+    height: 20px;
+	background-color: var(--background-color);
+    text-transform: capitalize;
+}
+	button#ListingSort--SortPicker:hover {
+		background-color: #0072C6;
+	}
+	button#ListingSort--SortPicker > :nth-child(1) {
+    	display: none;
+    }
+    button#ListingSort--SortPicker > span {
+        color: #F0F0F0;
+    	font-family: "Segoe UI", IBMPlexSans, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+    	font-size: 12px;
+        font-weight: 100;
+    }
+    	button#ListingSort--SortPicker > span::before {
+    	    content: "By ";
+    	}
+/******************************************************** View / Sort < Mailbox ***/
 /*** Right Side *******************************************************************/
 /* Containers and Scrolling */
 ._1BFbVxT49QnrAN3fqGZ1z8 {
-    position: fixed;
+	position: fixed;
     z-index: 1;
     top: var(--banner-height);
     right: 0px;
@@ -301,37 +324,33 @@ div[role="menu"] [role="menuitem"] {
     overflow-y: scroll;
     pointer-events: none;
 }
-/* Scrollbar */
-._1BFbVxT49QnrAN3fqGZ1z83::-webkit-scrollbar {
-    width: 15px;
-}
-
-._1BFbVxT49QnrAN3fqGZ1z8::-webkit-scrollbar-track {
-    background: #343434;
-}
-
-._1BFbVxT49QnrAN3fqGZ1z8::-webkit-scrollbar-thumb, div.iQdHyy::-webkit-scrollbar-button {
-    border: 1px solid #3B3B3B;
-    background: #575757;
-}
-
-    ._1BFbVxT49QnrAN3fqGZ1z8::-webkit-scrollbar-thumb:hover {
-        border-color: #101010;
-        background: #808080;
+    /* Scrollbar */
+    ._1BFbVxT49QnrAN3fqGZ1z83::-webkit-scrollbar {
+        width: 15px;
     }
-
-._1BFbVxT49QnrAN3fqGZ1z8::-webkit-scrollbar-button:hover {
-    border: 1px solid #3B3B3B;
-    background: #707070;
-}
+        ._1BFbVxT49QnrAN3fqGZ1z8::-webkit-scrollbar-track {
+            background: #343434; 
+        }
+        ._1BFbVxT49QnrAN3fqGZ1z8::-webkit-scrollbar-thumb, div.iQdHyy::-webkit-scrollbar-button {
+            border: 1px solid #3B3B3B;
+            background: #575757;
+        }
+        ._1BFbVxT49QnrAN3fqGZ1z8::-webkit-scrollbar-thumb:hover {
+            border-color: #101010;
+            background: #808080;
+        }
+        ._1BFbVxT49QnrAN3fqGZ1z8::-webkit-scrollbar-button:hover {
+            border: 1px solid #3B3B3B;
+            background: #707070;
+        }
 
 ._1BFbVxT49QnrAN3fqGZ1z8 * {
-    margin: 0;
+	margin: 0;
     border: 0;
     padding: 0;
-    max-width: 100%;
+	max-width: 100%;
     background-color: var(--background-color);
-    pointer-events: all;
+	pointer-events: all;
 }
 
 ._1BFbVxT49QnrAN3fqGZ1z8 h1,
@@ -346,23 +365,23 @@ div[role="menu"] [role="menuitem"] {
     font-family: "Segoe UI";
     font-weight: 400;
     text-transform: lowercase;
-}
+} 
 
 ._1BFbVxT49QnrAN3fqGZ1z8 h1 {
     color: white;
-    font-size: 12pt;
+	font-size: 12pt;
 }
 
 ._1BFbVxT49QnrAN3fqGZ1z8 h2 {
     color: white;
-    font-size: 10pt;
+	font-size: 10pt;
 }
 
 ._1BFbVxT49QnrAN3fqGZ1z8 p,
 ._1BFbVxT49QnrAN3fqGZ1z8 span,
 ._1BFbVxT49QnrAN3fqGZ1z8 div {
     color: white;
-    font-size: 8pt;
+	font-size: 8pt;
 }
 
 ._1BFbVxT49QnrAN3fqGZ1z8 a,
@@ -380,7 +399,7 @@ div[role="menu"] [role="menuitem"] {
 ._1BFbVxT49QnrAN3fqGZ1z8 [data-before-content="advertisement"],
 ._1BFbVxT49QnrAN3fqGZ1z8 [data-before-content="advertisement"] *,
 ._1BFbVxT49QnrAN3fqGZ1z8 iframe {
-    display: none !important;
+	display: none !important;
     visibility: hidden !important;
     width: 0 !important;
     min-width: 0 !important;
@@ -392,24 +411,23 @@ div[role="menu"] [role="menuitem"] {
 /******************************************************************* Right Side ***/
 /*** Overlay Scroll Container *****************************************************/
 [class|="SubredditVars"] {
-    display: block;
+	display: block;
 }
-
-    [class|="SubredditVars"] > [style*="--comments-overlay-background"] {
-        visibility: hidden;
+	[class|="SubredditVars"] > [style*="--comments-overlay-background"] {
+		visibility: hidden;
         left: var(--left-side-width);
         top: var(--banner-height) !important;
         width: var(--content-width);
         height: var(--content-height);
     }
-
+    
     [class|="SubredditVars"] [class|="SubredditVars"] * {
-        display: none !important;
+    	display: none !important;
     }
-
+    
 #overlayScrollContainer,
 div.u1x7p5-0.kFtMxp {
-    visibility: hidden;
+	visibility: hidden;
     position: fixed;
     top: var(--banner-height);
     margin-top: 8px;
@@ -433,35 +451,35 @@ div.u1x7p5-0.kFtMxp {
     width: calc(var(--content-width) + var(--mailbox-width) - 23px);
 }
 
-    /******* Children *****************************************************************/
-    #overlayScrollContainer > div,
-    #overlayScrollContainer > div > div,
-    #overlayScrollContainer > div > div > div,
-    div.u1x7p5-0.kFtMxp > div {
-        display: block;
-        visibility: visible;
-        margin: 0;
-        border: 0;
-        padding: 0;
-        width: 100%;
-        min-width: 100%;
-        max-width: 100%;
-        height: 100%;
-        min-height: 100%;
-        max-height: 100%;
-        pointer-events: all;
-        background-color: var(--background-color);
-    }
+/******* Children *****************************************************************/
+#overlayScrollContainer > div,
+#overlayScrollContainer > div > div,
+#overlayScrollContainer > div > div > div,
+div.u1x7p5-0.kFtMxp > div {
+    display: block;
+    visibility: visible;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    pointer-events: all;
+    background-color: var(--background-color);
+}
 
-        #overlayScrollContainer > div:nth-child(2) {
-            display: none;
-        }
+#overlayScrollContainer > div:nth-child(2) {
+	display: none;
+}
 
-        #overlayScrollContainer > div > div {
-            height: calc(100% + 17px);
-            min-height: calc(100% + 17px);
-            max-height: calc(100% + 17px);
-        }
+#overlayScrollContainer > div > div {
+    height: calc(100% + 17px);
+    min-height: calc(100% + 17px);
+    max-height: calc(100% + 17px);
+}
 
 /* Selection */
 #overlayScrollContainer *::selection {
@@ -472,11 +490,11 @@ div.u1x7p5-0.kFtMxp {
 #overlayScrollContainer > div > :nth-child(1) > div > :nth-child(2),
 #overlayScrollContainer > div > :nth-child(1) > div > :nth-child(3),
 #overlayScrollContainer > div > :nth-child(1) > div > :nth-child(4),
-div.u1x7p5-0.kFtMxp > div > :nth-child(1),
-div.u1x7p5-0.kFtMxp > div > :nth-child(2),
-div.u1x7p5-0.kFtMxp > div > :nth-child(3),
-div.u1x7p5-0.kFtMxp > div > :nth-child(4) {
-    margin-left: 0;
+						  div.u1x7p5-0.kFtMxp > div > :nth-child(1),
+						  div.u1x7p5-0.kFtMxp > div > :nth-child(2),
+						  div.u1x7p5-0.kFtMxp > div > :nth-child(3),
+						  div.u1x7p5-0.kFtMxp > div > :nth-child(4) {
+	margin-left: 0;
     margin-right: 0;
     margin-top: 0;
     margin-bottom: 0;
@@ -488,11 +506,11 @@ div.u1x7p5-0.kFtMxp > div > div:nth-child(1) {
     height: calc(30% - 8px);
 }
 
-    #overlayScrollContainer > div > :nth-child(1) > div > .Post,
-    #overlayScrollContainer > div > :nth-child(1) > div > :nth-child(1) > .Post,
-    div.u1x7p5-0.kFtMxp .Post {
-        padding: 0;
-    }
+#overlayScrollContainer > div > :nth-child(1) > div > .Post,
+#overlayScrollContainer > div > :nth-child(1) > div > :nth-child(1) > .Post,
+div.u1x7p5-0.kFtMxp .Post {
+	padding: 0;
+}
 
 /*********** Upvote / Downvote / Count ********************************************/
 [data-test-id="post-content"] > :nth-child(1) {
@@ -509,75 +527,70 @@ div.u1x7p5-0.kFtMxp > div > div:nth-child(1) {
     width: 100% !important;
     float: left;
 }
-
-    [data-test-id="post-content"] > :nth-child(1) > div {
-        position: absolute;
+	[data-test-id="post-content"] > :nth-child(1) > div {
+    	position: absolute;
         left: 0;
-        flex-direction: unset;
-    }
-
+	    flex-direction: unset;
+	}
+    
     [data-test-id="post-content"] > :nth-child(1) button {
-        position: relative;
-        top: 0px;
-        left: 0px;
-        width: auto;
+    	position: relative;
+    	top: 0px;
+    	left: 0px;
+    	width: auto;
         color: white;
-        font-family: "Segoe UI", IBMPlexSans, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
-        font-size: 12px;
+    	font-family: "Segoe UI", IBMPlexSans, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+    	font-size: 12px;
         font-weight: 100;
     }
-
-        [data-test-id="post-content"] > :nth-child(1) button:focus {
-            background-color: rgba(0, 0, 0, 0)
+    
+    	[data-test-id="post-content"] > :nth-child(1) button:focus {
+        	background-color: rgba(0, 0, 0, 0)
         }
-
-        [data-test-id="post-content"] > :nth-child(1) button::after {
-            position: relative;
-            top: -6px;
-            height: 20px;
+    
+    	[data-test-id="post-content"] > :nth-child(1) button::after {
+        	position: relative;
+        	top: -6px;
+        	height: 20px;
         }
-        /* Upvote */
-        [data-test-id="post-content"] > :nth-child(1) button[aria-label="upvote"]::after {
-            content: "Upvote;";
-        }
-
-        [data-test-id="post-content"] > :nth-child(1) button[aria-label="upvote"]:hover div,
-        [data-test-id="post-content"] > :nth-child(1) button[aria-label="upvote"]:hover::after {
-            color: #CC3700;
-            /*filter: brightness(1.40);
+	/* Upvote */
+    [data-test-id="post-content"] > :nth-child(1) button[aria-label="upvote"]::after {
+        content: "Upvote;";
+    }
+    [data-test-id="post-content"] > :nth-child(1) button[aria-label="upvote"]:hover div,
+    [data-test-id="post-content"] > :nth-child(1) button[aria-label="upvote"]:hover::after {
+        color: #CC3700;
+        /*filter: brightness(1.40);
         /*color: #E69B80;*/
-        }
-
-        [data-test-id="post-content"] > :nth-child(1) button[aria-pressed="true"] i.icon-upvote::before,
-        [data-test-id="post-content"] > :nth-child(1) button[aria-label="upvote"][aria-pressed="true"]::after {
-            color: #FF4500;
-            /*filter: brightness(1.40);
+    }
+    [data-test-id="post-content"] > :nth-child(1) button[aria-pressed="true"] i.icon-upvote::before,
+    [data-test-id="post-content"] > :nth-child(1) button[aria-label="upvote"][aria-pressed="true"]::after {
+        color: #FF4500;
+        /*filter: brightness(1.40);
         /*color: #FFA280;*/
-        }
-        /* Downvote */
-        [data-test-id="post-content"] > :nth-child(1) button[aria-label="downvote"]::after {
-            content: "Downvote;";
-        }
-
-        [data-test-id="post-content"] > :nth-child(1) button[aria-label="downvote"]:hover div,
-        [data-test-id="post-content"] > :nth-child(1) button[aria-label="downvote"]:hover::after {
-            color: #5A75CC;
-            /*filter: brightness(1.40);
+    }
+	/* Downvote */
+    [data-test-id="post-content"] > :nth-child(1) button[aria-label="downvote"]::after {
+        content: "Downvote;";
+    }
+    [data-test-id="post-content"] > :nth-child(1) button[aria-label="downvote"]:hover div,
+    [data-test-id="post-content"] > :nth-child(1) button[aria-label="downvote"]:hover::after {
+        color: #5A75CC;
+        /*filter: brightness(1.40);
         /*color: #ACBAE6;*/
-        }
-
-        /* Count */
-        [data-test-id="post-content"] > :nth-child(1) button + div {
-            position: relative;
-            padding-left: 7px;
-            top: 2px;
-            font-weight: 100;
-            /*filter: brightness(1.40);*/
-        }
-
-            [data-test-id="post-content"] > :nth-child(1) button + div::after {
-                content: " Points;";
-            }
+    }
+    
+	/* Count */
+    [data-test-id="post-content"] > :nth-child(1) button+div {
+        position: relative;
+        padding-left: 7px;
+        top: 2px;
+        font-weight: 100;
+        /*filter: brightness(1.40);*/
+    }
+    [data-test-id="post-content"] > :nth-child(1) button+div::after {
+        content: " Points;";
+    }
 /******************************************** Upvote / Downvote / Count ***********/
 /*********** Icon / Sub / User / Time *********************************************/
 [data-test-id="post-content"] > :nth-child(2) {
@@ -594,7 +607,7 @@ div.u1x7p5-0.kFtMxp > div > div:nth-child(1) {
         height: 48px;
         width: 48px;
     }
-
+    
     /* Subreddit Name & User Name */
     [data-test-id="post-content"] > :nth-child(2) [data-click-id="subreddit"],
     [data-test-id="post-content"] > :nth-child(2) a[href*="/user/"] {
@@ -604,39 +617,38 @@ div.u1x7p5-0.kFtMxp > div > div:nth-child(1) {
         font-size: 12pt;
         font-weight: 100;
     }
-
+    
     [data-test-id="post-content"] > :nth-child(2) span {
         display: none;
     }
-
-/* Timestamp */
-[data-test-id="post-content"] a[data-click-id="timestamp"] {
-    position: absolute;
-    right: 1px;
-    margin: 0;
-    padding: 0;
-    color: #F0F0F0 !important;
-    font-family: "Segoe UI";
-    font-size: 9pt;
-    font-weight: 100;
-    line-height: 24px;
-}
+    
+    /* Timestamp */
+    [data-test-id="post-content"] a[data-click-id="timestamp"] {
+        position: absolute;
+        right: 1px;
+        margin: 0;
+        padding: 0;
+        color: #F0F0F0 !important;
+        font-family: "Segoe UI";
+        font-size: 9pt;
+        font-weight: 100;
+        line-height: 24px;
+    }
 /********************************************* Icon / Sub / User / Time ***********/
 /*********** Title ****************************************************************/
 [data-test-id="post-content"] > :nth-child(3) {
-    position: relative;
+	position: relative;
     top: 50px;
     margin: 0;
     padding-left: 63px;
 }
-
-[data-test-id="post-content"] :nth-child(3) h1 {
-    color: white;
-    font-family: "Segoe UI";
-    font-size: 12pt;
-    font-weight: 400;
-    text-wrap: break-word;
-}
+    [data-test-id="post-content"] :nth-child(3) h1 {
+        color: white;
+        font-family: "Segoe UI";
+        font-size: 12pt;
+        font-weight: 400;
+        text-wrap: break-word;
+    } 
 /**************************************************************** Title ***********/
 /*********** Flair ****************************************************************/
 /* revisit */
@@ -644,14 +656,14 @@ div.u1x7p5-0.kFtMxp > div > div:nth-child(1) {
 	
 }*/
 ._2fiIRtMpITeCAzXc4cANKp._1mK-LVHGTTlcFpMsjItjYJ {
-    margin-left: 0;
-    margin-bottom: 0;
+	margin-left: 0;
+	margin-bottom: 0;
     display: none;
 }
 /**************************************************************** Flair ***********/
 /*********** Original Post ********************************************************/
 [data-test-id="post-content"] > :nth-last-child(2) {
-    display: block;
+	display: block;
     position: absolute;
     top: 113px;
     left: 0;
@@ -674,90 +686,78 @@ div.u1x7p5-0.kFtMxp > div > div:nth-child(1) {
     [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar {
         width: 16px;
     }
-
-    [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-track {
-        background-color: #F3F3F3;
-    }
-
-    [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-thumb {
-        border: 1px solid #ABABAB;
-        background-color: #FFFFFF;
-    }
-
-        [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-thumb:hover {
-            border: 1px solid #ABABAB;
-            background-color: #F0F0F0;
+        [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-track {
+            background-color: #F3F3F3;
         }
-
-    [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-button {
-        border: 1px solid #ABABAB;
-        background-color: #FFFFFF;
-    }
-
-        [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-button:hover {
-            border: 1px solid #878787;
+        [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-thumb {
+            border: 1px solid #ABABAB;
             background-color: #FFFFFF;
         }
-
-    /* Image Post */
-    [data-test-id="post-content"] > :nth-last-child(2) a {
-        width: 100%;
-        height: auto;
-        cursor: unset;
-        pointer-events: none;
-    }
-
-        [data-test-id="post-content"] > :nth-last-child(2) a img {
-            padding-top: 136px;
-            padding-bottom: 136px;
-            padding-left: auto;
-            padding-right: auto;
-            background-color: white !important;
+            [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-thumb:hover {
+                border: 1px solid #ABABAB;
+                background-color: #F0F0F0;
+            }
+        [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-button {
+            border: 1px solid #ABABAB;
+            background-color: #FFFFFF;
         }
-
-        [data-test-id="post-content"] > :nth-last-child(2) a::before,
-        [data-test-id="post-content"] > :nth-last-child(2) a::after {
-            position: relative;
-            z-index: 1;
-            padding-left: 8px;
-            color: black;
-            font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
-            font-size: 12pt;
-            font-weight: 400;
-            line-height: 16px;
-        }
-
-        [data-test-id="post-content"] > :nth-last-child(2) a::before {
-            content: "Scroll down to view content.";
-            top: 5px;
-        }
-
-        [data-test-id="post-content"] > :nth-last-child(2) a::after {
-            content: "Scroll up to view content.";
-            bottom: 5px;
-        }
+            [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-button:hover {
+                border: 1px solid #878787;
+                background-color: #FFFFFF;
+            }
+            
+	/* Image Post */
+	[data-test-id="post-content"] > :nth-last-child(2) a {
+	    width: 100%;
+	    height: auto;
+	    cursor: unset;
+	    pointer-events: none;
+	}
+		[data-test-id="post-content"] > :nth-last-child(2) a img {
+		    padding-top: 136px;
+		    padding-bottom: 136px;
+		    padding-left: auto;
+		    padding-right: auto;
+		    background-color: white !important;
+		}
+		[data-test-id="post-content"] > :nth-last-child(2) a::before,
+		[data-test-id="post-content"] > :nth-last-child(2) a::after {
+		    position: relative;
+		    z-index: 1;
+		    padding-left: 8px;
+		    color: black;
+		    font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
+		    font-size: 12pt;
+		    font-weight: 400;
+		    line-height: 16px;
+		}
+			[data-test-id="post-content"] > :nth-last-child(2) a::before {
+			    content: "Scroll down to view content.";
+			    top: 5px;
+			}
+			[data-test-id="post-content"] > :nth-last-child(2) a::after {
+			    content: "Scroll up to view content.";
+			    bottom: 5px;
+			}
 /******************************************************** Original Post ***********/
 /*********** Actions **************************************************************/
 div[data-test-id="post-content"] > :nth-last-child(1) {
-    position: absolute;
+	position: absolute;
     left: 0;
-    top: 4px;
-    margin: 0;
-    border: 0;
-    padding: 0;
-    height: 16px;
+	top: 4px;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	height: 16px;
 }
-
-    div[data-test-id="post-content"] > :nth-last-child(1) > div {
-        height: 16px;
-    }
-
+	div[data-test-id="post-content"] > :nth-last-child(1) >div {
+		height: 16px;
+	}
     div[data-test-id="post-content"] > :nth-last-child(1) span {
-        color: #F0F0F0;
+    	color: #F0F0F0;
         font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
-        font-weight: 100;
+    	font-weight: 100;
     }
-
     div[data-test-id="post-content"] > :nth-last-child(1) i::before {
         color: #F0F0F0;
     }
@@ -768,7 +768,7 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 
 /* Could shorten to [data-test-id="comment-submission-form-markdown"] */
 #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2),
-div.u1x7p5-0.kFtMxp > div > div:nth-child(2) {
+                          div.u1x7p5-0.kFtMxp > div > div:nth-child(2) {
     border-top: 1px solid #ABABAB;
     border-bottom: 1px solid #ABABAB;
     padding-left: 8px;
@@ -777,139 +777,135 @@ div.u1x7p5-0.kFtMxp > div > div:nth-child(2) {
     height: calc(10% - 2px);
 }
 
-[data-test-id="comment-submission-form-markdown"] > div,
-[data-test-id="comment-submission-form-richtext"] > div {
-    margin: 0;
-}
-
-[data-test-id="comment-submission-form-markdown"] span,
-[data-test-id="comment-submission-form-markdown"] a,
-[data-test-id="comment-submission-form-markdown"] button,
-[data-test-id="comment-submission-form-richtext"] + div span,
-[data-test-id="comment-submission-form-richtext"] + div button {
-    display: inline-block;
-    font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
-    font-size: 9pt;
-    font-weight: 400;
-    text-transform: capitalize;
-}
-
-[data-test-id="comment-submission-form-markdown"] span {
-    color: black;
-}
-
-[data-test-id="comment-submission-form-markdown"] a,
-[data-test-id="comment-submission-form-markdown"] button {
-    color: #0563C1;
-}
-
-[data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) {
-    height: calc(100% - 17px);
-}
-
-    /* Removing border two parents above text area */
-    [data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) > :nth-child(1) {
-        border: none;
-        height: 100%;
+	[data-test-id="comment-submission-form-markdown"] > div,
+    [data-test-id="comment-submission-form-richtext"] > div {
+    	margin: 0;
+    }
+    [data-test-id="comment-submission-form-markdown"] span,
+    [data-test-id="comment-submission-form-markdown"] a,
+    [data-test-id="comment-submission-form-markdown"] button,
+    [data-test-id="comment-submission-form-richtext"] + div span,
+    [data-test-id="comment-submission-form-richtext"] + div button {
+        display: inline-block;
+        font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+        font-size: 9pt;
+        font-weight: 400;
+    	text-transform: capitalize;
     }
 
-        /* Setting some stuff one parent above text area */
-        [data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) > :nth-child(1) > :nth-child(1) {
-            padding: 0;
-            min-height: 0;
-            height: calc(100% - 18px);
-            background-color: white;
-        }
+    [data-test-id="comment-submission-form-markdown"] span {
+        color: black;
+    }
 
-/* Text Area */
-[data-test-id="comment-submission-form-markdown"] textarea,
-[data-test-id="comment-submission-form-richtext"] [role="textbox"] {
-    border-top: 1px dashed var(--background-color);
-    border-bottom: 1px dashed var(--background-color);
-    padding: 2px;
-    height: 100% !important;
-    max-height: 200px;
-    background-color: white;
-    color: black;
-    line-height: 15px;
-}
-
-[data-test-id="comment-submission-form-markdown"] textarea {
-    min-height: 40px;
-}
-
-[data-test-id="comment-submission-form-richtext"] [role="textbox"] {
-    min-height: 34px;
-}
-
-[data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) > :nth-child(1) > :nth-child(2) {
-    height: 17px;
-    border-color: #ABABAB;
-    border-radius: 0;
-    background-color: white;
-}
-
-/* Comment/Reply */
-[data-test-id="comment-submission-form-markdown"] button[type="submit"],
-[data-test-id="comment-submission-form-markdown"] button[type="reset"],
-[data-test-id="comment-submission-form-richtext"] + div button[type="submit"],
-[data-test-id="comment-submission-form-richtext"] + div button[type="reset"] {
-    margin-left: 10px;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    border: 0;
-    padding: 0;
-    min-height: 0;
-    min-width: 0;
-    background-color: white;
-}
-
-/* "Switch to Fancy" */
-[data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) > :nth-child(1) > :nth-child(2) > button {
-    margin: 0;
-}
-
+    [data-test-id="comment-submission-form-markdown"] a,
+    [data-test-id="comment-submission-form-markdown"] button {
+        color: #0563C1;
+    }
+    
+    [data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) {
+    	height: calc(100% - 17px);
+    }
+    
+    /* Removing border two parents above text area */
+    [data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) > :nth-child(1) {
+    	border: none;
+        height: 100%;
+    }    
+    
+    /* Setting some stuff one parent above text area */
+    [data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) > :nth-child(1) > :nth-child(1)  {
+        padding: 0;
+        min-height: 0;
+        height: calc(100% - 18px);
+        background-color: white;
+    }
+    
+    /* Text Area */
+    [data-test-id="comment-submission-form-markdown"] textarea,
+    [data-test-id="comment-submission-form-richtext"] [role="textbox"] {
+    	border-top: 1px dashed var(--background-color);
+        border-bottom: 1px dashed var(--background-color);
+        padding: 2px;
+        height: 100% !important;
+    	max-height: 200px;
+        background-color: white;
+        color: black;
+        line-height: 15px;
+    }
+    	[data-test-id="comment-submission-form-markdown"] textarea {
+    	    min-height: 40px;
+    	}
+    	[data-test-id="comment-submission-form-richtext"] [role="textbox"] {
+    	    min-height: 34px;
+    	}
+    
+    [data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) > :nth-child(1) > :nth-child(2) {
+        height: 17px;
+        border-color: #ABABAB;
+        border-radius: 0;
+        background-color: white;
+    }
+    
+    /* Comment/Reply */
+    [data-test-id="comment-submission-form-markdown"] button[type="submit"],
+    [data-test-id="comment-submission-form-markdown"] button[type="reset"],
+    [data-test-id="comment-submission-form-richtext"] + div button[type="submit"],
+    [data-test-id="comment-submission-form-richtext"] + div button[type="reset"] {
+    	margin-left: 10px;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        border: 0;
+        padding: 0;
+        min-height: 0;
+        min-width: 0;
+        background-color: white;
+    }
+    
+    /* "Switch to Fancy" */
+    [data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) > :nth-child(1) > :nth-child(2) > button {
+    	margin: 0;
+    }
+    
 /*********** Fancypants Editor ****************************************************/
 /* Extra margin on "Comment As [Username]" */
 #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2) > :nth-child(1),
-div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(1) {
+                          div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(1) {
     margin-bottom: 0;
 }
-    /* "Comment as" */
-    #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2) > :nth-child(1) span,
-    div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(1) span {
-        color: black;
-    }
-    /* Username */
-    #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2) > :nth-child(1) a,
-    div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(1) a {
-        color: #0563C1;
-    }
+/* "Comment as" */
+#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2) > :nth-child(1) span,
+                          div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(1) span {
+    color: black;
+}
+/* Username */
+#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2) > :nth-child(1) a,
+                          div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(1) a {
+    color: #0563C1;
+}
 /* Container for buttons / "Switch To Markdown" / "Comment" below textbox */
 [data-test-id="comment-submission-form-richtext"] + div {
     height: 16px;
     background-color: white;
 }
+[data-test-id="comment-submission-form-richtext"] + div > :nth-child(2) > :nth-child(1) > :nth-child(1) {
+	height: 20px;
+}
 
-    [data-test-id="comment-submission-form-richtext"] + div > :nth-child(2) > :nth-child(1) > :nth-child(1) {
-        height: 20px;
-    }
-
-    [data-test-id="comment-submission-form-richtext"] + div [role="button"] {
-        padding-top: 0;
+	[data-test-id="comment-submission-form-richtext"] + div [role="button"] {
+    	padding-top: 0;
         padding-bottom: 0;
     }
-
-        /* "Switch to Markdown" */
-        [data-test-id="comment-submission-form-richtext"] + div [role="button"] > span {
-            position: relative;
-            left: 35px;
-            color: #0563C1;
-        }
+    
+	/* "Switch to Markdown" */
+    [data-test-id="comment-submission-form-richtext"] + div [role="button"] > span {
+    	position: relative;
+        left: 35px;
+        color: #0563C1;
+    }
 
 #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2) > :nth-child(2) > :nth-child(1) > :nth-child(1),
-div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(2) > :nth-child(1) > :nth-child(1) {
+                          div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(2) > :nth-child(1) > :nth-child(1) {
     border: none;
 }
 /**************************************************** Fancypants Editor ***********/
@@ -918,101 +914,93 @@ div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(2) > :nth-child(1) > :
 /*** Sort By **********************************************************************/
 #overlayScrollContainer > div > :nth-child(1) > div > :nth-child(3),
 div.u1x7p5-0.kFtMxp > div > div:nth-child(3) {
-    position: absolute;
+	position: absolute;
     top: calc(30% - 2px);
     right: 0;
     border: 0;
     padding-right: 0;
     padding-bottom: 0;
     height: 18px;
-    background-color: white;
+	background-color: white;
 }
 
-#overlayScrollContainer > div > :nth-child(1) > div > :nth-child(3) {
-    top: calc(30% - 2px);
-    right: 0;
-}
+	#overlayScrollContainer > div > :nth-child(1) > div > :nth-child(3) {
+    	top: calc(30% - 2px);
+    	right: 0;
+    }
+	div.u1x7p5-0.kFtMxp > div > div:nth-child(3) {
+    	top: calc(30% - 10px);
+    	right: 17px;
+    }
 
-div.u1x7p5-0.kFtMxp > div > div:nth-child(3) {
-    top: calc(30% - 10px);
-    right: 17px;
-}
-
-    /* Sort By */
-    #overlayScrollContainer > div > :nth-child(1) > div > :nth-child(3) > :nth-child(1),
-    div.u1x7p5-0.kFtMxp > div > div:nth-child(3) > :nth-child(1) {
-        display: block;
-        background-color: white;
-        color: black;
-        font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
-        font-size: 9pt;
-        font-weight: 400;
-        line-height: 18px;
+	/* Sort By */
+	#overlayScrollContainer > div > :nth-child(1) > div > :nth-child(3) > :nth-child(1),
+	div.u1x7p5-0.kFtMxp > div > div:nth-child(3) > :nth-child(1) {
+		display: block;
+		background-color: white;
+		color: black;
+	    font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+	    font-size: 9pt;
+	    font-weight: 400;
+	    line-height: 18px;
         text-transform: Capitalize;
-    }
-
-    #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(3) > button,
-    div.u1x7p5-0.kFtMxp > div > div:nth-child(3) > button {
-        display: block;
-        padding: 0;
-        height: 18px;
-        line-height: 18px;
-    }
-
-        #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(3) > button > span,
-        div.u1x7p5-0.kFtMxp > div > div:nth-child(3) > button > span {
-            background-color: white;
-            color: #0563C1;
-            font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
-            font-size: 9pt;
-            font-weight: 400;
-            text-transform: capitalize;
-        }
+	}
+	#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(3) > button,
+	div.u1x7p5-0.kFtMxp > div > div:nth-child(3) > button {
+		display: block;
+	    padding: 0;
+	    height: 18px;
+	    line-height: 18px;
+	}
+		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(3) > button > span,
+		div.u1x7p5-0.kFtMxp > div > div:nth-child(3) > button > span {
+			background-color: white;
+			color: #0563C1;
+        	font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+        	font-size: 9pt;
+        	font-weight: 400;
+    		text-transform: capitalize;
+		}
 /********************************************************************** Sort By ***/
 /*** Comments *********************************************************************/
 #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4),
 div.u1x7p5-0.kFtMxp > div > div:nth-child(4) {
-    margin-bottom: 9px;
+	margin-bottom: 9px;
     border-bottom: 2px solid white;
     padding: 0;
     height: calc(60% - 9px);
     overflow-y: scroll;
-    background-color: white;
+	background-color: white;
 }
 
     #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar,
-    div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar {
+	div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar {
         width: 16px;
     }
-
-    #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar-track,
-    div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-track {
-        background-color: #F3F3F3;
-    }
-
-    #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar-thumb,
-    div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-thumb {
-        border: 1px solid #ABABAB;
-        background-color: #FFFFFF;
-    }
-
-        #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar-thumb:hover,
-        div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-thumb:hover {
-            border: 1px solid #ABABAB;
-            background-color: #F0F0F0;
+   		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar-track,
+		div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-track {
+            background-color: #F3F3F3;
         }
-
-    #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar-button,
-    div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-button {
-        border: 1px solid #ABABAB;
-        background-color: #FFFFFF;
-    }
-
-        #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar-button:hover,
-        div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-button:hover {
-            border: 1px solid #878787;
+   		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar-thumb,
+		div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-thumb {
+            border: 1px solid #ABABAB;
             background-color: #FFFFFF;
         }
+   			#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar-thumb:hover,
+			div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-thumb:hover {
+                border: 1px solid #ABABAB;
+                background-color: #F0F0F0;
+            }
+   		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar-button,
+		div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-button {
+            border: 1px solid #ABABAB;
+            background-color: #FFFFFF;
+        }
+   			#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar-button:hover,
+			div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-button:hover {
+                border: 1px solid #878787;
+                background-color: #FFFFFF;
+            }
 
 /* Container for Individual Comments */
 .Comment {
@@ -1023,97 +1011,93 @@ div.u1x7p5-0.kFtMxp > div > div:nth-child(4) {
 
     .Comment > :nth-child(2) {
         padding: 0;
-        width: 100%;
+    	width: 100%;
         max-width: 100%;
     }
-
-        .Comment > :nth-child(2) a,
+    	.Comment > :nth-child(2) a,
         [id|="moreComments"] p {
-            color: #0563C1;
-            font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
-            font-size: 11pt;
-            font-weight: 400;
-            line-height: 14px;
+	    	color: #0563C1;
+	    	font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
+	    	font-size: 11pt;
+	    	font-weight: 400;
+	    	line-height: 14px;
         }
-
-[id|="moreComments"] p {
-    height: 16px;
-}
-
-/* Username, Flair, Points, Timestamp */
-.Comment > :nth-child(2) > :nth-child(2) > * {
-    margin: 0;
-    padding-left: 0;
-    padding-right: 4px;
-}
-
-.Comment > :nth-child(2) > :nth-child(2) span {
-    color: black;
-    font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
-    font-size: 11pt;
-    font-weight: 400;
-    line-height: 18px;
-}
-
-
-/* Flair */
-.Comment > :nth-child(2) > :nth-child(2) > :nth-child(2) {
-    background-color: white !important;
-    color: #AAA !important;
-}
-
-    .Comment > :nth-child(2) > :nth-child(2) > :nth-child(2) > span {
-    }
-/* Points */
-.Comment > :nth-child(2) > :nth-child(2) > span {
-    color: black;
-    font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
-    font-size: 11pt;
-    font-weight: 400;
-    line-height: 18px;
-}
-
-/* Content */
-[data-test-id="post-content"] p,
-[data-test-id="post-content"] th,
-[data-test-id="post-content"] td,
-[data-test-id="comment"] p,
-[data-test-id="comment"] th,
-[data-test-id="comment"] td {
-    border-color: black;
-    background-color: white;
-    color: black;
-    font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
-    font-size: 11pt;
-    font-weight: 400;
-    line-height: 18px;
-}
-
-/* Actions (Reply, Give Award, Share, etc.) */
-.Comment > :nth-child(2) > :nth-child(4) {
-    margin: 0;
-}
-
-.Comment > :nth-child(2) button {
-    background-color: white;
-    color: black;
-    font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
-    font-size: 11pt;
-    font-weight: 400;
-    line-height: 18px;
-}
-
-.Comment button i.icon.icon-expand {
-    position: relative;
-    top: 11px;
-}
-
+        
+        [id|="moreComments"] p {
+        	height: 16px;
+        }
+    
+    	/* Username, Flair, Points, Timestamp */
+        .Comment > :nth-child(2) > :nth-child(2) > * {
+        	margin: 0;
+            padding-left: 0;
+            padding-right: 4px;
+        }
+        .Comment > :nth-child(2) > :nth-child(2) span {
+        	color: black;
+		    font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
+		    font-size: 11pt;
+		    font-weight: 400;
+		    line-height: 18px;
+        }
+        
+        
+        /* Flair */
+        .Comment > :nth-child(2) > :nth-child(2) > :nth-child(2) {
+        	background-color: white !important;
+            color: #AAA !important;
+        }
+        .Comment > :nth-child(2) > :nth-child(2) > :nth-child(2) > span {
+        }
+        /* Points */
+        .Comment > :nth-child(2) > :nth-child(2) > span {
+		    color: black;
+		    font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
+		    font-size: 11pt;
+		    font-weight: 400;
+		    line-height: 18px;
+        }
+    
+        /* Content */
+        [data-test-id="post-content"] p,
+    	[data-test-id="post-content"] th,
+    	[data-test-id="post-content"] td,
+        [data-test-id="comment"] p,
+    	[data-test-id="comment"] th,
+    	[data-test-id="comment"] td {
+        	border-color: black;
+            background-color: white;
+		    color: black;
+		    font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
+		    font-size: 11pt;
+		    font-weight: 400;
+		    line-height: 18px;
+        }
+        
+        /* Actions (Reply, Give Award, Share, etc.) */
+        .Comment > :nth-child(2) > :nth-child(4) {
+        	margin: 0;
+        }
+    	.Comment > :nth-child(2) button {
+		    background-color: white;
+		    color: black;
+		    font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
+		    font-size: 11pt;
+		    font-weight: 400;
+		    line-height: 18px;
+		}
+        
+        .Comment button i.icon.icon-expand {
+        	position: relative;
+            top: 11px;
+        }
+        
 [id|="moreComments"] > div {
-    padding: 0;
+	padding: 0;
 }
 
 .threadline {
-    border-right: 1px solid #ABABAB !important;
+	border-right: 1px solid #ABABAB !important;
 }
 /********************************************************************* Comments ***/
 /* User Flair */
@@ -1133,6 +1117,6 @@ span._2fCzxBE1dlMh4OFc7B3Dun {
 
 /* Comments Loading */
 div._2o0N1VHuLszWHqY5A8iayv {
-    display: none;
+	display: none;
 }
 /**********************************************************************************/
