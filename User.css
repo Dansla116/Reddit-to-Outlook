@@ -1,7 +1,12 @@
 /*** User Profile Pages ***********************************************************/
-/* 8/5/19 *************************************************************************/
 /* Regex: .*reddit\.com\/user\/(?!.*\/m\/.*\/).*                                  */
 /**********************************************************************************/
-html {
-    
+div[data-redditstyle="true"] + div {
+	position: fixed;
+    left: var(--folders-width);
+    top: var(--banner-height);
+    width: calc(100vw - var(--folders-width) - var(--actions-width));
+    height: var(--content-height);
+    max-height: var(--content-height);
+    overflow-y: scroll;
 }
