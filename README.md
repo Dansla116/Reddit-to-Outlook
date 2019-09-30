@@ -14,4 +14,5 @@ Stylish CSS to make Reddit look like Microsoft Outlook
 
 # Setup Reddit
 1. Change view to "Compact" as oppossed to "Card" or "Clasic".
-2. Turn "Night Mode" on.
+2. Expand "My Communities" dropdown and pin to left-side.
+3. Turn "Night Mode" on.
