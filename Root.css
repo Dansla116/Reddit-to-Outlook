@@ -440,10 +440,10 @@ button#ListingSort--SortPicker {
 }
 
 	#overlayScrollContainer {
-		top: var(--banner-height);
-    		left: calc(var(--left-side-width) + 7px);
-        	height: calc(var(--content-height) - 18px);
-    		width: calc(var(--content-width) - 31px);
+	    top: var(--banner-height);
+    	left: calc(var(--left-side-width) + 7px);
+        height: calc(var(--content-height) - 18px);
+    	width: calc(var(--content-width) - 31px);
 	}
 
 	[style="max-width:1600px"]+[style="max-width:1600px"] {
@@ -729,7 +729,7 @@ button#ListingSort--SortPicker {
             }
             
 	/* Image Post */
-	[data-test-id="post-content"] > :nth-last-child(2) a {
+	[data-test-id="post-content"] > :nth-last-child(2) a[href$=".jpg"] {
 	    width: 100%;
 	    height: auto;
 	    cursor: unset;
@@ -742,8 +742,8 @@ button#ListingSort--SortPicker {
 		    padding-right: auto;
 		    background-color: white !important;
 		}
-		[data-test-id="post-content"] > :nth-last-child(2) a::before,
-		[data-test-id="post-content"] > :nth-last-child(2) a::after {
+		[data-test-id="post-content"] > :nth-last-child(2) a[href$=".jpg"]::before,
+		[data-test-id="post-content"] > :nth-last-child(2) a[href$=".jpg"]::after {
 		    position: relative;
 		    z-index: 1;
 		    padding-left: 8px;
@@ -753,11 +753,11 @@ button#ListingSort--SortPicker {
 		    font-weight: 400;
 		    line-height: 16px;
 		}
-			[data-test-id="post-content"] > :nth-last-child(2) a::before {
+			[data-test-id="post-content"] > :nth-last-child(2) a[href$=".jpg"]::before {
 			    content: "Scroll down to view content.";
 			    top: 5px;
 			}
-			[data-test-id="post-content"] > :nth-last-child(2) a::after {
+			[data-test-id="post-content"] > :nth-last-child(2) a[href$=".jpg"]::after {
 			    content: "Scroll up to view content.";
 			    bottom: 5px;
 			}
