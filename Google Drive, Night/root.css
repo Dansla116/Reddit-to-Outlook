@@ -1,0 +1,422 @@
+/*** Root *************************************************************************/
+/*** on domain: drive.google.com                                               ****/
+/**********************************************************************************/
+:root {
+	--header-background: #232323;
+    --sidebar-background: #282828;
+    --content-background: #1F1F1F;
+    --button-background: #393939;
+    --input-background: #121212;
+    --input-placeholder: #757575;
+    --trim-color: #8CB3E9;
+    --icon-fill: #747474;
+    --icon-fill-hover: #9C9C9C;
+}
+
+/* All Icons on the page that should be white */
+svg[fill="#000000"] > path:not([fill="none"]) {
+    fill: var(--icon-fill);
+}
+
+/* All input fields */
+input {
+	background-color: var(--input-background) !important;
+    color: white;
+}
+	input::placeholder {
+		color: var(--input-placeholder) !important;
+	}
+/*** Header ***********************************************************************/
+/* Header Background */
+header > div:nth-child(2) {
+    background-color: var(--header-background);
+}
+
+/* Google "Drive" Text */
+[title="Drive"] > span {
+    border-radius: 0;
+	opacity: 1 !important;
+	color: #FFFFFF !important;
+}
+	[title="Drive"] > span:hover {
+		text-decoration: underline;
+	}  
+
+/* White border behind search bar */
+#aso_search_form_anchor {
+	border: 0;
+    border-radius: 0;
+	background: var(--input-background);
+}
+
+/* Search Button */
+[aria-label="Search Google Drive"] {
+    background-color: var(--button-background) !important;
+}
+	[aria-label="Search Google Drive"] > svg {
+		opacity: 1;
+		fill: var(--icon-fill);
+	}
+	[aria-label="Search Google Drive"]:hover > svg {
+		fill: var(--icon-fill-hover);
+	}
+
+/* Search Input Field */
+[aria-label="Search Drive"] {
+	position: relative !important;
+    top: -11px;
+    padding: 13px 11px !important;
+    background-color: var(--input-background) !important;
+    opacity: 1;
+    color: #e3e3e3 !important;
+}
+	[aria-label="Search Drive"]::placeholder {
+	    color: var(--input-placeholder) !important;
+	}
+
+/* Cancel Button */
+[aria-label="Clear search"] {
+    visibility: visible;
+    border-radius: 0;
+    background-color: var(--button-background) !important;
+}
+	[aria-label="Clear search"] > svg {
+		opacity: 1;
+		fill: var(--icon-fill);
+	}
+	[aria-label="Clear search"]:hover > svg {
+		fill: var(--icon-fill-hover);
+	}
+
+/* Dropdown Button */
+[aria-label="Search options"] {
+    border-top-right-radius: 5px;
+    background-color: var(--button-background) !important;
+}
+	[aria-label="Search options"] > svg {
+		opacity: 1;
+	    fill: #747474;
+	}
+	[aria-label="Search options"]:hover > svg {
+		fill: #9C9C9C;
+	}
+
+/******* More Options Dropdown ****************************************************/
+/* Labels & Button */
+[role="dialog"] > form div,
+[role="dialog"] > form span:not([role="link"]),
+[role="dialog"] > form label {
+	color: white !important;
+}
+
+[role="dialog"] > form span[role="link"],
+[role="dialog"] > form div[role="button"]:not([aria-label="Close search options"]) {
+	background-color: var(--button-background) !important;
+}
+/**************************************************** More Options Dropdown *******/
+
+[role="dialog"] > form div[role="button"][aria-label="Close search options"] > svg > polygon {
+	fill: #F88;
+}
+
+/* Dropdown when you click on search textbox */
+[role="listbox"] {
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	background-color: var(--input-background) !important;
+}
+	[role="listbox"] > :last-child > div {
+    	background-color: var(--input-background);
+        color: white;
+    }
+    
+[role="dialog"] [role="option"] > div {
+	border: 0 !important;
+    padding: 0 47px !important;
+    background-color: black !important;
+}
+
+	[role="dialog"] [role="option"] > div > span > span > div {
+		color: white;
+	}
+    
+	[role="dialog"] [role="option"] > div:hover {
+    	background-color: #474747 !important;
+    }
+    
+[role="dialog"] > form [role="menu"] {
+	background-color: var(--input-background);
+}
+	[role="dialog"] > form [role="menu"]::after {
+    	display: none;
+    }
+    [role="dialog"] > form [role="menu"] [role="menuitem"]:hover {
+    	background-color: var(--button-background);
+    }
+    
+/* weird thing that makes dropdown icons shift left when hovered over */
+div.a-s-yd-J.a-s-yd-Sa.Sa > div > span.h-v-c.a-v-c {
+    padding-left: 1px;
+}
+
+/* thin white border between header that has search bar and header for content */
+#drive_main_page > div > div > div > div > div > :first-child {
+	border: none;
+}
+/*********************************************************************** Header ***/
+/*** Sub-Header *******************************************************************/
+#drive_main_page > div > div > div > div > div > :nth-child(2) {
+	background-color: #232323;
+}
+
+#drive_main_page > div > div > div > div > div > :nth-child(2) > :nth-child(2) {
+	border: none;
+}
+
+/* New Button */
+button[aria-label="New"] {
+	background-color: var(--button-background) !important;
+    color: white !important;
+}
+
+[role="button"] > div,
+[guidedhelpid="folder_path"] [role="link"],
+[guidedhelpid="folder_path"] [role="button"] {
+	color: white;
+}
+/******************************************************************* Sub-Header ***/
+/*** Sidebar **********************************************************************/
+[data-target="sidebar"] {
+	background-color: var(--sidebar-background);
+}
+
+	[data-target="sidebar"] > div {
+		background-color: var(--sidebar-background);
+	}
+        
+	/* removing right padding */
+	[data-target="sidebar"] [role="navigation"] [role="tree"] {
+		padding: 0;
+	}
+
+	/* Locations & Folders */
+	[data-target="sidebar"] [role="treeitem"][aria-selected="false"] span {
+	    color: white;
+	}
+    
+	[data-target="sidebar"] [role="treeitem"][aria-selected="true"] > div:first-child,
+    [data-target="sidebar"] [role="treeitem"]:hover > div {
+		background-color: var(--button-background);
+	}
+		[data-target="sidebar"] [role="treeitem"][aria-selected="true"] > div:first-child svg,
+		[data-target="sidebar"] [role="treeitem"][aria-selected="true"] > div:first-child svg path {
+			fill: var(--trim-color);
+		}
+		[data-target="sidebar"] [role="treeitem"][aria-selected="true"] > div:first-child span {
+			color: var(--trim-color);
+    	}
+
+	[data-target="sidebar"] [role="treeitem"][aria-selected="true"] [aria-selected="false"] {
+		background-color: #282828;
+	}
+
+	/* Storage Quota */
+	/* "Storage" */
+    [guidedhelpid="main_nav"] > div > :nth-child(2) span {
+    	color: white;
+    }
+        
+    /* Remaining Storage Line */
+    [guidedhelpid="main_nav"] > div > :nth-child(2) svg:last-child rect {
+    	fill: black;
+    }
+    
+    /* Links */
+	[guidedhelpid="main_nav"] > div > :nth-child(2) a {
+    	color: var(--trim-color) !important;
+    }
+
+/* thing that looks like a white border on the right but is actually the background */
+#drive_main_page > :nth-child(2) > :first-child > :nth-child(2) > :first-child > :first-child > :first-child > :first-child > :first-child {
+	background-color: var(--content-background);
+}
+
+/********************************************************************** Sidebar ***/
+/*** Content **********************************************************************/
+[guidedhelpid="main_container"] {
+	background-color: var(--content-background);
+}
+
+/* Content Header */
+[guidedhelpid="main_container"] > div > div:first-child > c-wiz:first-child > div:nth-child(2) > c-wiz:first-child > div:first-child > c-wiz:first-child > div:first-child > div:first-child {
+	background-color: var(--header-background);
+}
+[guidedhelpid="main_container"] [data-column-field][data-column-width] {
+	color: white;
+}
+
+/* List View Text */
+[role="gridcell"] {
+	cursor: pointer; 
+}
+
+[role="gridcell"]:hover {
+	background-color: var(--button-background);
+}
+[role="gridcell"] * {
+	color: white;
+}
+
+c-wiz[role="grid"] > div > c-wiz > div > [aria-selected="true"] {
+	background-color: var(--button-background);
+}
+
+/* Shared with me */
+[data-target="selectionArea"] [role="presentation"] {
+	border: none !important;
+}
+
+[data-target="doc"] {
+	background-color: var(--content-background);
+}
+	[data-target="doc"] [data-target="itemUploadDrop"],
+	[data-target="doc"] [data-target="itemUploadDrop"]+*,
+	[data-target="doc"] [data-target="itemUploadDrop"]+*+* {
+    	border: none;
+    }
+		[data-target="doc"] [data-target="itemUploadDrop"] span {
+    		color: white !important;
+    	}
+
+/* removing ugly-ass white borders on every element */
+c-wiz[role="grid"] > div > c-wiz > div {
+	border: none !important;
+}
+/********************************************************************** Content ***/
+/*** Right Sidebar ****************************************************************/
+/* Title & Details / Activites */
+[data-target="sidebar"] [data-label="default"] > div {
+	background-color: var(--header-background);
+    color: white;
+}
+
+[data-target="sidebar"] [data-label="default"] [style="user-select: none;"][aria-selected="false"],
+[data-target="sidebar"] [data-label="default"] [aria-label*="Google Drive Folder"] > div {
+	color: white;
+}
+
+[data-target="sidebar"] [data-label="default"] [style="user-select: none;"][aria-selected="true"] {
+	color: var(--trim-color);
+}
+
+[data-target="sidebar"] [data-label="default"] [style="user-select: none;"][aria-selected="true"] [style="user-select: none;"] > [style="user-select: none;"] {
+	border-bottom-color: var(--trim-color);
+    
+}
+
+[data-target="sidebar"] [data-label="default"] > :first-child > :nth-child(2) > :first-child > :first-child > :first-child > :first-child > :first-child > :first-child > :first-child {
+	width: 100%;
+	background-color: var(--sidebar-background);
+}
+
+/* removing left border */
+[data-target="sidebar"] [data-label="default"] > :first-child,
+[data-target="sidebar"] [data-label="default"] > :first-child > :nth-child(2) {
+	border: none;
+}
+
+/* removing right border */
+#drive_main_page > :nth-child(2) > :nth-child(3) {
+	border: none;
+}
+
+/* Main Content */
+[data-target="sidebar"] [data-label="default"] > :first-child > :nth-child(2) > :first-child {
+	background-color: var(--sidebar-background);
+}
+/**************************************************************** Right Sidebar ***/
+
+/*** Popups ***********************************************************************/
+[role="dialog"],
+[role="menu"] {
+	box-shadow: 0 0px 20px 1px var(--trim-color) !important;
+}
+[role="menu"],
+[role="dialog"] {
+	background-color: var(--content-background);
+}
+[role="menu"]::after {
+	display: none;
+}
+
+[role="menu"] div {
+	color: white;
+}
+
+[role="menu"] > div div:hover {
+	background-color: var(--button-background);
+}
+
+[role="dialog"] > :not(form):first-child > div,
+[role="dialog"] > :not(form):first-child {
+	background-color: var(--header-background);
+}
+[role="dialog"] > :not(form):first-child > span {
+	color: white;
+}
+	[role="dialog"] > :not(form):first-child > span > svg > polygon {
+    	fill: #F88 !important;
+    }
+
+[aria-label="Close"] {
+
+}
+
+	[role="dialog"] > :last-child {
+    	border: none;
+		background-color: var(--content-background);
+	}
+    	[role="dialog"] > :last-child [aria-label*="File Upload"] > div {
+        	border: none;
+        }
+        [role="dialog"] > :last-child [aria-label*="File Upload"] span {
+        	color: white;
+        }
+/*********************************************************************** Popups ***/
+
+/*** Modal (with real classes!) ***************************************************/
+.modal-dialog {
+	color: white;
+    top: 0 !important;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.slc-input {
+	color: white;
+}
+
+.modal-dialog-title {
+	background-color: var(--header-background);
+}
+
+.modal-dialog-content {
+	background-color: var(--content-background);
+}
+
+.inviter-recipient-area,
+.inviter-role-selector {
+	background-color: var(--input-background);
+    background-image: none;
+}
+
+.apc-name,
+.apc-email-contents, .apc-detail {
+	color: white;
+}
+
+.ia-invite-controls-area {
+	background-color: var(--content-background);
+}
+/*************************************************** Modal (with real classes!) ***/
