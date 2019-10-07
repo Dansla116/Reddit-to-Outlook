@@ -51,6 +51,7 @@ header > div:nth-child(2) {
 
 /* Search Button */
 [aria-label="Search Google Drive"] {
+	border-top-left-radius: 5px;
     background-color: var(--button-background) !important;
 }
 	[aria-label="Search Google Drive"] > svg {
@@ -88,6 +89,18 @@ header > div:nth-child(2) {
 		fill: var(--icon-fill-hover);
 	}
 
+#aso_search_form_anchor [role="listbox"] [role="option"] > div {
+	padding: 0 50px;
+}
+	
+	#aso_search_form_anchor [role="listbox"] [role="option"] > div:hover {
+    	background-color: var(--button-background);
+    }
+
+	#aso_search_form_anchor [role="listbox"] [role="option"] > div span {
+    	color: white;
+    }
+
 /* Dropdown Button */
 [aria-label="Search options"] {
     border-top-right-radius: 5px;
@@ -120,13 +133,13 @@ header > div:nth-child(2) {
 }
 
 /* Dropdown when you click on search textbox */
-[role="listbox"] {
+#aso_search_form_anchor [role="listbox"] {
 	border-bottom: 1px solid white;
 	border-left: 1px solid white;
 	border-right: 1px solid white;
 	background-color: var(--input-background) !important;
 }
-	[role="listbox"] > :last-child > div {
+	#aso_search_form_anchor [role="listbox"] > :last-child > div {
     	background-color: var(--input-background);
         color: white;
     }
@@ -222,6 +235,10 @@ button[aria-label="New"] {
 	}
 
 	/* Storage Quota */
+    [guidedhelpid="main_nav"] > div > :nth-child(2)::before {
+    	margin: 8px 0;
+    }
+    
 	/* "Storage" */
     [guidedhelpid="main_nav"] > div > :nth-child(2) span {
     	color: white;
@@ -257,15 +274,22 @@ button[aria-label="New"] {
 }
 
 /* List View Text */
-[role="gridcell"] {
+[role="gridcell"],
+[aria-label="Starred list view"] > div {
 	cursor: pointer; 
 }
 
-[role="gridcell"]:hover {
-	background-color: var(--button-background);
+[role="gridcell"]:hover,
+[aria-label="Starred list view"] > div:hover {
+	background-color: var(--button-background) !important;
 }
-[role="gridcell"] * {
+[role="gridcell"] *,
+[aria-label="Starred list view"] > div * {
 	color: white;
+}
+
+[aria-label="Starred list view"] > div > div:last-child {
+	border-bottom: none !important
 }
 
 c-wiz[role="grid"] > div > c-wiz > div > [aria-selected="true"] {
@@ -293,6 +317,20 @@ c-wiz[role="grid"] > div > c-wiz > div > [aria-selected="true"] {
 c-wiz[role="grid"] > div > c-wiz > div {
 	border: none !important;
 }
+
+[role="presentation"] {
+	background-color: var(--content-background) !important;
+}
+	[role="presentation"]:hover::-webkit-scrollbar-track {
+    	
+		background-color: var(--button-background) !important;
+        
+    }
+
+
+[role="main"] [aria-selected="false"] {
+	background-color: var(--content-background);
+}
 /********************************************************************** Content ***/
 /*** Right Sidebar ****************************************************************/
 /* Title & Details / Activites */
@@ -302,7 +340,7 @@ c-wiz[role="grid"] > div > c-wiz > div {
 }
 
 [data-target="sidebar"] [data-label="default"] [style="user-select: none;"][aria-selected="false"],
-[data-target="sidebar"] [data-label="default"] [aria-label*="Google Drive Folder"] > div {
+[data-target="sidebar"] [data-label="default"] [aria-label][role="link"][data-target="open"] div[title] {
 	color: white;
 }
 
@@ -335,6 +373,17 @@ c-wiz[role="grid"] > div > c-wiz > div {
 [data-target="sidebar"] [data-label="default"] > :first-child > :nth-child(2) > :first-child {
 	background-color: var(--sidebar-background);
 }
+
+/* Empty */
+[data-target="sidebar"] [data-label="empty"] > div {
+    background-color: var(--sidebar-background);
+}
+	[data-target="sidebar"] [data-label="empty"] > div div {
+    	color: white;
+    }
+	[data-target="sidebar"] [data-label="empty"] > div path {
+    	fill: white;
+    }
 /**************************************************************** Right Sidebar ***/
 
 /*** Popups ***********************************************************************/
