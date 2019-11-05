@@ -21,10 +21,11 @@ html *::-webkit-scrollbar {
   --footer-height: 21px;
   --content-height: calc(100vh - (var(--banner-height) + var(--footer-height)));
   
-  
   --background-color: #262626;
   --border-color: #444444;
   --folders-color: background: linear-gradient(to bottom, var(--background-color) 0%,#1b1b1b 100%);
+  
+  --link-color: #0563C1;
 }
 
 /*** Background Color *************************************************************/
@@ -46,6 +47,25 @@ header {
 	    z-index: -1;
 	    top: 0;
 	}
+
+/* Community Dropdown */
+div[aria-label^="Start"] {
+	visibility: visible;
+	position: absolute;
+    z-index: 3;
+    left: 0;
+    top: var(--banner-height);
+    width: var(--folders-width);
+}
+div[aria-label^="Start"] > button {
+	display: block;
+    background-color: #252525;
+}
+
+div[aria-label^="Start"] > svg {
+	position: absolute;
+    z-index: 3;
+}
 
 /* Search Bar (Fixed Positioned to Top of Mailbox) */
 #SearchDropdown {
@@ -508,10 +528,12 @@ button#ListingSort--SortPicker {
 #overlayScrollContainer > div > :nth-child(1) > div > :nth-child(2),
 #overlayScrollContainer > div > :nth-child(1) > div > :nth-child(3),
 #overlayScrollContainer > div > :nth-child(1) > div > :nth-child(4),
+#overlayScrollContainer > div > :nth-child(1) > div > :nth-last-child(1),
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(1),
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(2),
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(3),
-[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(4) {
+[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(4),
+[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-last-child(1) {
 	margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -821,7 +843,7 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 
     [data-test-id="comment-submission-form-markdown"] a,
     [data-test-id="comment-submission-form-markdown"] button {
-        color: #0563C1;
+        color: var(--link-color);
     }
     
     [data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) {
@@ -903,7 +925,7 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 /* Username */
 #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2) > :nth-child(1) a,
                           div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(1) a {
-    color: #0563C1;
+    color: var(--link-color);
 }
 /* Container for buttons / "Switch To Markdown" / "Comment" below textbox */
 [data-test-id="comment-submission-form-richtext"] + div {
@@ -923,7 +945,7 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
     [data-test-id="comment-submission-form-richtext"] + div [role="button"] > span {
     	position: relative;
         left: 35px;
-        color: #0563C1;
+        color: var(--link-color);
     }
 
 #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2) > :nth-child(2) > :nth-child(1) > :nth-child(1),
@@ -975,16 +997,33 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(3) > button > span,
 		div.u1x7p5-0.kFtMxp > div > div:nth-child(3) > button > span {
 			background-color: white;
-			color: #0563C1;
+			color: var(--link-color);
         	font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
         	font-size: 9pt;
         	font-weight: 400;
     		text-transform: capitalize;
 		}
 /********************************************************************** Sort By ***/
+
+/*** View Discussion in Other Community *******************************************/
+#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4) {
+	position: absolute;
+    right: 0;
+    z-index: 1;
+	padding: 0;
+    background-color: transparent;
+}
+#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4) > a {
+	position: relative;
+    right: 17px;
+    color: var(--link-color);
+    font-weight: 400;
+}
+/******************************************* View Discussion in Other Community ***/
+
 /*** Comments *********************************************************************/
-#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4),
-[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-child(4) {
+#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1),
+[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-last-child(1) {
     border-bottom: 2px solid white;
     padding: 0;
     height: 60%;
@@ -992,30 +1031,30 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 	background-color: white;
 }
 
-    #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar,
+    #overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar,
 	div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar {
         width: 16px;
     }
-   		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar-track,
+   		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-track,
 		div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-track {
             background-color: #F3F3F3;
         }
-   		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar-thumb,
+   		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-thumb,
 		div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-thumb {
             border: 1px solid #ABABAB;
             background-color: #FFFFFF;
         }
-   			#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar-thumb:hover,
+   			#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-thumb:hover,
 			div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-thumb:hover {
                 border: 1px solid #ABABAB;
                 background-color: #F0F0F0;
             }
-   		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar-button,
+   		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-button,
 		div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-button {
             border: 1px solid #ABABAB;
             background-color: #FFFFFF;
         }
-   			#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4)::-webkit-scrollbar-button:hover,
+   			#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-button:hover,
 			div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-button:hover {
                 border: 1px solid #878787;
                 background-color: #FFFFFF;
@@ -1035,7 +1074,7 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
     }
     	.Comment > :nth-child(2) a,
         [id|="moreComments"] p {
-	    	color: #0563C1;
+	    	color: var(--link-color);
 	    	font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
 	    	font-size: 11pt;
 	    	font-weight: 400;
