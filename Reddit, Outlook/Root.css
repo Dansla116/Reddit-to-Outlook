@@ -1024,10 +1024,11 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 /*** Comments *********************************************************************/
 #overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1),
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-last-child(1) {
-    border-bottom: 2px solid white;
-    padding: 0;
-    height: 60%;
-    overflow-y: scroll;
+	border-bottom: 2px solid white;
+	padding: 0;
+	height: 60%;
+	width: 100%;
+	overflow-y: scroll;
 	background-color: white;
 }
 
