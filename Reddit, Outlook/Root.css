@@ -2,30 +2,30 @@
 /*** Regex: .*reddit\.com.*                                                    ****/
 /**********************************************************************************/
 html::-webkit-scrollbar {
-    width: 0;
+	width: 0;
 	background: transparent;
 }
 html *::-webkit-scrollbar {
-    width: 0;
+	width: 0;
 	background: transparent;
 }
 
 :root {
-  --folders-width: 226px;
-  --mailbox-width: 314px;
-  --actions-width: 249px;
-  --left-side-width: calc(var(--folders-width) + var(--mailbox-width));
-  --content-width: calc(100vw - (var(--folders-width) + var(--mailbox-width) + var(--actions-width)));
-  
-  --banner-height: 157px;
-  --footer-height: 21px;
-  --content-height: calc(100vh - (var(--banner-height) + var(--footer-height)));
-  
-  --background-color: #262626;
-  --border-color: #444444;
-  --folders-color: background: linear-gradient(to bottom, var(--background-color) 0%,#1b1b1b 100%);
-  
-  --link-color: #0563C1;
+	--folders-width: 226px;
+	--mailbox-width: 314px;
+	--actions-width: 249px;
+	--left-side-width: calc(var(--folders-width) + var(--mailbox-width));
+	--content-width: calc(100vw - (var(--folders-width) + var(--mailbox-width) + var(--actions-width)));
+
+	--banner-height: 157px;
+	--footer-height: 21px;
+	--content-height: calc(100vh - (var(--banner-height) + var(--footer-height)));
+
+	--background-color: #262626;
+	--border-color: #444444;
+	--folders-color: background: linear-gradient(to bottom, var(--background-color) 0%,#1b1b1b 100%);
+
+	--link-color: #0563C1;
 }
 
 /*** Background Color *************************************************************/
@@ -44,64 +44,64 @@ header {
 		content: url("https://i.imgur.com/sCePtwf.png");
 		visibility: visible;
 		position: fixed;
-	    z-index: -1;
-	    top: 0;
+		z-index: -1;
+		top: 0;
 	}
 
 /* Community Dropdown */
 div[aria-label^="Start"] {
 	visibility: visible;
 	position: absolute;
-    z-index: 3;
-    left: 0;
-    top: var(--banner-height);
-    width: var(--folders-width);
+	z-index: 3;
+	left: 0;
+	top: var(--banner-height);
+	width: var(--folders-width);
 }
 div[aria-label^="Start"] > button {
 	display: block;
-    background-color: #252525;
+	background-color: #252525;
 }
 
 div[aria-label^="Start"] > svg {
 	position: absolute;
-    z-index: 3;
+	z-index: 3;
 }
 
 /* Search Bar (Fixed Positioned to Top of Mailbox) */
 #SearchDropdown {
 	visibility: visible;
 	position: fixed;
-    left: var(--folders-width);
-    top: var(--banner-height);
-    margin-left: 20px;
-    margin-top: 8px;
+	left: var(--folders-width);
+	top: var(--banner-height);
+	margin-left: 20px;
+	margin-top: 8px;
 	height: 20px;
-    pointer-events: all;
+	pointer-events: all;
 }
 	#SearchDropdown > label {
 		position: absolute;
-	    top: 0;
-	    right: 0;
+		top: 0;
+		right: 0;
 		margin-top: 0;
 		margin-right: 10px;
 	}
 		#SearchDropdown > label > svg {
 			position: absolute;
-		    top: 0;
-		    right: 0;
+			top: 0;
+			right: 0;
 			fill: #3676B7;
-		    transform: scaleY(0.68) scaleX(-0.68);
+			transform: scaleY(0.68) scaleX(-0.68);
 		}
 
 	#SearchDropdown > form > input {
 		border-color: #686868;
-    	border-radius: 0;
-    	padding-left: 7px;
+		border-radius: 0;
+		padding-left: 7px;
 		height: 20px;
-    	width: 173px;
-    	background-color: #363636;
-    	font-family: "Segoe UI";
-    	font-size: 8pt;
+		width: 173px;
+		background-color: #363636;
+		font-family: "Segoe UI";
+		font-size: 8pt;
 	}
 		#SearchDropdown > form > input::placeholder {
 			color: #9E9E9E;
@@ -111,13 +111,13 @@ div[aria-label^="Start"] > svg {
 header > :nth-child(1) > :nth-child(2) > div {
 	visibility: visible;
 	position: fixed;
-    bottom: var(--footer-height);
-    margin: 0;
-    border: 0;
-    width: calc(var(--folders-width) / 2);
-    overflow-x: hide;
-    pointer-events: all;
-    background-color: #383838;
+	bottom: var(--footer-height);
+	margin: 0;
+	border: 0;
+	width: calc(var(--folders-width) / 2);
+	overflow-x: hide;
+	pointer-events: all;
+	background-color: #383838;
 }
 	header > :nth-child(1) > :nth-child(2) > div:nth-child(1) {
 		left: 0px;
@@ -127,15 +127,15 @@ header > :nth-child(1) > :nth-child(2) > div {
 	}
 
 	header > :nth-child(1) > :nth-child(2) > div span {
-    	margin-left: 0;
-    }
+		margin-left: 0;
+	}
 	header > :nth-child(1) > :nth-child(2) > div a {
 		margin-left: 0 !important;
 		padding-top: 13.5px;
-	    padding-bottom: 13.5px;
-	    padding-left: 10.5px;
-	    padding-right: 10.5px;
-	    transition: background-color 0.5s;
+		padding-bottom: 13.5px;
+		padding-left: 10.5px;
+		padding-right: 10.5px;
+		transition: background-color 0.5s;
 	}
 		header > :nth-child(1) > :nth-child(2) > div a:hover {
 			background-color: #0072C6;
@@ -149,16 +149,16 @@ header > :nth-child(1) > :nth-child(2) > div {
 /* User Name (Fixed Positioned to Top of Header) */
 #email-collection-tooltip-id > :nth-child(2) > :nth-child(1) {
 	visibility: visible;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 8px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-top: 8px;
 	width: 100vw;
-    text-align: center;
-    pointer-events: none;
+	text-align: center;
+	pointer-events: none;
 	color: white;
-    font-family: "Segoe UI";
-    font-weight: 400;
+	font-family: "Segoe UI";
+	font-weight: 400;
 }
 	#email-collection-tooltip-id > :nth-child(2) > :nth-child(1)::before {
 		content: "Inbox  -  u/";
@@ -166,25 +166,25 @@ header > :nth-child(1) > :nth-child(2) > div {
 	#email-collection-tooltip-id > :nth-child(2) > :nth-child(1)::after {
 		content: "@reddit.com  -  Outlook";
 	}
-    
+
 /* Karma (Fixed Positioned to Bottom Left of Status Bar) */
 #email-collection-tooltip-id > span {
 	visibility: visible;
 	position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid #999999;
-    padding-top: 1px;
-    padding-bottom: 3px;
-    padding-left: 9px;
-    pointer-events: none;
-    background-color: var(--background-color);
-    color: white;
-    font-family: "Segoe UI";
-    font-size: 8.5pt;
-    font-weight: 400;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-top: 1px solid var(--border-color);
+	border-bottom: 1px solid #999999;
+	padding-top: 1px;
+	padding-bottom: 3px;
+	padding-left: 9px;
+	pointer-events: none;
+	background-color: var(--background-color);
+	color: white;
+	font-family: "Segoe UI";
+	font-size: 8.5pt;
+	font-weight: 400;
 }
 /*********************************************************************** Header ***/
 
@@ -193,50 +193,50 @@ header > :nth-child(1) > :nth-child(2) > div {
 [role="menuitem"] svg,
 [role="menuitem"] img {
 	display: none;
-    visibility: hidden;
+	visibility: hidden;
 }
 /*** Folder Pane > Containers *****************************************************/
 /* BOOKMARK: Folder Pane - parent of [role="menu"] */
 ._20fGT0XJD3MvX9yBsVeKMn.zoWOQnp55WuhEugRSwfw1 {
 	top: var(--banner-height);
-    margin-top: 8px;
+	margin-top: 8px;
 	width: var(--folders-width) !important;
-    border-right: 1px solid var(--border-color);
-    background: linear-gradient(to bottom, var(--background-color) 0%, #1b1b1b 100%);
+	border-right: 1px solid var(--border-color);
+	background: linear-gradient(to bottom, var(--background-color) 0%, #1b1b1b 100%);
 }
 
 [role="menu"] {
 	position: fixed;
-    z-index: 2;
+	z-index: 2;
 	top: var(--banner-height);
 	max-height: calc(var(--content-height) - 46px);
 	width: calc(var(--folders-width) - 6px);
-    overflow-y: scroll;
-    background: linear-gradient(to bottom, var(--background-color) 0%, #1b1b1b 100%);
+	overflow-y: scroll;
+	background: linear-gradient(to bottom, var(--background-color) 0%, #1b1b1b 100%);
 }
-    /* Scrollbar */
+	/* Scrollbar */
 	div[role="menu"]::-webkit-scrollbar {
 		display: none;
-        width: 15px;
+		width: 15px;
 	}
 		div[role="menu"]::-webkit-scrollbar-track {
-            background: #343434;
-        }
+			background: #343434;
+		}
 		div[role="menu"]::-webkit-scrollbar-thumb,
-        div[role="menu"]::-webkit-scrollbar-button {
-            border: 1px solid #3B3B3B;
-            background: #575757; 
-        }
-        div[role="menu"]::-webkit-scrollbar-thumb:hover {
-            border-color: #101010;
-            background: #808080;
-        }
-        div[role="menu"]::-webkit-scrollbar-button:hover {
-            border: 1px solid #3B3B3B;
-            background: #707070; 
-        }
+		div[role="menu"]::-webkit-scrollbar-button {
+			border: 1px solid #3B3B3B;
+			background: #575757; 
+		}
+		div[role="menu"]::-webkit-scrollbar-thumb:hover {
+			border-color: #101010;
+			background: #808080;
+		}
+		div[role="menu"]::-webkit-scrollbar-button:hover {
+			border: 1px solid #3B3B3B;
+			background: #707070; 
+		}
 
-        div[role="menu"]:hover::-webkit-scrollbar {
+		div[role="menu"]:hover::-webkit-scrollbar {
 			display: block;
 		}
 /***************************************************** Containers < Folder Pane ***/
@@ -246,40 +246,40 @@ header > :nth-child(1) > :nth-child(2) > div {
 	padding-top: 4.5px;
 	padding-bottom: 4.5px;
 	padding-left: 17px;
-    padding-right: 0;
-    cursor: default;
+	padding-right: 0;
+	cursor: default;
 	color: #F0F0F0;
-    font-family: "Segoe UI";
+	font-family: "Segoe UI";
 	font-size: 10pt;
-    font-weight: 400;
-    text-transform: capitalize;
+	font-weight: 400;
+	text-transform: capitalize;
 }
 div[role="menu"] [role="menuitem"] {
 	margin-left: 6px;
 	padding-top: 4.5px;
 	padding-bottom: 4.5px;
 	padding-left: 26px;
-    padding-right: 0px;
-    cursor: default;
+	padding-right: 0px;
+	cursor: default;
 	color: #F0F0F0;
 }
 	div[role="menu"] [role="menuitem"] > span {
 		padding: 0;
-    	font-family: "Segoe UI";
+		font-family: "Segoe UI";
 		font-size: 10pt;
-    	font-weight: 400;
+		font-weight: 400;
 	}
-    div[role="menu"] [role="heading"]:active,
-    div[role="menu"] [role="menuitem"]:active {
+	div[role="menu"] [role="heading"]:active,
+	div[role="menu"] [role="menuitem"]:active {
 		background-color: #0067B0;
 	}
-    div[role="menu"] [role="heading"]:hover,
-    div[role="menu"] [role="menuitem"]:hover {
+	div[role="menu"] [role="heading"]:hover,
+	div[role="menu"] [role="menuitem"]:hover {
 		background-color: #505050;
 	}
-   div[role="menu"] [role="heading"]:focus,
-   div[role="menu"] [role="menuitem"]:focus {
-	    outline: none;
+	div[role="menu"] [role="heading"]:focus,
+	div[role="menu"] [role="menuitem"]:focus {
+		outline: none;
 		background-color: var(--border-color);
 	}
 /******************************************************** Content < Folder Pane ***/
@@ -287,89 +287,89 @@ div[role="menu"] [role="menuitem"] {
 /*** Mailbox > View / Sort ********************************************************/
 #view--layout--FUE {
 	visibility: visible;
-    position: fixed;
-    top: var(--banner-height);
-    right: 0;
-    width: calc(var(--actions-width) - 10px);
-    height: 20px;
-    padding: 10px 0 0 10px;
-    background-color: var(--background-color);
-    z-index: 50;
+	position: fixed;
+	top: var(--banner-height);
+	right: 0;
+	width: calc(var(--actions-width) - 10px);
+	height: 20px;
+	padding: 10px 0 0 10px;
+	background-color: var(--background-color);
+	z-index: 50;
 }
 
 button#ListingSort--SortPicker {
 	visibility: visible;
-    position: fixed;
-    top: 193px;
-    left: 400px;
+	position: fixed;
+	top: 193px;
+	left: 400px;
 	margin: 0;
-    padding: 0;
-    width: auto;
-    height: 20px;
+	padding: 0;
+	width: auto;
+	height: 20px;
 	background-color: var(--background-color);
-    text-transform: capitalize;
+	text-transform: capitalize;
 }
 	button#ListingSort--SortPicker:hover {
 		background-color: #0072C6;
 	}
 	button#ListingSort--SortPicker > :nth-child(1) {
-    	display: none;
-    }
-    button#ListingSort--SortPicker > span {
-        color: #F0F0F0;
-    	font-family: "Segoe UI", IBMPlexSans, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
-    	font-size: 12px;
-        font-weight: 100;
-    }
-    	button#ListingSort--SortPicker > span::before {
-    	    content: "By ";
-    	}
+		display: none;
+	}
+	button#ListingSort--SortPicker > span {
+		color: #F0F0F0;
+		font-family: "Segoe UI", IBMPlexSans, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+		font-size: 12px;
+		font-weight: 100;
+	}
+		button#ListingSort--SortPicker > span::before {
+			content: "By ";
+		}
 /******************************************************** View / Sort < Mailbox ***/
 /*** Right Side *******************************************************************/
 /* Containers and Scrolling */
 ._1BFbVxT49QnrAN3fqGZ1z8 {
 	position: fixed;
-    z-index: 1;
-    top: var(--banner-height);
-    right: 0px;
-    margin-left: 0 !important;
-    margin-top: 8px !important;
-    border-left: 1px solid var(--border-color);
-    padding-left: 9px;
-    padding-right: 8px;
-    padding-top: 193px;
-    width: calc(var(--actions-width) - 25px);
-    height: calc(100vh - 380px);
-    overflow-x: hidden;
-    overflow-y: scroll;
-    pointer-events: none;
+	z-index: 1;
+	top: var(--banner-height);
+	right: 0px;
+	margin-left: 0 !important;
+	margin-top: 8px !important;
+	border-left: 1px solid var(--border-color);
+	padding-left: 9px;
+	padding-right: 8px;
+	padding-top: 193px;
+	width: calc(var(--actions-width) - 25px);
+	height: calc(100vh - 380px);
+	overflow-x: hidden;
+	overflow-y: scroll;
+	pointer-events: none;
 }
-    /* Scrollbar */
-    ._1BFbVxT49QnrAN3fqGZ1z83::-webkit-scrollbar {
-        width: 15px;
-    }
-        ._1BFbVxT49QnrAN3fqGZ1z8::-webkit-scrollbar-track {
-            background: #343434; 
-        }
-        ._1BFbVxT49QnrAN3fqGZ1z8::-webkit-scrollbar-thumb, div.iQdHyy::-webkit-scrollbar-button {
-            border: 1px solid #3B3B3B;
-            background: #575757;
-        }
-        ._1BFbVxT49QnrAN3fqGZ1z8::-webkit-scrollbar-thumb:hover {
-            border-color: #101010;
-            background: #808080;
-        }
-        ._1BFbVxT49QnrAN3fqGZ1z8::-webkit-scrollbar-button:hover {
-            border: 1px solid #3B3B3B;
-            background: #707070;
-        }
+	/* Scrollbar */
+	._1BFbVxT49QnrAN3fqGZ1z83::-webkit-scrollbar {
+		width: 15px;
+	}
+		._1BFbVxT49QnrAN3fqGZ1z8::-webkit-scrollbar-track {
+			background: #343434; 
+		}
+		._1BFbVxT49QnrAN3fqGZ1z8::-webkit-scrollbar-thumb, div.iQdHyy::-webkit-scrollbar-button {
+			border: 1px solid #3B3B3B;
+			background: #575757;
+		}
+		._1BFbVxT49QnrAN3fqGZ1z8::-webkit-scrollbar-thumb:hover {
+			border-color: #101010;
+			background: #808080;
+		}
+		._1BFbVxT49QnrAN3fqGZ1z8::-webkit-scrollbar-button:hover {
+			border: 1px solid #3B3B3B;
+			background: #707070;
+		}
 
 ._1BFbVxT49QnrAN3fqGZ1z8 * {
 	margin: 0;
-    border: 0;
-    padding: 0;
+	border: 0;
+	padding: 0;
 	max-width: 100%;
-    background-color: var(--background-color);
+	background-color: var(--background-color);
 	pointer-events: all;
 }
 
@@ -380,34 +380,34 @@ button#ListingSort--SortPicker {
 ._1BFbVxT49QnrAN3fqGZ1z8 div,
 ._1BFbVxT49QnrAN3fqGZ1z8 a,
 ._1BFbVxT49QnrAN3fqGZ1z8 button {
-    line-height: 13px;
-    text-align: left;
-    font-family: "Segoe UI";
-    font-weight: 400;
-    text-transform: lowercase;
+	line-height: 13px;
+	text-align: left;
+	font-family: "Segoe UI";
+	font-weight: 400;
+	text-transform: lowercase;
 } 
 
 ._1BFbVxT49QnrAN3fqGZ1z8 h1 {
-    color: white;
+	color: white;
 	font-size: 12pt;
 }
 
 ._1BFbVxT49QnrAN3fqGZ1z8 h2 {
-    color: white;
+	color: white;
 	font-size: 10pt;
 }
 
 ._1BFbVxT49QnrAN3fqGZ1z8 p,
 ._1BFbVxT49QnrAN3fqGZ1z8 span,
 ._1BFbVxT49QnrAN3fqGZ1z8 div {
-    color: white;
+	color: white;
 	font-size: 8pt;
 }
 
 ._1BFbVxT49QnrAN3fqGZ1z8 a,
 ._1BFbVxT49QnrAN3fqGZ1z8 button {
-    color: #9BBBDC;
-    font-size: 8pt;
+	color: #9BBBDC;
+	font-size: 8pt;
 }
 
 /* Pictures */
@@ -420,13 +420,13 @@ button#ListingSort--SortPicker {
 ._1BFbVxT49QnrAN3fqGZ1z8 [data-before-content="advertisement"] *,
 ._1BFbVxT49QnrAN3fqGZ1z8 iframe {
 	display: none !important;
-    visibility: hidden !important;
-    width: 0 !important;
-    min-width: 0 !important;
-    max-width: 0 !important;
-    height: 0 !important;
-    min-height: 0 !important;
-    max-height: 0 !important;
+	visibility: hidden !important;
+	width: 0 !important;
+	min-width: 0 !important;
+	max-width: 0 !important;
+	height: 0 !important;
+	min-height: 0 !important;
+	max-height: 0 !important;
 }
 /******************************************************************* Right Side ***/
 /*** Overlay Scroll Container *****************************************************/
@@ -435,43 +435,43 @@ button#ListingSort--SortPicker {
 }
 	[class|="SubredditVars"] > [style*="--comments-overlay-background"] {
 		visibility: hidden;
-        left: var(--left-side-width);
-        top: var(--banner-height) !important;
-        width: var(--content-width);
-        height: var(--content-height);
-    }
-    
-    [class|="SubredditVars"] [class|="SubredditVars"] * {
-    	display: none !important;
-    }
+		left: var(--left-side-width);
+		top: var(--banner-height) !important;
+		width: var(--content-width);
+		height: var(--content-height);
+	}
+
+	[class|="SubredditVars"] [class|="SubredditVars"] * {
+		display: none !important;
+	}
 
 #overlayScrollContainer,
 [style="max-width:1600px"]+[style="max-width:1600px"] {
 	visibility: hidden;
-    position: fixed;
-    margin-top: 8px;
-    border-left: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    padding-left: 12px;
-    padding-right: 17px;
-    padding-bottom: 9px;
-    background-color: var(--background-color);
+	position: fixed;
+	margin-top: 8px;
+	border-left: 1px solid var(--border-color);
+	border-right: 1px solid var(--border-color);
+	border-bottom: 1px solid var(--border-color);
+	padding-left: 12px;
+	padding-right: 17px;
+	padding-bottom: 9px;
+	background-color: var(--background-color);
 }
 
 	#overlayScrollContainer {
-	    top: var(--banner-height);
-    	left: calc(var(--left-side-width) + 7px);
-        height: calc(var(--content-height) - 18px);
-    	width: calc(var(--content-width) - 31px);
+		top: var(--banner-height);
+		left: calc(var(--left-side-width) + 7px);
+		height: calc(var(--content-height) - 18px);
+		width: calc(var(--content-width) - 31px);
 	}
 
 	[style="max-width:1600px"]+[style="max-width:1600px"] {
 		top: calc(var(--banner-height) + 65px);
-    	left: calc(var(--folders-width) + 7px);
-    	width: calc(var(--content-width) + var(--mailbox-width) - 23px);
-    	max-width: calc(var(--content-width) + var(--mailbox-width) - 23px) !important;
-    }
+		left: calc(var(--folders-width) + 7px);
+		width: calc(var(--content-width) + var(--mailbox-width) - 23px);
+		max-width: calc(var(--content-width) + var(--mailbox-width) - 23px) !important;
+	}
 
 /******* Children *****************************************************************/
 #overlayScrollContainer > div,
@@ -479,36 +479,36 @@ button#ListingSort--SortPicker {
 #overlayScrollContainer > div > div > div,
 [style="max-width:1600px"]+[style="max-width:1600px"] > div,
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div {
-    display: block;
-    visibility: visible;
-    margin: 0;
-    border: 0;
-    padding: 0;
-    pointer-events: all;
-    background-color: var(--background-color);
+	display: block;
+	visibility: visible;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	pointer-events: all;
+	background-color: var(--background-color);
 }
 
 	#overlayScrollContainer > div,
 	#overlayScrollContainer > div > div,
 	#overlayScrollContainer > div > div > div {
-	    width: 100%;
-	    min-width: 100%;
-	    max-width: 100%;
-    	height: 100%;
-    	min-height: 100%;
-    	max-height: 100%;
+		width: 100%;
+		min-width: 100%;
+		max-width: 100%;
+		height: 100%;
+		min-height: 100%;
+		max-height: 100%;
 	}
 
 	[style="max-width:1600px"]+[style="max-width:1600px"] > div,
 	[style="max-width:1600px"]+[style="max-width:1600px"] > div > div {
-    	top: calc(var(--banner-height) + 65px);
-    	height: calc(var(--content-height) - 65px);
-    	min-height: calc(var(--content-height) - 65px);
-    	max-height: calc(var(--content-height) - 65px);
-    	width: calc(var(--content-width) + var(--mailbox-width));
-    	max-width: calc(var(--content-width) + var(--mailbox-width));
-    	min-width: calc(var(--content-width) + var(--mailbox-width));
-    }
+		top: calc(var(--banner-height) + 65px);
+		height: calc(var(--content-height) - 65px);
+		min-height: calc(var(--content-height) - 65px);
+		max-height: calc(var(--content-height) - 65px);
+		width: calc(var(--content-width) + var(--mailbox-width));
+		max-width: calc(var(--content-width) + var(--mailbox-width));
+		min-width: calc(var(--content-width) + var(--mailbox-width));
+	}
 
 #overlayScrollContainer > div:nth-child(2),
 [style="max-width:1600px"]+[style="max-width:1600px"] > div:nth-child(2) {
@@ -521,7 +521,7 @@ button#ListingSort--SortPicker {
 
 /* Selection */
 #overlayScrollContainer *::selection {
-    background-color: #C6C6C6;
+	background-color: #C6C6C6;
 }
 /**********************************************************************************/
 #overlayScrollContainer > div > :nth-child(1) > div > :nth-child(1),
@@ -535,15 +535,15 @@ button#ListingSort--SortPicker {
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(4),
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-last-child(1) {
 	margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+	margin-right: 0;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 /******* Header *******************************************************************/
 #overlayScrollContainer > div > :nth-child(1) > div > :nth-child(1),
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(1) {
-    height: 30%;
+	height: 30%;
 }
 
 #overlayScrollContainer > div > :nth-child(1) > div > .Post,
@@ -554,145 +554,145 @@ button#ListingSort--SortPicker {
 
 /*********** Upvote / Downvote / Count ********************************************/
 [data-test-id="post-content"] > :nth-child(1) {
-    position: absolute;
-    z-index: 1;
-    top: 80px;
-    margin: 0;
-    border-left: 0 !important;
-    border-right: 0 !important;
-    border-top: 0 !important;
-    border-bottom: 1px solid var(--border-color);
-    padding: 0;
-    height: 33px !important;
-    width: 100% !important;
-    float: left;
+	position: absolute;
+	z-index: 1;
+	top: 80px;
+	margin: 0;
+	border-left: 0 !important;
+	border-right: 0 !important;
+	border-top: 0 !important;
+	border-bottom: 1px solid var(--border-color);
+	padding: 0;
+	height: 33px !important;
+	width: 100% !important;
+	float: left;
 }
 	[data-test-id="post-content"] > :nth-child(1) > div {
-    	position: absolute;
-        left: 0;
-	    flex-direction: unset;
-	}
-    
-    [data-test-id="post-content"] > :nth-child(1) button {
-    	position: relative;
-    	top: 0px;
-    	left: 0px;
-    	width: auto;
-        color: white;
-    	font-family: "Segoe UI", IBMPlexSans, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
-    	font-size: 12px;
-        font-weight: 100;
-    }
-    
-    	[data-test-id="post-content"] > :nth-child(1) button:focus {
-        	background-color: rgba(0, 0, 0, 0)
-        }
-    
-    	[data-test-id="post-content"] > :nth-child(1) button::after {
-        	position: relative;
-        	top: -6px;
-        	height: 20px;
-        }
-	/* Upvote */
-    [data-test-id="post-content"] > :nth-child(1) button[aria-label="upvote"]::after {
-        content: "Upvote;";
-    }
-    [data-test-id="post-content"] > :nth-child(1) button[aria-label="upvote"]:hover div,
-    [data-test-id="post-content"] > :nth-child(1) button[aria-label="upvote"]:hover::after {
-        color: #CC3700;
-        /*filter: brightness(1.40);
-        /*color: #E69B80;*/
-    }
-    [data-test-id="post-content"] > :nth-child(1) button[aria-pressed="true"] i.icon-upvote::before,
-    [data-test-id="post-content"] > :nth-child(1) button[aria-label="upvote"][aria-pressed="true"]::after {
-        color: #FF4500;
-        /*filter: brightness(1.40);
-        /*color: #FFA280;*/
-    }
-	/* Downvote */
-    [data-test-id="post-content"] > :nth-child(1) button[aria-label="downvote"]::after {
-        content: "Downvote;";
-    }
-    [data-test-id="post-content"] > :nth-child(1) button[aria-label="downvote"]:hover div,
-    [data-test-id="post-content"] > :nth-child(1) button[aria-label="downvote"]:hover::after {
-        color: #5A75CC;
-        /*filter: brightness(1.40);
-        /*color: #ACBAE6;*/
-    }
-    
-	/* Count */
-    [data-test-id="post-content"] > :nth-child(1) button+div {
-        position: relative;
-        padding-left: 7px;
-        top: 2px;
-        font-weight: 100;
-        /*filter: brightness(1.40);*/
-    }
-    [data-test-id="post-content"] > :nth-child(1) button+div::after {
-        content: " Points;";
-    }
+		position: absolute;
+			left: 0;
+			flex-direction: unset;
+		}
+		
+		[data-test-id="post-content"] > :nth-child(1) button {
+			position: relative;
+			top: 0px;
+			left: 0px;
+			width: auto;
+			color: white;
+			font-family: "Segoe UI", IBMPlexSans, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+			font-size: 12px;
+			font-weight: 100;
+		}
+		
+			[data-test-id="post-content"] > :nth-child(1) button:focus {
+				background-color: rgba(0, 0, 0, 0)
+			}
+		
+			[data-test-id="post-content"] > :nth-child(1) button::after {
+				position: relative;
+				top: -6px;
+				height: 20px;
+			}
+		/* Upvote */
+		[data-test-id="post-content"] > :nth-child(1) button[aria-label="upvote"]::after {
+			content: "Upvote;";
+		}
+		[data-test-id="post-content"] > :nth-child(1) button[aria-label="upvote"]:hover div,
+		[data-test-id="post-content"] > :nth-child(1) button[aria-label="upvote"]:hover::after {
+			color: #CC3700;
+			/*filter: brightness(1.40);
+			/*color: #E69B80;*/
+		}
+		[data-test-id="post-content"] > :nth-child(1) button[aria-pressed="true"] i.icon-upvote::before,
+		[data-test-id="post-content"] > :nth-child(1) button[aria-label="upvote"][aria-pressed="true"]::after {
+			color: #FF4500;
+			/*filter: brightness(1.40);
+			/*color: #FFA280;*/
+		}
+		/* Downvote */
+		[data-test-id="post-content"] > :nth-child(1) button[aria-label="downvote"]::after {
+			content: "Downvote;";
+		}
+		[data-test-id="post-content"] > :nth-child(1) button[aria-label="downvote"]:hover div,
+		[data-test-id="post-content"] > :nth-child(1) button[aria-label="downvote"]:hover::after {
+			color: #5A75CC;
+			/*filter: brightness(1.40);
+			/*color: #ACBAE6;*/
+		}
+		
+		/* Count */
+		[data-test-id="post-content"] > :nth-child(1) button+div {
+			position: relative;
+			padding-left: 7px;
+			top: 2px;
+			font-weight: 100;
+			/*filter: brightness(1.40);*/
+		}
+		[data-test-id="post-content"] > :nth-child(1) button+div::after {
+			content: " Points;";
+		}
 /******************************************** Upvote / Downvote / Count ***********/
 /*********** Icon / Sub / User / Time *********************************************/
 [data-test-id="post-content"] > :nth-child(2) {
-    position: absolute;
-    top: 28px;
-    margin: 0;
-    padding-left: 0px;
-    width: 100%;
+	position: absolute;
+	top: 28px;
+	margin: 0;
+	padding-left: 0px;
+	width: 100%;
 }
-    /* Icon */
-    [data-test-id="post-content"] > :nth-child(2) a > img,
-    [data-test-id="post-content"] > :nth-child(2) a > svg {
-        margin-right: 7.5px;
-        height: 48px;
-        width: 48px;
-    }
-    
-    /* Subreddit Name & User Name */
-    [data-test-id="post-content"] > :nth-child(2) > :nth-child(2) {
-    	display: block;
-    }
-    
-    [data-test-id="post-content"] > :nth-child(2) [data-click-id="subreddit"],
-    [data-test-id="post-content"] > :nth-child(2) a[href*="/user/"] {
-        margin-right: 7.5px;
-        color: #F0F0F0 !important;
-        font-family: "Segoe UI";
-        font-size: 12pt;
-        font-weight: 100;
-    }
-    
-    [data-test-id="post-content"] > :nth-child(2) span {
-        display: none;
-    }
-    
-    /* Timestamp */
-    [data-test-id="post-content"] a[data-click-id="timestamp"] {
-        position: absolute;
-        right: 1px;
-        margin: 0;
-        padding: 0;
-        color: #F0F0F0 !important;
-        font-family: "Segoe UI";
-        font-size: 9pt;
-        font-weight: 100;
-        line-height: 24px;
-    }
+	/* Icon */
+	[data-test-id="post-content"] > :nth-child(2) a > img,
+	[data-test-id="post-content"] > :nth-child(2) a > svg {
+		margin-right: 7.5px;
+		height: 48px;
+		width: 48px;
+	}
+	
+	/* Subreddit Name & User Name */
+	[data-test-id="post-content"] > :nth-child(2) > :nth-child(2) {
+		display: block;
+	}
+	
+	[data-test-id="post-content"] > :nth-child(2) [data-click-id="subreddit"],
+	[data-test-id="post-content"] > :nth-child(2) a[href*="/user/"] {
+		margin-right: 7.5px;
+		color: #F0F0F0 !important;
+		font-family: "Segoe UI";
+		font-size: 12pt;
+		font-weight: 100;
+	}
+	
+	[data-test-id="post-content"] > :nth-child(2) span {
+		display: none;
+	}
+	
+	/* Timestamp */
+	[data-test-id="post-content"] a[data-click-id="timestamp"] {
+		position: absolute;
+		right: 1px;
+		margin: 0;
+		padding: 0;
+		color: #F0F0F0 !important;
+		font-family: "Segoe UI";
+		font-size: 9pt;
+		font-weight: 100;
+		line-height: 24px;
+	}
 /********************************************* Icon / Sub / User / Time ***********/
 /*********** Title ****************************************************************/
 [data-test-id="post-content"] > :nth-child(3) {
 	position: relative;
-    top: 50px;
-    margin: 0;
-    padding-left: 63px;
+	top: 50px;
+	margin: 0;
+	padding-left: 63px;
 }
-    [data-test-id="post-content"] :nth-child(3) h1 {
-        color: white;
-        font-family: "Segoe UI";
-        font-size: 12pt;
-        font-weight: 400;
-        text-wrap: break-word;
-    } 
+	[data-test-id="post-content"] :nth-child(3) h1 {
+		color: white;
+		font-family: "Segoe UI";
+		font-size: 12pt;
+		font-weight: 400;
+		text-wrap: break-word;
+	}
 /**************************************************************** Title ***********/
 /*********** Flair ****************************************************************/
 /* revisit */
@@ -702,92 +702,92 @@ button#ListingSort--SortPicker {
 ._2fiIRtMpITeCAzXc4cANKp._1mK-LVHGTTlcFpMsjItjYJ {
 	margin-left: 0;
 	margin-bottom: 0;
-    display: none;
+	display: none;
 }
 /**************************************************************** Flair ***********/
 /*********** Original Post ********************************************************/
 [data-test-id="post-content"] > :nth-last-child(2) {
 	display: block;
-    position: absolute;
-    top: 113px;
-    left: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin: 12px 0 0 0 !important;
-    border: 2px solid white;
-    border-left: 0;
-    border-right: 0;
-    border-radius: 0;
-    padding: 5px 8px;
-    height: calc(100% - 136px);
-    overflow-y: scroll;
-    width: calc(100% - 16px);
-    min-width: calc(100% - 16px);
-    max-width: calc(100% - 16px) !important;
-    background-color: white;
+	position: absolute;
+	top: 113px;
+	left: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin: 12px 0 0 0 !important;
+	border: 2px solid white;
+	border-left: 0;
+	border-right: 0;
+	border-radius: 0;
+	padding: 5px 8px;
+	height: calc(100% - 136px);
+	overflow-y: scroll;
+	width: calc(100% - 16px);
+	min-width: calc(100% - 16px);
+	max-width: calc(100% - 16px) !important;
+	background-color: white;
 }
-    /* Scrollbar */
-    [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar {
-        width: 16px;
-    }
-        [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-track {
-            background-color: #F3F3F3;
-        }
-        [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-thumb {
-            border: 1px solid #ABABAB;
-            background-color: #FFFFFF;
-        }
-            [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-thumb:hover {
-                border: 1px solid #ABABAB;
-                background-color: #F0F0F0;
-            }
-        [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-button {
-            border: 1px solid #ABABAB;
-            background-color: #FFFFFF;
-        }
-            [data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-button:hover {
-                border: 1px solid #878787;
-                background-color: #FFFFFF;
-            }
-            
+	/* Scrollbar */
+	[data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar {
+		width: 16px;
+	}
+		[data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-track {
+			background-color: #F3F3F3;
+		}
+		[data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-thumb {
+			border: 1px solid #ABABAB;
+			background-color: #FFFFFF;
+		}
+			[data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-thumb:hover {
+				border: 1px solid #ABABAB;
+				background-color: #F0F0F0;
+			}
+		[data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-button {
+			border: 1px solid #ABABAB;
+			background-color: #FFFFFF;
+		}
+			[data-test-id="post-content"] > :nth-last-child(2)::-webkit-scrollbar-button:hover {
+				border: 1px solid #878787;
+				background-color: #FFFFFF;
+			}
+			
 	/* Image Post */
 	[data-test-id="post-content"] > :nth-last-child(2) a[href$=".jpg"] {
-	    width: 100%;
-	    height: auto;
-	    cursor: unset;
-	    pointer-events: none;
+		width: 100%;
+		height: auto;
+		cursor: unset;
+		pointer-events: none;
 	}
 		[data-test-id="post-content"] > :nth-last-child(2) a img {
-		    padding-top: 136px;
-		    padding-bottom: 136px;
-		    padding-left: auto;
-		    padding-right: auto;
-		    background-color: white !important;
+			padding-top: 136px;
+			padding-bottom: 136px;
+			padding-left: auto;
+			padding-right: auto;
+			background-color: white !important;
 		}
 		[data-test-id="post-content"] > :nth-last-child(2) a[href$=".jpg"]::before,
 		[data-test-id="post-content"] > :nth-last-child(2) a[href$=".jpg"]::after {
-		    position: relative;
-		    z-index: 1;
-		    padding-left: 8px;
-		    color: black;
-		    font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
-		    font-size: 12pt;
-		    font-weight: 400;
-		    line-height: 16px;
+			position: relative;
+			z-index: 1;
+			padding-left: 8px;
+			color: black;
+			font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
+			font-size: 12pt;
+			font-weight: 400;
+			line-height: 16px;
 		}
 			[data-test-id="post-content"] > :nth-last-child(2) a[href$=".jpg"]::before {
-			    content: "Scroll down to view content.";
-			    top: 5px;
+				content: "Scroll down to view content.";
+				top: 5px;
 			}
 			[data-test-id="post-content"] > :nth-last-child(2) a[href$=".jpg"]::after {
-			    content: "Scroll up to view content.";
-			    bottom: 5px;
+				content: "Scroll up to view content.";
+				bottom: 5px;
 			}
 /******************************************************** Original Post ***********/
 /*********** Actions **************************************************************/
 div[data-test-id="post-content"] > :nth-last-child(1) {
 	position: absolute;
-    left: 0;
+	left: 0;
 	top: 4px;
 	margin: 0;
 	border: 0;
@@ -797,14 +797,14 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 	div[data-test-id="post-content"] > :nth-last-child(1) >div {
 		height: 16px;
 	}
-    div[data-test-id="post-content"] > :nth-last-child(1) span {
-    	color: #F0F0F0;
-        font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
-    	font-weight: 100;
-    }
-    div[data-test-id="post-content"] > :nth-last-child(1) i::before {
-        color: #F0F0F0;
-    }
+	div[data-test-id="post-content"] > :nth-last-child(1) span {
+		color: #F0F0F0;
+		font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+		font-weight: 100;
+	}
+	div[data-test-id="post-content"] > :nth-last-child(1) i::before {
+		color: #F0F0F0;
+	}
 /************************************************************** Actions ***********/
 /******************************************************************* Header *******/
 
@@ -813,144 +813,144 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 /* Could shorten to [data-test-id="comment-submission-form-markdown"] */
 #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2),
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(2) {
-    border-top: 1px solid #ABABAB;
-    border-bottom: 1px solid #ABABAB;
-    padding-left: 8px;
-    padding-right: 8px;
-    background-color: white;
-    height: 10%;
+	border-top: 1px solid #ABABAB;
+	border-bottom: 1px solid #ABABAB;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color: white;
+	height: 10%;
 }
 
 	[data-test-id="comment-submission-form-markdown"] > div,
-    [data-test-id="comment-submission-form-richtext"] > div {
-    	margin: 0;
-    }
-    [data-test-id="comment-submission-form-markdown"] span,
-    [data-test-id="comment-submission-form-markdown"] a,
-    [data-test-id="comment-submission-form-markdown"] button,
-    [data-test-id="comment-submission-form-richtext"] + div span,
-    [data-test-id="comment-submission-form-richtext"] + div button {
-        display: inline-block;
-        font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
-        font-size: 9pt;
-        font-weight: 400;
-    	text-transform: capitalize;
-    }
+	[data-test-id="comment-submission-form-richtext"] > div {
+		margin: 0;
+	}
+	[data-test-id="comment-submission-form-markdown"] span,
+	[data-test-id="comment-submission-form-markdown"] a,
+	[data-test-id="comment-submission-form-markdown"] button,
+	[data-test-id="comment-submission-form-richtext"] + div span,
+	[data-test-id="comment-submission-form-richtext"] + div button {
+		display: inline-block;
+		font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+		font-size: 9pt;
+		font-weight: 400;
+		text-transform: capitalize;
+	}
 
-    [data-test-id="comment-submission-form-markdown"] span {
-        color: black;
-    }
+	[data-test-id="comment-submission-form-markdown"] span {
+		color: black;
+	}
 
-    [data-test-id="comment-submission-form-markdown"] a,
-    [data-test-id="comment-submission-form-markdown"] button {
-        color: var(--link-color);
-    }
-    
-    [data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) {
-    	height: calc(100% - 17px);
-    }
-    
-    /* Removing border two parents above text area */
-    [data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) > :nth-child(1) {
-    	border: none;
-        height: 100%;
-    }    
-    
-    /* Setting some stuff one parent above text area */
-    [data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) > :nth-child(1) > :nth-child(1)  {
-        padding: 0;
-        min-height: 0;
-        height: calc(100% - 18px);
-        background-color: white;
-    }
-    
-    /* Text Area */
-    [data-test-id="comment-submission-form-markdown"] textarea,
-    [data-test-id="comment-submission-form-richtext"] [role="textbox"] {
-    	border-top: 1px dashed var(--background-color);
-        border-bottom: 1px dashed var(--background-color);
-        padding: 2px;
-        height: 100% !important;
-    	max-height: 200px;
-        background-color: white;
-        color: black;
-        line-height: 15px;
-    }
-    	[data-test-id="comment-submission-form-markdown"] textarea {
-    	    min-height: 40px;
-    	}
-    	[data-test-id="comment-submission-form-richtext"] [role="textbox"] {
-    	    min-height: 34px;
-    	}
-    
-    [data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) > :nth-child(1) > :nth-child(2) {
-        height: 17px;
-        border-color: #ABABAB;
-        border-radius: 0;
-        background-color: white;
-    }
-    
-    /* Comment/Reply */
-    [data-test-id="comment-submission-form-markdown"] button[type="submit"],
-    [data-test-id="comment-submission-form-markdown"] button[type="reset"],
-    [data-test-id="comment-submission-form-richtext"] + div button[type="submit"],
-    [data-test-id="comment-submission-form-richtext"] + div button[type="reset"] {
-    	margin-left: 10px;
-        margin-right: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-        border: 0;
-        padding: 0;
-        min-height: 0;
-        min-width: 0;
-        background-color: white;
-    }
-    
-    /* "Switch to Fancy" */
-    [data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) > :nth-child(1) > :nth-child(2) > button {
-    	margin: 0;
-    }
-    
+	[data-test-id="comment-submission-form-markdown"] a,
+	[data-test-id="comment-submission-form-markdown"] button {
+		color: var(--link-color);
+	}
+
+	[data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) {
+		height: calc(100% - 17px);
+	}
+
+	/* Removing border two parents above text area */
+	[data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) > :nth-child(1) {
+		border: none;
+		height: 100%;
+	}
+	
+	/* Setting some stuff one parent above text area */
+	[data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) > :nth-child(1) > :nth-child(1)  {
+		padding: 0;
+		min-height: 0;
+		height: calc(100% - 18px);
+		background-color: white;
+	}
+
+	/* Text Area */
+	[data-test-id="comment-submission-form-markdown"] textarea,
+	[data-test-id="comment-submission-form-richtext"] [role="textbox"] {
+		border-top: 1px dashed var(--background-color);
+		border-bottom: 1px dashed var(--background-color);
+		padding: 2px;
+		height: 100% !important;
+		max-height: 200px;
+		background-color: white;
+		color: black;
+		line-height: 15px;
+	}
+		[data-test-id="comment-submission-form-markdown"] textarea {
+			min-height: 40px;
+		}
+		[data-test-id="comment-submission-form-richtext"] [role="textbox"] {
+			min-height: 34px;
+		}
+
+	[data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) > :nth-child(1) > :nth-child(2) {
+		height: 17px;
+		border-color: #ABABAB;
+		border-radius: 0;
+		background-color: white;
+	}
+
+	/* Comment/Reply */
+	[data-test-id="comment-submission-form-markdown"] button[type="submit"],
+	[data-test-id="comment-submission-form-markdown"] button[type="reset"],
+	[data-test-id="comment-submission-form-richtext"] + div button[type="submit"],
+	[data-test-id="comment-submission-form-richtext"] + div button[type="reset"] {
+		margin-left: 10px;
+		margin-right: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+		border: 0;
+		padding: 0;
+		min-height: 0;
+		min-width: 0;
+		background-color: white;
+	}
+
+	/* "Switch to Fancy" */
+	[data-test-id="comment-submission-form-markdown"] > :nth-last-child(1) > :nth-child(1) > :nth-child(2) > button {
+		margin: 0;
+	}
+
 /*********** Fancypants Editor ****************************************************/
 /* Extra margin on "Comment As [Username]" */
 #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2) > :nth-child(1),
                           div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(1) {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 /* "Comment as" */
 #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2) > :nth-child(1) span,
                           div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(1) span {
-    color: black;
+	color: black;
 }
 /* Username */
 #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2) > :nth-child(1) a,
                           div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(1) a {
-    color: var(--link-color);
+	color: var(--link-color);
 }
 /* Container for buttons / "Switch To Markdown" / "Comment" below textbox */
 [data-test-id="comment-submission-form-richtext"] + div {
-    height: 16px;
-    background-color: white;
+	height: 16px;
+	background-color: white;
 }
 [data-test-id="comment-submission-form-richtext"] + div > :nth-child(2) > :nth-child(1) > :nth-child(1) {
 	height: 20px;
 }
 
 	[data-test-id="comment-submission-form-richtext"] + div [role="button"] {
-    	padding-top: 0;
-        padding-bottom: 0;
-    }
-    
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
 	/* "Switch to Markdown" */
-    [data-test-id="comment-submission-form-richtext"] + div [role="button"] > span {
-    	position: relative;
-        left: 35px;
-        color: var(--link-color);
-    }
+	[data-test-id="comment-submission-form-richtext"] + div [role="button"] > span {
+		position: relative;
+		left: 35px;
+		color: var(--link-color);
+	}
 
 #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2) > :nth-child(2) > :nth-child(1) > :nth-child(1),
                           div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(2) > :nth-child(1) > :nth-child(1) {
-    border: none;
+	border: none;
 }
 /**************************************************** Fancypants Editor ***********/
 
@@ -959,21 +959,21 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 #overlayScrollContainer > div > :nth-child(1) > div > :nth-child(3),
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-child(3) {
 	position: absolute;
-    border: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    height: 18px;
+	border: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	height: 18px;
 	background-color: white;
 }
 
 	#overlayScrollContainer > div > :nth-child(1) > div > :nth-child(3) {
-    	top: calc(30% + 1px);
-    	right: 0;
-    }
+		top: calc(30% + 1px);
+		right: 0;
+	}
 	div.u1x7p5-0.kFtMxp > div > div:nth-child(3) {
-    	top: calc(30% - 10px);
-    	right: 17px;
-    }
+		top: calc(30% - 10px);
+		right: 17px;
+	}
 
 	/* Sort By */
 	#overlayScrollContainer > div > :nth-child(1) > div > :nth-child(3) > :nth-child(1),
@@ -981,43 +981,43 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 		display: block;
 		background-color: white;
 		color: black;
-	    font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
-	    font-size: 9pt;
-	    font-weight: 400;
-	    line-height: 18px;
-        text-transform: Capitalize;
+		font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+		font-size: 9pt;
+		font-weight: 400;
+		line-height: 18px;
+		text-transform: Capitalize;
 	}
 	#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(3) > button,
 	div.u1x7p5-0.kFtMxp > div > div:nth-child(3) > button {
 		display: block;
-	    padding: 0;
-	    height: 18px;
-	    line-height: 18px;
+		padding: 0;
+		height: 18px;
+		line-height: 18px;
 	}
 		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(3) > button > span,
 		div.u1x7p5-0.kFtMxp > div > div:nth-child(3) > button > span {
 			background-color: white;
 			color: var(--link-color);
-        	font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
-        	font-size: 9pt;
-        	font-weight: 400;
-    		text-transform: capitalize;
+			font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+			font-size: 9pt;
+			font-weight: 400;
+			text-transform: capitalize;
 		}
 /********************************************************************** Sort By ***/
 
 /*** View Discussion in Other Community *******************************************/
 #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4) {
 	position: absolute;
-    right: 0;
-    z-index: 1;
+	right: 0;
+	z-index: 1;
 	padding: 0;
-    background-color: transparent;
+	background-color: transparent;
 }
 #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4) > a {
 	position: relative;
-    right: 17px;
-    color: var(--link-color);
-    font-weight: 400;
+	right: 17px;
+	color: var(--link-color);
+	font-weight: 400;
 }
 /******************************************* View Discussion in Other Community ***/
 
@@ -1032,125 +1032,125 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 	background-color: white;
 }
 
-    #overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar,
+	#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar,
 	div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar {
-        width: 16px;
-    }
-   		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-track,
+		width: 16px;
+	}
+		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-track,
 		div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-track {
-            background-color: #F3F3F3;
-        }
-   		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-thumb,
+			background-color: #F3F3F3;
+		}
+		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-thumb,
 		div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-thumb {
-            border: 1px solid #ABABAB;
-            background-color: #FFFFFF;
-        }
-   			#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-thumb:hover,
+			border: 1px solid #ABABAB;
+			background-color: #FFFFFF;
+		}
+			#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-thumb:hover,
 			div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-thumb:hover {
-                border: 1px solid #ABABAB;
-                background-color: #F0F0F0;
-            }
-   		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-button,
+				border: 1px solid #ABABAB;
+				background-color: #F0F0F0;
+			}
+		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-button,
 		div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-button {
-            border: 1px solid #ABABAB;
-            background-color: #FFFFFF;
-        }
-   			#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-button:hover,
+			border: 1px solid #ABABAB;
+			background-color: #FFFFFF;
+		}
+			#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-button:hover,
 			div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-button:hover {
-                border: 1px solid #878787;
-                background-color: #FFFFFF;
-            }
+				border: 1px solid #878787;
+				background-color: #FFFFFF;
+			}
 
 /* Container for Individual Comments */
 .Comment {
-    margin-top: 0 !important;
-    padding-top: 0;
-    padding-right: 0;
+	margin-top: 0 !important;
+	padding-top: 0;
+	padding-right: 0;
 }
 
-    .Comment > :nth-child(2) {
-        padding: 0;
-    	width: 100%;
-        max-width: 100%;
-    }
-    	.Comment > :nth-child(2) a,
-        [id|="moreComments"] p {
-	    	color: var(--link-color);
-	    	font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
-	    	font-size: 11pt;
-	    	font-weight: 400;
-	    	line-height: 14px;
-        }
-        
-        [id|="moreComments"] p {
-        	height: 16px;
-        }
-    
-    	/* Username, Flair, Points, Timestamp */
-        .Comment > :nth-child(2) > :nth-child(2) > * {
-        	margin: 0;
-            padding-left: 0;
-            padding-right: 4px;
-        }
-        .Comment > :nth-child(2) > :nth-child(2) span {
-        	color: black;
-		    font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
-		    font-size: 11pt;
-		    font-weight: 400;
-		    line-height: 18px;
-        }
-        
-        
-        /* Flair */
-        .Comment > :nth-child(2) > :nth-child(2) > :nth-child(2) {
-        	background-color: white !important;
-            color: #AAA !important;
-        }
-        .Comment > :nth-child(2) > :nth-child(2) > :nth-child(2) > span {
-        }
-        /* Points */
-        .Comment > :nth-child(2) > :nth-child(2) > span {
-		    color: black;
-		    font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
-		    font-size: 11pt;
-		    font-weight: 400;
-		    line-height: 18px;
-        }
-    
-        /* Content */
-        [data-test-id="post-content"] p,
-    	[data-test-id="post-content"] th,
-    	[data-test-id="post-content"] td,
-        [data-test-id="comment"] p,
-    	[data-test-id="comment"] th,
-    	[data-test-id="comment"] td {
-        	border-color: black;
-            background-color: white;
-		    color: black;
-		    font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
-		    font-size: 11pt;
-		    font-weight: 400;
-		    line-height: 18px;
-        }
-        
-        /* Actions (Reply, Give Award, Share, etc.) */
-        .Comment > :nth-child(2) > :nth-child(4) {
-        	margin: 0;
-        }
-    	.Comment > :nth-child(2) button {
-		    background-color: white;
-		    color: black;
-		    font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
-		    font-size: 11pt;
-		    font-weight: 400;
-		    line-height: 18px;
+	.Comment > :nth-child(2) {
+		padding: 0;
+		width: 100%;
+		max-width: 100%;
+	}
+		.Comment > :nth-child(2) a,
+		[id|="moreComments"] p {
+			color: var(--link-color);
+			font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
+			font-size: 11pt;
+			font-weight: 400;
+			line-height: 14px;
 		}
-        
-        .Comment button i.icon.icon-expand {
-        	position: relative;
-            top: 11px;
-        }
-        
+		
+		[id|="moreComments"] p {
+			height: 16px;
+		}
+	
+		/* Username, Flair, Points, Timestamp */
+		.Comment > :nth-child(2) > :nth-child(2) > * {
+			margin: 0;
+			padding-left: 0;
+			padding-right: 4px;
+		}
+		.Comment > :nth-child(2) > :nth-child(2) span {
+			color: black;
+			font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
+			font-size: 11pt;
+			font-weight: 400;
+			line-height: 18px;
+		}
+		
+		
+		/* Flair */
+		.Comment > :nth-child(2) > :nth-child(2) > :nth-child(2) {
+			background-color: white !important;
+			color: #AAA !important;
+		}
+		.Comment > :nth-child(2) > :nth-child(2) > :nth-child(2) > span {
+		}
+		/* Points */
+		.Comment > :nth-child(2) > :nth-child(2) > span {
+			color: black;
+			font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
+			font-size: 11pt;
+			font-weight: 400;
+			line-height: 18px;
+		}
+	
+		/* Content */
+		[data-test-id="post-content"] p,
+		[data-test-id="post-content"] th,
+		[data-test-id="post-content"] td,
+		[data-test-id="comment"] p,
+		[data-test-id="comment"] th,
+		[data-test-id="comment"] td {
+			border-color: black;
+			background-color: white;
+			color: black;
+			font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
+			font-size: 11pt;
+			font-weight: 400;
+			line-height: 18px;
+		}
+		
+		/* Actions (Reply, Give Award, Share, etc.) */
+		.Comment > :nth-child(2) > :nth-child(4) {
+			margin: 0;
+		}
+		.Comment > :nth-child(2) button {
+			background-color: white;
+			color: black;
+			font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
+			font-size: 11pt;
+			font-weight: 400;
+			line-height: 18px;
+		}
+		
+		.Comment button i.icon.icon-expand {
+			position: relative;
+			top: 11px;
+		}
+
 [id|="moreComments"] > div {
 	padding: 0;
 }
@@ -1161,17 +1161,17 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 /********************************************************************* Comments ***/
 /* User Flair */
 div.Post > div[data-test-id="post-content"] div.camSYk + span.jySElJ {
-    padding-top: 1px;
-    background-color: var(--background-color);
-    color: white;
-    font-family: "Segoe UI";
-    font-size: 16px;
-    font-weight: 100;
+	padding-top: 1px;
+	background-color: var(--background-color);
+	color: white;
+	font-family: "Segoe UI";
+	font-size: 16px;
+	font-weight: 100;
 }
 /* Useless bullet point and "Posted By" */
 span.ZdrFI,
 span._2fCzxBE1dlMh4OFc7B3Dun {
-    display: none;
+	display: none;
 }
 
 /* Comments Loading */

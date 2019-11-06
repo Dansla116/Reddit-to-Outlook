@@ -6,254 +6,254 @@
 /* Fix this if the whole post background (without a post) and a portion of the right
    turns black */
 div.qYj03fU5CXf5t2Fc5iSvg > :nth-child(1) {
-    display: none;
+	display: none;
 }
 
 /* Subreddit Banner */
 div.qYj03fU5CXf5t2Fc5iSvg > :nth-child(2) > :nth-child(1) {
-    display: none;
+	display: none;
 }
 
 /* BOOKMARK: Mailbox 2 */
 div._1OVBBWLtHoSPfGCRaPzpTf {
-    position: fixed;
+	position: fixed;
 	margin-top: 8px;
-    border-left: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
-    padding-right: 21px;
-    padding-top: 72px;
-    left: var(--folders-width);
-    top: var(--banner-height);
-    height: calc(var(--content-height) - 80px);
-    min-height: calc(var(--content-height) - 80px);
-    max-height: calc(var(--content-height) - 80px);
-    overflow-y: scroll;
-    width: calc(var(--mailbox-width) - 15px);
-    background-color: var(--background-color) !important;
+	border-left: 1px solid var(--border-color);
+	border-right: 1px solid var(--border-color);
+	padding-right: 21px;
+	padding-top: 72px;
+	left: var(--folders-width);
+	top: var(--banner-height);
+	height: calc(var(--content-height) - 80px);
+	min-height: calc(var(--content-height) - 80px);
+	max-height: calc(var(--content-height) - 80px);
+	overflow-y: scroll;
+	width: calc(var(--mailbox-width) - 15px);
+	background-color: var(--background-color) !important;
 }
 
-    div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1) {
-        left: calc(var(--folders-width));
-        top: calc(var(--banner-height) + 80px);
-        height: calc(var(--content-height) - 80px);
-        min-height: calc(var(--content-height) - 80px);
-        max-height: calc(var(--content-height) - 80px);
-        overflow-y: scroll;
-        width: calc(var(--mailbox-width) - 15px);
-        background-color: var(--background-color) !important;
-    }
+	div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1) {
+		left: calc(var(--folders-width));
+		top: calc(var(--banner-height) + 80px);
+		height: calc(var(--content-height) - 80px);
+		min-height: calc(var(--content-height) - 80px);
+		max-height: calc(var(--content-height) - 80px);
+		overflow-y: scroll;
+		width: calc(var(--mailbox-width) - 15px);
+		background-color: var(--background-color) !important;
+	}
 
-        div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1)::before {
-            content: url(https://i.imgur.com/uiXG0I4.png);
-            position: fixed;
-            z-index: 1;
-            left: calc(var(--folders-width) + 1px);
-            top: calc(var(--banner-height) + 1px);
-            background-color: var(--background-color);
-        }
+		div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1)::before {
+			content: url(https://i.imgur.com/uiXG0I4.png);
+			position: fixed;
+			z-index: 1;
+			left: calc(var(--folders-width) + 1px);
+			top: calc(var(--banner-height) + 1px);
+			background-color: var(--background-color);
+		}
 
-        div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover {
-            width: calc(var(--mailbox-width));
-        }
+		div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover {
+			width: calc(var(--mailbox-width));
+		}
 
-            /* Scrollbar */
-            div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar {
-                display: block;
-                width: 15px;
-            }
+			/* Scrollbar */
+			div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar {
+				display: block;
+				width: 15px;
+			}
 
-            div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar-track {
-                background: #343434;
-            }
+			div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar-track {
+				background: #343434;
+			}
 
-            div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar-thumb,
-            div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar-button {
-                border: 1px solid #3B3B3B;
-                background: #575757;
-            }
+			div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar-thumb,
+			div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar-button {
+				border: 1px solid #3B3B3B;
+				background: #575757;
+			}
 
-                div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar-thumb:hover {
-                    border-color: #101010;
-                    background: #808080;
-                }
+				div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar-thumb:hover {
+					border-color: #101010;
+					background: #808080;
+				}
 
-                div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar-button:hover {
-                    border: 1px solid #3B3B3B;
-                    background: #707070;
-                }
+				div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar-button:hover {
+					border: 1px solid #3B3B3B;
+					background: #707070;
+				}
 
-    /* Unrendered Posts */
-    div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(2) {
-        display: none;
-    }
+	/* Unrendered Posts */
+	div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(2) {
+		display: none;
+	}
 
 
 /*** Mailbox > Individual Messages ************************************************/
 div.s1nu6uif-0.GsVvZ > :nth-child(2) > :nth-child(4) {
-    padding: 0;
+	padding: 0;
 }
 
-    div.s1nu6uif-0.GsVvZ > :nth-child(2) > :nth-child(4) > :nth-child(1) > :nth-child(1) > div {
-        border-bottom: 1px solid #626262;
-        border-left: 0;
-        border-right: 0;
-        border-collapse: collapse;
-        margin-left: 9px;
-        margin-right: 3px;
-        height: 62px;
-    }
+	div.s1nu6uif-0.GsVvZ > :nth-child(2) > :nth-child(4) > :nth-child(1) > :nth-child(1) > div {
+		border-bottom: 1px solid #626262;
+		border-left: 0;
+		border-right: 0;
+		border-collapse: collapse;
+		margin-left: 9px;
+		margin-right: 3px;
+		height: 62px;
+	}
 
-        div.s1nu6uif-0.GsVvZ > :nth-child(2) > :nth-child(4) > :nth-child(1) > :nth-child(1) > div > div {
-            height: 62px;
-        }
+		div.s1nu6uif-0.GsVvZ > :nth-child(2) > :nth-child(4) > :nth-child(1) > :nth-child(1) > div > div {
+			height: 62px;
+		}
 /*** Mailbox > Individual Messages > Content **************************************/
 .scrollerItem.Post {
-    margin: 0;
-    border: 0;
-    padding: 0;
-    height: 62px;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	height: 62px;
 }
-    /* Cumbersome upvote/downvote thing */
-    .scrollerItem.Post > div > :nth-child(1) {
-        display: none;
-    }
+	/* Cumbersome upvote/downvote thing */
+	.scrollerItem.Post > div > :nth-child(1) {
+		display: none;
+	}
 
-    /* Everything Else */
-    .scrollerItem.Post > div > :nth-child(2) {
-        border-left: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        background-color: var(--background-color) !important;
-    }
+	/* Everything Else */
+	.scrollerItem.Post > div > :nth-child(2) {
+		border-left: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		background-color: var(--background-color) !important;
+	}
 
-        .scrollerItem.Post > div > :nth-child(2) > div {
-            padding-left: 24px;
-            border-bottom: 1px solid var(--border-color);
-            height: 61px;
-        }
-            /* Icon */
-            .scrollerItem.Post > div > :nth-child(2) > div > a,
-            .scrollerItem.Post > div > :nth-child(2) > div > button {
-                position: absolute;
-                right: 0;
-                padding: 0;
-                margin: 0;
-            }
+		.scrollerItem.Post > div > :nth-child(2) > div {
+			padding-left: 24px;
+			border-bottom: 1px solid var(--border-color);
+			height: 61px;
+		}
+			/* Icon */
+			.scrollerItem.Post > div > :nth-child(2) > div > a,
+			.scrollerItem.Post > div > :nth-child(2) > div > button {
+				position: absolute;
+				right: 0;
+				padding: 0;
+				margin: 0;
+			}
 
-            /* Body */
-            .scrollerItem.Post > div > :nth-child(2) > div > div[data-click-id="body"] {
-            	height: 100%;
-            }
+			/* Body */
+			.scrollerItem.Post > div > :nth-child(2) > div > div[data-click-id="body"] {
+				height: 100%;
+			}
 
-                .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] div:nth-child(3) {
-                    position: absolute;
-                    bottom: 0;
-                    width: 100%;
-                }
+				.scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] div:nth-child(3) {
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+				}
 
-                /* Awards */
-                .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] div:nth-child(5) {
-                    position: absolute;
-                    right: 20%;
-                    bottom: 0;
-                    padding: 0;
-                }
+				/* Awards */
+				.scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] div:nth-child(5) {
+					position: absolute;
+					right: 20%;
+					bottom: 0;
+					padding: 0;
+				}
 
-                /* Post Title */
-                .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] {
-                    position: absolute;
-                    top: 0;
-                    width: 100%;
-                }
-                
-                .scrollerItem.Post > div > :nth-child(2) > div > div[data-click-id="body"] > div {
-                	width: calc(100% - 75px);
-                }
-                
-                .scrollerItem.Post > div > :nth-child(2) > div > div[data-click-id="body"] h3 {
-                    color: #F0F0F0;
-                    font-family: "Segoe UI";
-                    font-size: 10pt;
-                    font-weight: 100;
-                    line-height: 10pt;
-                }
+				/* Post Title */
+				.scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] {
+					position: absolute;
+					top: 0;
+					width: 100%;
+				}
+				
+				.scrollerItem.Post > div > :nth-child(2) > div > div[data-click-id="body"] > div {
+					width: calc(100% - 75px);
+				}
+				
+				.scrollerItem.Post > div > :nth-child(2) > div > div[data-click-id="body"] h3 {
+					color: #F0F0F0;
+					font-family: "Segoe UI";
+					font-size: 10pt;
+					font-weight: 100;
+					line-height: 10pt;
+				}
 
-                /* Subreddit */
-                .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] [data-click-id="subreddit"] {
-                    color: #F0F0F0;
-                    font-family: "Segoe UI";
-                    font-size: 10pt;
-                    font-weight: 100;
-                    line-height: 10pt;
-                }
+				/* Subreddit */
+				.scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] [data-click-id="subreddit"] {
+					color: #F0F0F0;
+					font-family: "Segoe UI";
+					font-size: 10pt;
+					font-weight: 100;
+					line-height: 10pt;
+				}
 
-                /* Stupid-ass bullet point */
-                .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] [role="presentation"] {
-                    display: none;
-                }
+				/* Stupid-ass bullet point */
+				.scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] [role="presentation"] {
+					display: none;
+				}
 
-                /* Username */
-                .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] [href*="user"] {
-                    color: #F0F0F0 !important;
-                    font-family: "Segoe UI";
-                    font-size: 10pt;
-                    font-weight: 100;
-                    line-height: 10pt;
-                }
+				/* Username */
+				.scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] [href*="user"] {
+					color: #F0F0F0 !important;
+					font-family: "Segoe UI";
+					font-size: 10pt;
+					font-weight: 100;
+					line-height: 10pt;
+				}
 
-                /* Flair */
-                .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] a[href*="flair_name"] {
-                    display: none;
-                }
+				/* Flair */
+				.scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] a[href*="flair_name"] {
+					display: none;
+				}
 
-                /* Timestamp */
-                .scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] [data-click-id="timestamp"] {
-                    position: absolute;
-                    right: 0;
-                    bottom: 4px;
-                }
+				/* Timestamp */
+				.scrollerItem.Post > div > :nth-child(2) > div > [data-click-id="body"] [data-click-id="timestamp"] {
+					position: absolute;
+					right: 0;
+					bottom: 4px;
+				}
 
-            /* Coments & "..." */
-            .scrollerItem.Post > div > :nth-child(2) > div > :nth-child(4) {
-                position: absolute;
-                right: 0;
-                top: 0;
-            }
+			/* Coments & "..." */
+			.scrollerItem.Post > div > :nth-child(2) > div > :nth-child(4) {
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
 
-                /* Comments */
-                .scrollerItem.Post > div > :nth-child(2) > div > :nth-child(4),
-                .scrollerItem.Post > div > :nth-child(2) > div > :nth-child(4) a {
-                    padding: 0;
-                    width: auto;
-                }
-                
-                /* "..." */
-                .scrollerItem.Post > div > :nth-child(2) > div > :nth-child(4) div {
-                	display: none;
-                }
+				/* Comments */
+				.scrollerItem.Post > div > :nth-child(2) > div > :nth-child(4),
+				.scrollerItem.Post > div > :nth-child(2) > div > :nth-child(4) a {
+					padding: 0;
+					width: auto;
+				}
+				
+				/* "..." */
+				.scrollerItem.Post > div > :nth-child(2) > div > :nth-child(4) div {
+					display: none;
+				}
 
-    /* Hover */
-    .scrollerItem.Post:hover > div > :nth-child(2) > div {
-        background-color: #383838;
-        box-shadow: inset 2px 0 #383838, inset 0 2px #383838, inset 0 -2px #383838, inset 5px 0 #C4C4C4;
-    }
+	/* Hover */
+	.scrollerItem.Post:hover > div > :nth-child(2) > div {
+		background-color: #383838;
+		box-shadow: inset 2px 0 #383838, inset 0 2px #383838, inset 0 -2px #383838, inset 5px 0 #C4C4C4;
+	}
 
-    /* Link */
-    .scrollerItem.Post [rel="noopener noreferrer"] {
-        display: none;
-    }
-    
-    /* Advertisements */
-    .scrollerItem.Post.promotedlink {
-	display: none !important;
-    	visibility: hidden !important;
-    	width: 0 !important;
-    	min-width: 0 !important;
-    	max-width: 0 !important;
-    	height: 0 !important;
-    	min-height: 0 !important;
-    	max-height: 0 !important;
-    }
+	/* Link */
+	.scrollerItem.Post [rel="noopener noreferrer"] {
+		display: none;
+	}
+	
+	/* Advertisements */
+	.scrollerItem.Post.promotedlink {
+		display: none !important;
+		visibility: hidden !important;
+		width: 0 !important;
+		min-width: 0 !important;
+		max-width: 0 !important;
+		height: 0 !important;
+		min-height: 0 !important;
+		max-height: 0 !important;
+	}
 /************************************** Content < Individual Messages < Mailbox ***/
 /************************************************ Individual Messages < Mailbox ***/
 /********************************************************************** Mailbox ***/
