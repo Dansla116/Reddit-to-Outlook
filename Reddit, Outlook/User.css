@@ -3,10 +3,10 @@
 /**********************************************************************************/
 div[data-redditstyle="true"] + div {
 	position: fixed;
-    left: var(--folders-width);
-    top: var(--banner-height);
-    width: calc(100vw - var(--folders-width) - var(--actions-width));
-    height: var(--content-height);
-    max-height: var(--content-height);
-    overflow-y: scroll;
+	left: var(--folders-width);
+	top: var(--banner-height);
+	width: calc(100vw - var(--folders-width) - var(--actions-width));
+	height: var(--content-height);
+	max-height: var(--content-height);
+	overflow-y: scroll;
 }
