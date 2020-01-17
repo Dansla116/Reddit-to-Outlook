@@ -1,12 +1,103 @@
 /*** User Profile Pages ***********************************************************/
 /* Regex: .*reddit\.com\/user\/(?!.*\/m\/.*\/).*                                  */
 /**********************************************************************************/
-div[data-redditstyle="true"] + div {
+div.ListingLayout-outerContainer {
 	position: fixed;
-	left: var(--folders-width);
+	left: calc(var(--folders-width) + 0px);
 	top: var(--banner-height);
-	width: calc(100vw - var(--folders-width) - var(--actions-width));
-	height: var(--content-height);
+	margin-top: 8px;
+	border-left: 1px solid var(--border-color);
+	border-right: 1px solid var(--border-color);
+	border-bottom: 1px solid var(--border-color);
+	padding: 0 17px 9px 12px;
+	width: calc(100vw - var(--folders-width) - var(--actions-width) - 23px);
+	height: calc(var(--content-height) - 18px);
+	min-height: calc(var(--content-height) - 20px);
 	max-height: var(--content-height);
 	overflow-y: scroll;
+}
+
+	div.ListingLayout-outerContainer > :nth-child(1) {
+		display: none;
+	}
+    
+	div.ListingLayout-outerContainer > * {
+		max-height: 100%;
+	}
+
+[style="max-width:100%"] {
+	padding: 0;
+}
+
+.scrollerItem.Post,
+.scrollerItem.Post:hover {
+	margin-top: 0;
+	border-left: none !important;
+	border-right: none !important;
+	border-top: none !important;
+	border-bottom: none !important;
+	border: none !important;
+	padding-bottom: 1px;
+	background-color: white;
+}
+
+[style="background: rgb(26, 26, 27);"],
+[style="background: rgb(26, 26, 27);"]:hover {
+	border-left: none !important;
+	border-right: none !important;
+	border-top: none !important;
+	border-bottom: none !important;
+	border: none !important;
+	background-color: white !important;
+	color: black;
+}
+
+[style="background: rgb(26, 26, 27);"] > * {
+	border-left: none !important;
+	border-right: none !important;
+	border-top: none !important;
+	border-bottom: none !important;
+	border: none !important;
+}
+
+/*.Comment[style="background: rgb(26, 26, 27);"] > *:hover {
+	margin-top: -1px;
+}*/
+
+[style="background: rgb(26, 26, 27);"] p,
+[style="background: rgb(26, 26, 27);"] h3,
+[style="background: rgb(26, 26, 27);"] span,
+[style="background: rgb(26, 26, 27);"] div {
+	color: black;
+	font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
+	font-size: 11pt;
+	font-weight: 400;
+}
+
+[style="background: rgb(26, 26, 27);"] a,
+[style="background: rgb(26, 26, 27);"] a span {
+	margin: 0 !important;
+	color: var(--link-color) !important;
+	font-family: "Calibri", "Noto Sans", "Helvetica Neue", "Segoe UI", Helvetica, Verdana, Arial, sans-serif;
+	font-size: 11pt;
+	font-weight: 400;
+}
+[style="background: rgb(26, 26, 27);"] a[href*="flair"] {
+	display: none;
+}
+
+[style="background: rgb(26, 26, 27);"] span[role*="presentation"] {
+	visibility: hidden;
+	margin: 0;
+}
+
+/* comment seperators */
+._324SLny5spJ682AiI73uBO {
+	border-top: none;
+}
+
+/* thread lines */
+._3H85Xyyv141qju7KQFQ_d5 {
+	border-left: 1px solid #ABABAB;
+	margin-right: 8px;
 }
