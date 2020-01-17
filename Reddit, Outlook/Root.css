@@ -54,8 +54,8 @@ div[aria-label^="Start"] {
 	position: absolute;
 	z-index: 3;
 	left: 0;
-	top: var(--banner-height);
-	width: var(--folders-width);
+	top: calc(var(--banner-height) - 1px);
+	width: calc(var(--folders-width) - 19px);
 }
 div[aria-label^="Start"] > button {
 	display: block;
@@ -146,6 +146,16 @@ header > :nth-child(1) > :nth-child(2) > div {
 	visibility: hidden;
 }
 
+/* Make Icons Gray */
+#email-verification-tooltip-id > div:nth-child(1) {
+	filter: grayscale(1);
+}
+
+/* Get Coins */
+#COIN_PURCHASE_DROPDOWN_ID {
+	display: none;
+}
+
 /* User Name (Fixed Positioned to Top of Header) */
 #email-collection-tooltip-id > :nth-child(2) > :nth-child(1) {
 	visibility: visible;
@@ -211,6 +221,7 @@ header > :nth-child(1) > :nth-child(2) > div {
 	top: var(--banner-height);
 	max-height: calc(var(--content-height) - 46px);
 	width: calc(var(--folders-width) - 6px);
+	overflow-x: hidden;
 	overflow-y: scroll;
 	background: linear-gradient(to bottom, var(--background-color) 0%, #1b1b1b 100%);
 }
@@ -298,32 +309,100 @@ div[role="menu"] [role="menuitem"] {
 }
 
 button#ListingSort--SortPicker {
+	display: block;
 	visibility: visible;
 	position: fixed;
+	z-index: 2;
 	top: 193px;
-	left: 400px;
+	left: 426px;
 	margin: 0;
-	padding: 0;
+	padding-left: 9px;
+	padding-right: 7px;
+	padding-top: 5px;
+	padding-bottom: 6px;
 	width: auto;
 	height: 20px;
 	background-color: var(--background-color);
+	line-height: 12px;
 	text-transform: capitalize;
 }
 	button#ListingSort--SortPicker:hover {
 		background-color: #0072C6;
 	}
+
+	button#ListingSort--SortPicker:focus {
+		outline: 1px dotted white;
+		box-shadow: none;
+	}
+
+	button#ListingSort--SortPicker:active:focus {
+		outline: 1px dotted orange
+	}
+
 	button#ListingSort--SortPicker > :nth-child(1) {
 		display: none;
 	}
+
+	button#ListingSort--SortPicker > * {
+		position: relative;
+		top: -3px;
+	}
+
 	button#ListingSort--SortPicker > span {
 		color: #F0F0F0;
 		font-family: "Segoe UI", IBMPlexSans, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
 		font-size: 12px;
 		font-weight: 100;
+		line-height: 12px;
 	}
 		button#ListingSort--SortPicker > span::before {
 			content: "By ";
 		}
+
+	button#ListingSort--SortPicker > i {
+		top: -4px
+	}
+
+div.SubredditVars-r-TheSilphRoad > div[role="menu"] {
+	position: absolute;
+	z-index: 3;
+	left: 325px !important;
+	overflow-y: hidden;
+	border: 1px solid #5E5E5E;
+	border-radius: 0;
+	box-shadow: none;
+	width: 165px;
+}
+
+	div.SubredditVars-r-TheSilphRoad > div[role="menu"]::before {
+	content: "Sort";
+		display: block;
+		border: 1px solid #363636;
+		border-bottom: 2px solid #363636;
+		padding: 4px 9px 9px;
+		width: 145px;
+		height: 9px;
+		background-color: #4A4A4A;
+		font-family: "Segoe UI";
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+	div.SubredditVars-r-TheSilphRoad > div[role="menu"] > a {
+		background-color: #363636;
+		margin: 0;
+		padding: 2px 0 2px 0;
+		height: 20px;
+	}
+
+		div.SubredditVars-r-TheSilphRoad > div[role="menu"] > a > span {
+			color: #F0F0F0;
+		}
+
+	div.SubredditVars-r-TheSilphRoad > div[role="menu"] > a:hover {
+		background-color: #505050
+	}
+
 /******************************************************** View / Sort < Mailbox ***/
 /*** Right Side *******************************************************************/
 /* Containers and Scrolling */
@@ -467,18 +546,17 @@ button#ListingSort--SortPicker {
 	}
 
 	[style="max-width:1600px"]+[style="max-width:1600px"] {
-		top: calc(var(--banner-height) + 65px);
-		left: calc(var(--folders-width) + 7px);
-		width: calc(var(--content-width) + var(--mailbox-width) - 23px);
-		max-width: calc(var(--content-width) + var(--mailbox-width) - 23px) !important;
+		top: calc(var(--banner-height) + 30px);
+		height: calc(var(--content-height) - 63px);
+		width: 100vw;
+		max-width: 100vw !important;
 	}
 
 /******* Children *****************************************************************/
 #overlayScrollContainer > div,
 #overlayScrollContainer > div > div,
 #overlayScrollContainer > div > div > div,
-[style="max-width:1600px"]+[style="max-width:1600px"] > div,
-[style="max-width:1600px"]+[style="max-width:1600px"] > div > div {
+[style="max-width:1600px"]+[style="max-width:1600px"] > div {
 	display: block;
 	visibility: visible;
 	margin: 0;
@@ -490,7 +568,8 @@ button#ListingSort--SortPicker {
 
 	#overlayScrollContainer > div,
 	#overlayScrollContainer > div > div,
-	#overlayScrollContainer > div > div > div {
+	#overlayScrollContainer > div > div > div:not([tabindex]),
+	[style="max-width:1600px"]+[style="max-width:1600px"] > div > div:not([tabindex]) {
 		width: 100%;
 		min-width: 100%;
 		max-width: 100%;
@@ -499,15 +578,18 @@ button#ListingSort--SortPicker {
 		max-height: 100%;
 	}
 
-	[style="max-width:1600px"]+[style="max-width:1600px"] > div,
-	[style="max-width:1600px"]+[style="max-width:1600px"] > div > div {
-		top: calc(var(--banner-height) + 65px);
-		height: calc(var(--content-height) - 65px);
-		min-height: calc(var(--content-height) - 65px);
-		max-height: calc(var(--content-height) - 65px);
-		width: calc(var(--content-width) + var(--mailbox-width));
-		max-width: calc(var(--content-width) + var(--mailbox-width));
-		min-width: calc(var(--content-width) + var(--mailbox-width));
+	#overlayScrollContainer > div > div > div[tabindex],
+	[style="max-width:1600px"]+[style="max-width:1600px"] > div > div[tabindex] {
+		display: none;
+	}
+
+	[style="max-width:1600px"]+[style="max-width:1600px"] > div {
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding-left: 13px;
+		height: 100%;
+		width: calc(100% - 31px);
 	}
 
 #overlayScrollContainer > div:nth-child(2),
@@ -524,16 +606,23 @@ button#ListingSort--SortPicker {
 	background-color: #C6C6C6;
 }
 /**********************************************************************************/
-#overlayScrollContainer > div > :nth-child(1) > div > :nth-child(1),
-#overlayScrollContainer > div > :nth-child(1) > div > :nth-child(2),
-#overlayScrollContainer > div > :nth-child(1) > div > :nth-child(3),
-#overlayScrollContainer > div > :nth-child(1) > div > :nth-child(4),
-#overlayScrollContainer > div > :nth-child(1) > div > :nth-last-child(1),
-[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(1),
+#overlayScrollContainer > div > :nth-child(1) > div {
+	visibility: hidden;
+}
+
+
+#overlayScrollContainer > div > :nth-child(1) > div .Post:nth-child(1),
+#overlayScrollContainer > div > :nth-child(1) > div .Post + :nth-child(2),
+#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-child(3),
+#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-child(4),
+#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-last-child(1),
+[style="max-width:1600px"]+[style="max-width:1600px"] .Post:nth-child(1),
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(2),
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(3),
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(4),
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-last-child(1) {
+	display: block;
+	visibility: visible;
 	margin-left: 0;
 	margin-right: 0;
 	margin-top: 0;
@@ -541,15 +630,15 @@ button#ListingSort--SortPicker {
 }
 
 /******* Header *******************************************************************/
-#overlayScrollContainer > div > :nth-child(1) > div > :nth-child(1),
-[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(1) {
+#overlayScrollContainer > div > :nth-child(1) > div .Post:nth-child(1),
+[style="max-width:1600px"]+[style="max-width:1600px"] > div > div .Post:nth-child(1) {
 	height: 30%;
 }
 
-#overlayScrollContainer > div > :nth-child(1) > div > .Post,
-#overlayScrollContainer > div > :nth-child(1) > div > :nth-child(1) > .Post,
-[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(1) > .Post {
+#overlayScrollContainer > div > :nth-child(1) > div .Post:nth-child(1),
+[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > .Post:nth-child(1) {
 	padding: 0;
+	background-color: #262626;
 }
 
 /*********** Upvote / Downvote / Count ********************************************/
@@ -569,9 +658,9 @@ button#ListingSort--SortPicker {
 }
 	[data-test-id="post-content"] > :nth-child(1) > div {
 		position: absolute;
-			left: 0;
-			flex-direction: unset;
-		}
+		left: 0;
+		flex-direction: unset;
+	}
 		
 		[data-test-id="post-content"] > :nth-child(1) button {
 			position: relative;
@@ -811,7 +900,7 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 /******* Comment as ***************************************************************/
 
 /* Could shorten to [data-test-id="comment-submission-form-markdown"] */
-#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2),
+#overlayScrollContainer > div > :nth-child(1) > div .Post + :nth-child(2),
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(2) {
 	border-top: 1px solid #ABABAB;
 	border-bottom: 1px solid #ABABAB;
@@ -913,17 +1002,20 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 
 /*********** Fancypants Editor ****************************************************/
 /* Extra margin on "Comment As [Username]" */
-#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2) > :nth-child(1),
-                          div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(1) {
+#overlayScrollContainer > div > :nth-child(1) > div .Post + :nth-child(2) > :nth-child(1),
+[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-child(2) > :nth-child(1),
+div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(1) {
 	margin-bottom: 0;
 }
 /* "Comment as" */
-#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2) > :nth-child(1) span,
+#overlayScrollContainer > div > :nth-child(1) > div .Post + :nth-child(2) > :nth-child(1) span,
+[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-child(2) > :nth-child(1) span,
                           div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(1) span {
 	color: black;
 }
 /* Username */
-#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2) > :nth-child(1) a,
+#overlayScrollContainer > div > :nth-child(1) > div .Post + :nth-child(2) > :nth-child(1) a,
+[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-child(2) > :nth-child(1) a,
                           div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(1) a {
 	color: var(--link-color);
 }
@@ -949,6 +1041,7 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 	}
 
 #overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(2) > :nth-child(2) > :nth-child(1) > :nth-child(1),
+[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-child(2) > :nth-child(2) > :nth-child(1) > :nth-child(1),
                           div.u1x7p5-0.kFtMxp > div > div:nth-child(2) > :nth-child(2) > :nth-child(1) > :nth-child(1) {
 	border: none;
 }
@@ -956,7 +1049,7 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 
 /**********************************************************************************/
 /*** Sort By **********************************************************************/
-#overlayScrollContainer > div > :nth-child(1) > div > :nth-child(3),
+#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-child(3),
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-child(3) {
 	position: absolute;
 	border: 0;
@@ -966,18 +1059,18 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 	background-color: white;
 }
 
-	#overlayScrollContainer > div > :nth-child(1) > div > :nth-child(3) {
+	#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-child(3) {
 		top: calc(30% + 1px);
 		right: 0;
 	}
-	div.u1x7p5-0.kFtMxp > div > div:nth-child(3) {
-		top: calc(30% - 10px);
-		right: 17px;
+	[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(3) {
+		top: calc(30% + 1px);
+		right: 0;
 	}
 
 	/* Sort By */
-	#overlayScrollContainer > div > :nth-child(1) > div > :nth-child(3) > :nth-child(1),
-	div.u1x7p5-0.kFtMxp > div > div:nth-child(3) > :nth-child(1) {
+	#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-child(3) > :nth-child(1),
+	[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > :nth-child(3) > :nth-child(1) {
 		display: block;
 		background-color: white;
 		color: black;
@@ -987,15 +1080,15 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 		line-height: 18px;
 		text-transform: Capitalize;
 	}
-	#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(3) > button,
-	div.u1x7p5-0.kFtMxp > div > div:nth-child(3) > button {
+	#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-child(3) > button,
+	[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-child(3) > button {
 		display: block;
 		padding: 0;
 		height: 18px;
 		line-height: 18px;
 	}
-		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(3) > button > span,
-		div.u1x7p5-0.kFtMxp > div > div:nth-child(3) > button > span {
+		#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-child(3) > button > span,
+		[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-child(3) > button > span {
 			background-color: white;
 			color: var(--link-color);
 			font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
@@ -1006,14 +1099,16 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 /********************************************************************** Sort By ***/
 
 /*** View Discussion in Other Community *******************************************/
-#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4) {
+#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-child(4),
+[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-child(4) {
 	position: absolute;
 	right: 0;
 	z-index: 1;
 	padding: 0;
 	background-color: transparent;
 }
-#overlayScrollContainer > div > :nth-child(1) > div > div:nth-child(4) > a {
+#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-child(4) > a,
+[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-child(4) > a {
 	position: relative;
 	right: 17px;
 	color: var(--link-color);
@@ -1022,7 +1117,11 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 /******************************************* View Discussion in Other Community ***/
 
 /*** Comments *********************************************************************/
-#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1),
+._2114DnVtHe_0MtbEW85tnL {
+	display: none;
+}
+
+#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-last-child(1),
 [style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-last-child(1) {
 	border-bottom: 2px solid white;
 	padding: 0;
@@ -1032,31 +1131,31 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 	background-color: white;
 }
 
-	#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar,
-	div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar {
+	#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-last-child(1)::-webkit-scrollbar,
+	[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-last-child(1)::-webkit-scrollbar {
 		width: 16px;
 	}
-		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-track,
-		div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-track {
+		#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-last-child(1)::-webkit-scrollbar-track,
+		[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-last-child(1)::-webkit-scrollbar-track {
 			background-color: #F3F3F3;
 		}
-		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-thumb,
-		div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-thumb {
+		#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-last-child(1)::-webkit-scrollbar-thumb,
+		[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-last-child(1)::-webkit-scrollbar-thumb {
 			border: 1px solid #ABABAB;
 			background-color: #FFFFFF;
 		}
-			#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-thumb:hover,
-			div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-thumb:hover {
+		#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-last-child(1)::-webkit-scrollbar-thumb:hover,
+		[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-last-child(1)::-webkit-scrollbar-thumb:hover {
 				border: 1px solid #ABABAB;
 				background-color: #F0F0F0;
 			}
-		#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-button,
-		div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-button {
+		#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-last-child(1)::-webkit-scrollbar-button,
+		[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-last-child(1)::-webkit-scrollbar-button {
 			border: 1px solid #ABABAB;
 			background-color: #FFFFFF;
 		}
-			#overlayScrollContainer > div > :nth-child(1) > div > div:nth-last-child(1)::-webkit-scrollbar-button:hover,
-			div.u1x7p5-0.kFtMxp > div > div:nth-child(4)::-webkit-scrollbar-button:hover {
+			#overlayScrollContainer > div > :nth-child(1) > div .Post ~ :nth-last-child(1)::-webkit-scrollbar-button:hover,
+			[style="max-width:1600px"]+[style="max-width:1600px"] > div > div > div:nth-last-child(1)::-webkit-scrollbar-button:hover {
 				border: 1px solid #878787;
 				background-color: #FFFFFF;
 			}
@@ -1131,6 +1230,25 @@ div[data-test-id="post-content"] > :nth-last-child(1) {
 			font-size: 11pt;
 			font-weight: 400;
 			line-height: 18px;
+		}
+
+		/* Content (Headers, but for whatever reason, they're divs) */
+		[data-test-id="comment"] div {
+			color: black;
+			margin: 0;
+		}
+
+		/* Content (Lists) */
+		[data-test-id="comment"] ul {
+			margin-left: 4px;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		[data-test-id="comment"] ul li {
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-right: 0;
+			color: black;
 		}
 		
 		/* Actions (Reply, Give Award, Share, etc.) */
