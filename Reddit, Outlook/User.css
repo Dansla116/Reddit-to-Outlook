@@ -25,6 +25,22 @@ div.ListingLayout-outerContainer {
 		max-height: 100%;
 	}
 
+/* Overview / Posts / Comments / Saved / etc. at top */
+div.ListingLayout-backgroundContainer + div > div:nth-child(2) > div > div {
+	display: flex;
+	justify-content: space-between;
+	left: 0;
+	padding-left: 12px;
+	padding-right: 17px;
+	width: calc(100% - 29px);
+}
+
+div > style ~ a[href*="/user/"] {
+	font-family: "Segoe UI";
+	font-size: 11px !important;
+}
+
+
 [style="max-width:100%"] {
 	padding: 0;
 }
