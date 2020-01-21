@@ -1,6 +1,145 @@
 /*** Root / Subreddit / Multis ****************************************************/
 /*** Regex: .*reddit\.com\/($|(r|[^user]|user\/.+\/m)\/.+\/)                   ****/
 /**********************************************************************************/
+
+/* Search Bar (Fixed Positioned to Top of Mailbox) */
+#SearchDropdown {
+	visibility: visible;
+	position: fixed;
+	left: var(--folders-width);
+	top: var(--banner-height);
+	margin-left: 20px;
+	margin-top: 8px;
+	height: 20px;
+	pointer-events: all;
+}
+	#SearchDropdown > label {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-top: 0;
+		margin-right: 10px;
+	}
+		#SearchDropdown > label > svg {
+			position: absolute;
+			top: 0;
+			right: 0;
+			fill: #3676B7;
+			transform: scaleY(0.68) scaleX(-0.68);
+		}
+
+	#SearchDropdown > form > input {
+		border-color: #686868;
+		border-radius: 0;
+		padding-left: 7px;
+		height: 20px;
+		width: 173px;
+		background-color: #363636;
+		font-family: "Segoe UI";
+		font-size: 8pt;
+	}
+		#SearchDropdown > form > input::placeholder {
+			color: #9E9E9E;
+		}
+
+/* Sort Dropdown */
+button#ListingSort--SortPicker {
+	display: block;
+	visibility: visible;
+	position: fixed;
+	z-index: 2;
+	top: calc(var(--banner-height) + 37px);
+	left: 426px;
+	margin: 0;
+	padding-left: 9px;
+	padding-right: 7px;
+	padding-top: 5px;
+	padding-bottom: 6px;
+	width: auto;
+	height: 20px;
+	background-color: var(--background-color);
+	line-height: 12px;
+	text-transform: capitalize;
+	cursor: default;
+}
+	button#ListingSort--SortPicker:hover {
+		background-color: #0072C6;
+	}
+
+	button#ListingSort--SortPicker:focus {
+		outline: 1px dotted white;
+		box-shadow: none;
+	}
+
+	button#ListingSort--SortPicker:active:focus {
+		outline: 1px dotted orange
+	}
+
+	button#ListingSort--SortPicker > :nth-child(1) {
+		display: none;
+	}
+
+	button#ListingSort--SortPicker > * {
+		position: relative;
+		top: -3px;
+	}
+
+	button#ListingSort--SortPicker > span {
+		color: #F0F0F0;
+		font-family: "Segoe UI", IBMPlexSans, "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+		font-size: 12px;
+		font-weight: 100;
+		line-height: 12px;
+	}
+		button#ListingSort--SortPicker > span::before {
+			content: "By ";
+		}
+
+	button#ListingSort--SortPicker > i {
+		top: -4px
+	}
+
+div[class^="SubredditVars-r-"] > div[role="menu"] {
+	position: absolute;
+	z-index: 3;
+	left: 325px !important;
+	overflow-y: hidden;
+	border: 1px solid #5E5E5E;
+	border-radius: 0;
+	box-shadow: none;
+	width: 165px;
+}
+
+	div[class^="SubredditVars-r-"] > div[role="menu"]::before {
+		content: "Sort";
+		display: block;
+		border: 1px solid #363636;
+		border-bottom: 2px solid #363636;
+		padding: 4px 9px 9px;
+		width: 145px;
+		height: 9px;
+		background-color: #4A4A4A;
+		font-family: "Segoe UI";
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+	div[class^="SubredditVars-r-"] > div[role="menu"] > a {
+		background-color: #363636;
+		margin: 0;
+		padding: 2px 0 2px 0;
+		height: 20px;
+	}
+
+		div[class^="SubredditVars-r-"] > div[role="menu"] > a > span {
+			color: #F0F0F0;
+			font-size: 9pt;
+		}
+
+	div[class^="SubredditVars-r-"]> div[role="menu"] > a:hover {
+		background-color: #505050
+	}
+
 /*** Mailbox **********************************************************************/
 /* BOOKMARK: Mailbox 1 */
 /* Fix this if the whole post background (without a post) and a portion of the right
@@ -33,6 +172,22 @@ div._1OVBBWLtHoSPfGCRaPzpTf {
 }
 
 	div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1) {
+		display: none;
+	}
+
+	div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(2) {
+		visibility: hidden;
+		margin: 0;
+		border: 0;
+		height: 0;
+	}
+
+		div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(2) > :nth-child(1) {
+			display: block;
+		}
+
+	div._1OVBBWLtHoSPfGCRaPzpTf > div.rpBJOHq2PR60pnwJlUyP0 {
+		display: block;
 		left: calc(var(--folders-width));
 		top: calc(var(--banner-height) + 80px);
 		height: calc(var(--content-height) - 80px);
@@ -43,7 +198,7 @@ div._1OVBBWLtHoSPfGCRaPzpTf {
 		background-color: var(--background-color) !important;
 	}
 
-		div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1)::before {
+		div._1OVBBWLtHoSPfGCRaPzpTf > div.rpBJOHq2PR60pnwJlUyP0::before {
 			content: url(https://i.imgur.com/uiXG0I4.png);
 			position: fixed;
 			z-index: 1;
@@ -52,40 +207,43 @@ div._1OVBBWLtHoSPfGCRaPzpTf {
 			background-color: var(--background-color);
 		}
 
-		div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover {
+		div._1OVBBWLtHoSPfGCRaPzpTf > div.rpBJOHq2PR60pnwJlUyP0:hover {
 			width: calc(var(--mailbox-width));
 		}
 
 			/* Scrollbar */
-			div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar {
+			div._1OVBBWLtHoSPfGCRaPzpTf > div.rpBJOHq2PR60pnwJlUyP0:hover::-webkit-scrollbar {
 				display: block;
 				width: 15px;
 			}
 
-			div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar-track {
+			div._1OVBBWLtHoSPfGCRaPzpTf > div.rpBJOHq2PR60pnwJlUyP0:hover::-webkit-scrollbar-track {
 				background: #343434;
 			}
 
-			div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar-thumb,
-			div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar-button {
+			div._1OVBBWLtHoSPfGCRaPzpTf > div.rpBJOHq2PR60pnwJlUyP0:hover::-webkit-scrollbar-thumb,
+			div._1OVBBWLtHoSPfGCRaPzpTf > div.rpBJOHq2PR60pnwJlUyP0:hover::-webkit-scrollbar-button {
 				border: 1px solid #3B3B3B;
 				background: #575757;
 			}
 
-				div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar-thumb:hover {
+				div._1OVBBWLtHoSPfGCRaPzpTf > div.rpBJOHq2PR60pnwJlUyP0:hover::-webkit-scrollbar-thumb:hover {
 					border-color: #101010;
 					background: #808080;
 				}
 
-				div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1):hover::-webkit-scrollbar-button:hover {
+				div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(2):hover::-webkit-scrollbar-button:hover {
 					border: 1px solid #3B3B3B;
 					background: #707070;
 				}
 
 	/* Unrendered Posts */
-	div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(2) {
+	/* Commented this out because when viewing messages directly, it hides the message. */
+	/*
+	div._1OVBBWLtHoSPfGCRaPzpTf > :last-child {
 		display: none;
 	}
+	*/
 
 
 /*** Mailbox > Individual Messages ************************************************/
