@@ -66,63 +66,95 @@ header {
 	}
 }
 
-@media (min-width: 1849px) {
-	header::before {
-		content: url("https://i.imgur.com/s6mGT0x.png");
+@media (min-width: 1815px) {
+	[style^="--background:#FFFFFF"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit%2C%20Outlook/img/banner-light-left-1815-1920.png?raw=true");
+	}
+	[style^="--background:#1A1A1B"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit%2C%20Outlook/img/banner-dark-left-1815-1920.png?raw=true");
 	}
 }
 
-@media (min-width: 1789px) and (max-width: 1848px) {
-	header::before {
-		content: url("https://i.imgur.com/qTQ8U1Z.png");
+@media (min-width: 1771px) and (max-width: 1814px) {
+	[style^="--background:#FFFFFF"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit%2C%20Outlook/img/banner-light-left-1771-1814.png?raw=true");
+	}
+	[style^="--background:#1A1A1B"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit%2C%20Outlook/img/banner-dark-left-1771-1814.png?raw=true");
 	}
 }
 
-@media (min-width: 1736px) and (max-width: 1788px) {
-	header::before {
-		content: url("https://i.imgur.com/cFLd5hZ.png");
+@media (min-width: 1711px) and (max-width: 1770px) {
+	[style^="--background:#FFFFFF"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit%2C%20Outlook/img/banner-light-left-1711-1770.png?raw=true");
+	}
+	[style^="--background:#1A1A1B"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit%2C%20Outlook/img/banner-dark-left-1711-1770.png?raw=true");
 	}
 }
 
-@media (min-width: 1681px) and (max-width: 1735px) {
-	header::before {
-		content: url("https://i.imgur.com/IcVyYAm.png");
+@media (min-width: 1658px) and (max-width: 1710px) {
+	[style^="--background:#FFFFFF"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit%2C%20Outlook/img/banner-light-left-1658-1710.png?raw=true");
+	}
+	[style^="--background:#1A1A1B"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit%2C%20Outlook/img/banner-dark-left-1658-1710.png?raw=true");
 	}
 }
 
-@media (min-width: 1551px) and (max-width: 1680px) {
-	header::before {
-		content: url("https://i.imgur.com/nX8qAYj.png");
+@media (min-width: 1603px) and (max-width: 1657px) {
+	[style^="--background:#FFFFFF"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit%2C%20Outlook/img/banner-light-left-1603-1657.png?raw=true");
+	}
+	[style^="--background:#1A1A1B"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit%2C%20Outlook/img/banner-dark-left-1603-1657.png?raw=true");
 	}
 }
 
-@media (min-width: 1476px) and (max-width: 1550px) {
-	header::before {
-		content: url("https://i.imgur.com/jOv5j8r.png");
+@media (min-width: 1473px) and (max-width: 1602px) {
+	[style^="--background:#FFFFFF"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit%2C%20Outlook/img/banner-light-left-1473-1602.png?raw=true");
+	}
+	[style^="--background:#1A1A1B"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit%2C%20Outlook/img/banner-dark-left-1473-1602.png?raw=true");
 	}
 }
 
-@media (min-width: 1490px) and (max-width: 1475px) {
-	header::before {
-		content: url("https://i.imgur.com/VANqbIe.png");
+@media (min-width: 1412px) and (max-width: 1472px) {
+	[style^="--background:#FFFFFF"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit,%20Outlook/img/banner-light-left-1412-1472.png?raw=true");
+	}
+	[style^="--background:#1A1A1B"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit,%20Outlook/img/banner-dark-left-1412-1472.png?raw=true");
 	}
 }
 
-@media (min-width: 1389px) and (max-width: 1489px) {
-	header::before {
-		content: url("https://i.imgur.com/fSVS1rk.png");
+@media (min-width: 1398px) and (max-width: 1411px) {
+	[style^="--background:#FFFFFF"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit,%20Outlook/img/banner-light-left-1398-1411.png?raw=true");
+	}
+	[style^="--background:#1A1A1B"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit,%20Outlook/img/banner-dark-left-1398-1411.png?raw=true");
 	}
 }
 
-@media (min-width: 1366px) and (max-width: 1388px) {
-	header::before {
-		content: url("https://i.imgur.com/d090TLs.png");
+@media (min-width: 1367px) and (max-width: 1397px) {
+	[style^="--background:#FFFFFF"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit,%20Outlook/img/banner-light-left-1367-1397.png?raw=true");
+	}
+	[style^="--background:#1A1A1B"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit,%20Outlook/img/banner-dark-left-1367-1397.png?raw=true");
 	}
 }
 
 @media (min-width: 1367px) {
+	[style^="--background:#FFFFFF"] header::after {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit,%20Outlook/img/banner-light-right-large.png?raw=true");
+	}
+	[style^="--background:#1A1A1B"] header::after {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit,%20Outlook/img/banner-dark-right-large.png?raw=true");
+	}
 	header::after {
-		content: url("https://i.imgur.com/BKJaiTU.png");
 		visibility: visible;
 		position: fixed;
 		z-index: -1;
@@ -133,8 +165,13 @@ header {
 
 /* Laptops and smaller */
 @media (max-width: 1366px) {
+	[style^="--background:#FFFFFF"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit,%20Outlook/img/banner-light-left-small.png?raw=true");
+	}
+	[style^="--background:#1A1A1B"] header::before {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit,%20Outlook/img/banner-dark-left-small.png?raw=true");
+	}
 	header::before {
-		content: url("https://i.imgur.com/7e5ncKh.png");
 		visibility: visible;
 		position: fixed;
 		z-index: -1;
@@ -142,10 +179,15 @@ header {
 		left: 0;
 		padding-right: 100%;
 		background-color: #0A0A0A;
-		box-shadow: 0 -33px #323130 inset; 
+		box-shadow: 0 -33px #323130 inset;
+	}
+	[style^="--background:#FFFFFF"] header::after {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit,%20Outlook/img/banner-light-right-small.png?raw=true");
+	}
+	[style^="--background:#1A1A1B"] header::after {
+		content: url("https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit,%20Outlook/img/banner-dark-right-small.png?raw=true");
 	}
 	header::after {
-		content: url("https://i.imgur.com/4ICfAxQ.png");
 		visibility: visible;
 		position: fixed;
 		z-index: -1;
