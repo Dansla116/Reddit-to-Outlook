@@ -154,11 +154,11 @@ div.qYj03fU5CXf5t2Fc5iSvg > :nth-child(2) > :nth-child(1) {
 }
 
 /* BOOKMARK: Mailbox 2 */
-div._1OVBBWLtHoSPfGCRaPzpTf {
+._1OVBBWLtHoSPfGCRaPzpTf {
 	position: fixed;
 	margin-top: 8px;
-	border-left: 1px solid var(--border-color);
-	border-right: 1px solid var(--border-color);
+	border-left: 1px solid var(--border-color-dark);
+	border-right: 1px solid var(--border-color-dark);
 	padding-right: 21px;
 	padding-top: 72px;
 	left: var(--folders-width);
@@ -168,7 +168,6 @@ div._1OVBBWLtHoSPfGCRaPzpTf {
 	max-height: calc(var(--content-height) - 80px);
 	overflow-y: scroll;
 	width: calc(var(--mailbox-width) - 15px);
-	background-color: var(--background-color) !important;
 }
 
 	div._1OVBBWLtHoSPfGCRaPzpTf > :nth-child(1) {
@@ -198,13 +197,17 @@ div._1OVBBWLtHoSPfGCRaPzpTf {
 		background-color: var(--background-color) !important;
 	}
 
+		[style="--pseudo-before-background:#DAE0E6;"] div._1OVBBWLtHoSPfGCRaPzpTf > div.rpBJOHq2PR60pnwJlUyP0::before {
+			content: url(https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit%2C%20Outlook/img/mailbox-dark.png?raw=true);
+		}
+		[style="--pseudo-before-background:#030303;"] div._1OVBBWLtHoSPfGCRaPzpTf > div.rpBJOHq2PR60pnwJlUyP0::before {
+			content: url(https://github.com/Dansla116/Stylish-Themes/blob/master/Reddit%2C%20Outlook/img/mailbox-dark.png?raw=true);
+		}
 		div._1OVBBWLtHoSPfGCRaPzpTf > div.rpBJOHq2PR60pnwJlUyP0::before {
-			content: url(https://i.imgur.com/uiXG0I4.png);
-			position: fixed;
 			z-index: 1;
+			position: fixed;
 			left: calc(var(--folders-width) + 1px);
 			top: calc(var(--banner-height) + 1px);
-			background-color: var(--background-color);
 		}
 
 		div._1OVBBWLtHoSPfGCRaPzpTf > div.rpBJOHq2PR60pnwJlUyP0:hover {
