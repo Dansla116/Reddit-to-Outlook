@@ -1,0 +1,11 @@
+/**********************************************************************************/
+/*** on domain: www.speedtest.net                                              ****/
+/**********************************************************************************/
+[id^="div-gpt-ad"] {
+	display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    max-height: 0 !important;
+    max-width: 0 !important;
+}

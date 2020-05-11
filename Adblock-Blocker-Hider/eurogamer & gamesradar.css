@@ -1,0 +1,21 @@
+/**********************************************************************************/
+/*** on domain: www.eurogamer.net                                              ****/
+/*** on domain: www.gamesradar.com                                             ****/
+/**********************************************************************************/
+body {
+	/*overflow-y: scroll !important;*/
+}
+
+div#main {
+	max-height: 100vh;
+    overflow-y: scroll;
+}
+
+[class^="sp_veil"],
+[class^="sp_message_container"] {
+	display: none !important;
+}
+
+.raleigh-background {
+	display: none !important;
+}
