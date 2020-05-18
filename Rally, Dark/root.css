@@ -263,7 +263,7 @@ input, textarea, select {
 /* Note: There are ~~two~~ three sets of tables in rally, smb and chr.  Elements
    from them can be interchanged on a dime. */
 /*** Tables ***********************************************************************/
-/*** Rally Grid ******************************************************************/
+/*** Tables > Rally Grid **********************************************************/
 /* header */
 .rally-grid .x4-grid-header-ct {
 	background-color: var(--header-background);
@@ -313,6 +313,7 @@ input, textarea, select {
 		background-color: var(--rally-red-dark);
 	}
 
+/*** END Tables > Rally Grid ******************************************************/
 /*** Tables > smb *****************************************************************/
 .rng .smb-Panel--app > .smb-PanelHeader,
 .rng .smb-Panel--appSettings > .smb-PanelHeader {
@@ -447,6 +448,11 @@ input, textarea, select {
 
 /*** END Tables > smb *************************************************************/
 /*** Tables > chr *****************************************************************/
+/* page container */
+.rng .chr-GridPage {
+	background-color: var(--content-background);
+}
+
 /* toolbar */
 .rng .chr-ToolbarDefaultToolbar {
 	background-color: var(--content-background);
@@ -638,6 +644,11 @@ input, textarea, select {
 	background-color: var(--content-background);
 }
 
+/* banner background, that they made blue as of 5/15/20 */
+.rng .chr-QuickDetailEntityHeader {
+	background-color: var(--content-background);
+}
+
 /* defect number in top left */
 .rng .chr-QuickDetailEntityHeader .chr-QuickDetailFormattedId .chr-QuickDetailFormattedId-panelTitle {
 	color: white;
@@ -741,19 +752,19 @@ a.cke_combo_button {
     }
 
 /* description and notes, icons */
-.cke_button_icon {
+.rng .cke_button_icon {
 	filter: brightness(300%);
 }
 	/* active */
-    a.cke_button_on {
+    .rng a.cke_button_on {
     	border: 1px solid var(--rally-red);
         box-shadow: 0 -10px 20px -10px var(--rally-red) inset;
     	background-color: var(--header-background);
     }
     /* hover */
-    a.cke_button_off:hover, a.cke_button_off:focus,
-    a.cke_button_on:hover, a.cke_button_on:focus,
-    a.cke_button_off:active {
+    .rng a.cke_button_off:hover, .rng a.cke_button_off:focus,
+    .rng a.cke_button_on:hover, .rng a.cke_button_on:focus,
+    .rng a.cke_button_off:active {
         box-shadow: 0 -10px 20px -10px var(--hover-blue) inset;
     	border: 1px solid var(--hover-blue);
     }

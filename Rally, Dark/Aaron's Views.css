@@ -53,7 +53,7 @@ td[style="background-color:#FF6666;color:black;weight:bold;white-space:nowrap"] 
 }
 
 /* Legend */
-.ejsc-legend {
+.ejsc-legend-series-container {
 	height: 126px;
 }
 
@@ -74,6 +74,12 @@ td[style="background-color:#FF6666;color:black;weight:bold;white-space:nowrap"] 
 
 .ejsc-legend-series-container,
 .ejsc-legend-series-div.ejsc-legend-series-out {
+	background: var(--background-color);
+}
+
+.ejsc-legend-series-div.ejsc-legend-series-over {
+	border-color: var(--hover-blue);
+    box-shadow: 0 -5px 15px -5px var(--hover-blue) inset;
 	background: var(--background-color);
 }
 
