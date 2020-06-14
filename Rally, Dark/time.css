@@ -1,0 +1,9 @@
+/**********************************************************************************/
+/*** Starting With: https://home.fmins.com/time/                                ***/
+/**********************************************************************************/
+
+.link-button-blue, .link-button-tan, .link-button-gray, .link-button-green, .link-button-red, .link-button-ltBlue, input[type="submit"].link-button-blue, .link-button-header, .link-button-blue-padded, .link-button-orange2 {
+	background-color: #000;
+	background-image: none;
+    color: white;
+}

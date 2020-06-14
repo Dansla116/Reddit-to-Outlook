@@ -1,0 +1,114 @@
+/**********************************************************************************/
+/*** Domain: rally1.rallydev.com                                                ***/
+/**********************************************************************************/
+table[width="100%"] select#timeboxList {
+	border: 1px solid var(--rally-red);
+    padding: 1px 3px 2px 3px;
+    height: 17px;
+	font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important
+}
+
+table[width="100%"] div,
+table[width="100%"] td.lbl {
+	color: var(--front-white);
+}
+
+#timeEntry_div input {
+	border: 1px solid var(--rally-red);
+    padding: 1px 3px 2px 3px;
+    height: 17px;
+	font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important
+}
+
+#timeEntry_div input[type="button"] {
+    padding: 1px 7px 2px 7px;
+}
+
+#timeEntry_div input:hover {
+	border-color: var(--hover-blue);
+}
+
+.ejsc-hint {
+	background-color: var(--input-black);
+    opacity: 0.85;
+}
+
+/* Team Report */
+canvas {
+	filter: saturate(400%) hue-rotate(180deg) invert(100%) brightness(115%);
+}
+
+td[style="background-color: lime;"],
+td[style="background-color: lime"] {
+	background-color: #080 !important;
+}
+
+td[style="background-color: yellow"] {
+	background-color: #880 !important;
+}
+
+td[style="background-color:#FF6666;color:black;weight:bold;white-space:nowrap"] {
+	background-color: #A00 !important;
+    color: white !important;
+}
+
+/* Legend */
+.ejsc-legend-series-container {
+	height: 126px;
+}
+
+.ejsc-legend.ejsc-legend-maximized,
+.ejsc-legend.ejsc-legend-minimized {
+	left: unset !important;
+	right: -80px !important;
+    top: -100px !important;
+    border: none;
+}
+
+.ejsc-legend-caption{
+	background: var(--header-background);
+}
+.ejsc-legend-owner {
+	display: none;
+}
+
+.ejsc-legend-series-container,
+.ejsc-legend-series-div.ejsc-legend-series-out {
+	background: var(--background-color);
+}
+
+.ejsc-legend-series-div.ejsc-legend-series-over {
+	border-color: var(--hover-blue);
+    box-shadow: 0 -5px 15px -5px var(--hover-blue) inset;
+	background: var(--background-color);
+}
+
+[title="Accepted Hours"] {
+	color: #8F8 !important;
+}
+[title="To Do"] {
+	color: #8CF !important;
+}
+[title="Ideal Burndown End"] {
+	color: var(--front-white) !important;
+}
+[title="Ideal Burndown Start"] {
+	color: #8CF !important;
+}
+[title="Actual Burndown Trend"] {
+	color: #F88 !important;
+}
+[title="Vacation Time"] {
+	color: #F88 !important;
+}
+
+td[colspan="4"][style="color:red"] {
+	color: var(--rally-red) !important;
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+font[color="blue"] {
+	color: var(--hover-blue);
+    text-shadow: white;
+}
