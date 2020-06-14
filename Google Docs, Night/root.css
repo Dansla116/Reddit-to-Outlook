@@ -1,0 +1,309 @@
+:root {
+	--header-background-color: #323130;
+    --body-background-color: #262626;
+    --border-color: #575757;
+    --button-color: #D4D4D4;
+    --trim-color: #8CB3E9;
+    --input-background: #121212;
+    --docs-blue-light: #A9C5F8;
+    --sheets-green-light: #91D1B2;
+    --sheets-green: #22813B;
+    --front-white: #FFF;
+}
+
+body {
+	color: white;
+}
+
+/*** Header ***********************************************************************/
+/* Header */
+#docs-header,
+.docs-material #docs-header .docs-titlebar-buttons {
+	background-color: var(--header-background-color);
+}
+
+#docs-title-widget,
+.docs-title-input-label {
+	visibility: hidden !important;
+}
+
+.docs-title-input {
+	border: none;
+	background-color: var(--header-background-color);
+}
+
+.docs-gm .docs-title-input:focus {
+	border: none !important;
+    color: white;
+}
+
+/* Menubar */
+#docs-menubars {
+	background-color: var(--header-background-color);
+}
+.docs-gm .docs-menubar .goog-control {
+	color: #FFFFFF;
+}
+.docs-gm .docs-menubar .goog-control-hover {
+	background-color: #484644;
+    font-weight: 700;
+}
+
+
+/* Toolbar */
+.docs-material #docs-toolbar-wrapper {
+    border-color: var(--header-background-color);
+	background-color: var(--header-background-color);
+    color: white;
+}
+
+/* Toolbar Seperators */
+.docs-gm .goog-toolbar-separator.goog-inline-block {
+	border-color: #484644
+}
+
+
+.docs-icon-img-container.docs-icon-img {
+	filter: invert(1) brightness(125%);
+}
+.goog-toolbar-button-checked .docs-icon-img-container.docs-icon-img {
+	filter: brightness(160%);
+}
+
+/* Buttons */
+.docs-material .goog-toolbar-button,
+.docs-material .goog-toolbar-menu-button[role="button"] {
+	background-color: var(--header-background-color);
+    color: var(--button-color);
+}
+.docs-gm .docs-material .goog-toolbar-button-hover,
+.docs-gm .docs-material .goog-toolbar-button-hover[role="button"] {
+	background-color: #484644;
+    color: var(--button-color);
+}
+.docs-gm .docs-material .goog-toolbar-button-checked,
+.docs-gm .docs-material .goog-toolbar-button-checked[role="button"] {
+	border-radius: 0;
+	background-color: #484644;
+    color: var(--button-color);
+}
+.docs-gm .docs-material .goog-toolbar-button-checked:hover,
+.docs-gm .docs-material .goog-toolbar-button-checked[role="button"]:hover {
+	border-radius: 0;
+	background-color: #484644;
+    color: var(--button-color);
+}
+
+/* Dropdown Listboxes / Comboboxes */
+.docs-material .goog-toolbar-menu-button[role="listbox"],
+.docs-material .goog-toolbar-combo-button[role="combobox"] {
+	border: 1px solid #686868 !important;
+	background-color: #444444;
+    color: #DADADA;
+}
+.docs-material .goog-toolbar-combo-button-input {
+	background-color: #444444;
+    color: #DADADA;
+}
+
+
+/*** Righthand Side ***************************************************************/
+.docs-companion-app-switcher-container {
+	border-top: 0px;
+}
+
+.companion-app-switcher-container {
+	border-left-color: var(--border-color);
+	background-color: var(--body-background-color);    
+}
+
+/*** Content **********************************************************************/
+#kix-horizontal-ruler,
+#kix-vertical-ruler,
+.kix-appview-editor {
+	background-color: #262626;
+    border-color: #262626;
+}
+
+.docs-ruler-margin-start {
+	background-color: #0B0B0B;
+}
+
+.docs-ruler-background-inner {
+	background-color: #3B3B3B;
+}
+
+input {
+    border-color: #686868;
+    color: #DADADA;
+    font-family: "Segoe UI";
+}
+
+.kix-appview-editor::-webkit-scrollbar {
+	width: 10px;
+    padding-right: 10px;
+}
+    .kix-appview-editor::-webkit-scrollbar-thumb {
+        background: #575757; 
+    	margin-right: 10px;
+    }
+    .kix-appview-editor::-webkit-scrollbar-thumb:hover {
+        background: #808080;
+    }
+
+input:hover {
+	border-color: #B5B5B5;
+    background-color: #333337;
+}
+input::placeholder {
+	color: #DADADA;
+    font-family: "Segoe UI";
+}
+
+/* Navigation Bar */
+.left-sidebar-container.docs-ui-unprintable {
+	border-right: 1px solid var(--border-color);
+}
+
+.navigation-widget-navigation-tab-button.navigation-widget {
+	position: static;
+    left: auto !important;
+    margin: 0;
+    box-shadow: none;
+    border-right: 1px solid var(--border-color);
+    border-radius: 0;
+    padding: 0;
+    background: var(--body-background-color);
+}
+.docs-gm-sidebars .navigation-widget-hat-title {
+	color: #FFFFFF;
+}
+.navigation-widget-hat-close-button-icon {
+	fill: #FFFFFF;
+}
+.docs-gm-sidebars .navigation-item .navigation-item-level-0 {
+	color: #FFFFFF;
+}
+
+/* Sidebar */
+.docs-gm-sidebars .waffle-gm-sidebar .waffle-sidebar-title,
+.docs-gm-sidebars .waffle-gm-sidebar .docs-sidebar-toggle-tabs,
+.waffle-sidebar-content {
+	background-color: #363636;
+}
+
+/* Survey */
+.survey .mdl-card {
+	background-color: #262626;
+	box-shadow: 0 0px 20px 1px var(--trim-color);
+}
+.survey .hats-nav {
+	background-color: #262626;
+}
+
+.survey .question.open-ended .mdl-textfield__input {
+	color: white;
+}
+
+.survey .mdl-textfield__input {
+	background-color: var(--input-background);
+}
+
+/* Google Sheets */
+div.formula-bar-separator > div {
+	background-color: #262626;
+}
+div#formula-bar {
+	background-color: #383838;
+}
+div#t-formula-bar-input-container {
+	background-color: #383838;
+}
+
+div#t-formula-bar-input-container div.cell-input {
+	background-color: #383838;
+    color: #FFFFFF;
+}
+
+/* Bottom Bar */
+.docs-gm .grid-bottom-bar {
+	background-color: var(--header-background-color);
+}
+.docs-sheet-add .docs-sheet-button-inner-box, .docs-sheet-add .docs-sheet-button-icon,
+.docs-sheet-all .docs-sheet-button-inner-box, .docs-sheet-all .docs-sheet-button-icon {
+	filter: brightness(200%);
+}
+.docs-gm .docs-sheet-tab,
+.docs-gm .docs-sheet-active-tab {
+	border-color: var(--border-color);
+	background-color: var(--body-background-color);
+}
+.docs-gm .docs-sheet-tab-name {
+	color: var(--front-white);
+}
+.docs-gm .docs-sheet-active-tab .docs-sheet-tab-name {
+	color: var(--sheets-green-light);
+}
+.waffle-assistant-entry-expanded,
+.waffle-assistant-entry-expanded.companion-collapsed {
+	border-color: var(--border-color);
+	background-color: var(--body-background-color);
+}
+.waffle-assistant-entry-label {
+	color: var(--sheets-green-light);
+}
+
+/* Specifc Content Elements */
+.goog-menu,
+.waffle-filterbox-boolean-condition-picker,
+.waffle-filtermenu {
+	background-color: var(--body-background-color);
+}
+.docs-gm .goog-menuitem,
+.waffle-filterbox-container,
+.goog-option-selected .goog-menuitem-content {
+	color: var(--front-white);
+}
+.waffle-filterbox-content > .goog-menuitem-highlight {
+	background-color: var(--body-background-color);
+}
+.docs-gm .goog-menuitem.goog-menuitem-highlight {
+    border: 1px solid var(--docs-blue-light);
+}
+.goog-menuitem-highlight .goog-menuitem-content,
+.goog-menuitem-hover .goog-menuitem-content {
+	color: var(--front-white);
+}
+
+.goog-menuitem-checkbox,
+.goog-menuitem-icon {
+	filter: invert(1);
+}
+.goog-link-button {
+	color: var(--docs-blue-light);
+}
+.waffle-filterbox-menu .goog-menu-filter input {
+	background-color: var(--input-background);
+}
+
+.text-sizer.annotation-bubble {
+	background-color: var(--body-background-color);
+    color: var(--front-color);
+}
+.annotation-attribution {
+	background-color: var(--body-background-color);
+}
+/* cancel buttons */
+.docs-gm .docs-image-effect-adjustment-reset-button, .docs-gm .waffle-filterbox-button-container .jfk-button-standard,
+.docs-gm .docs-suggestiondialog-reject-container .jfk-button, .docs-gm .docs-suggestiondialog-reject-container .goog-flat-menu-button,
+.motion-ui .punch-animation-sidebar-add.goog-flat-button, .docs-gm .docs-offline-optinpromo-buttons .jfk-button-standard {
+	border-color: var(--sheets-green-light) !important;
+	background-color: var(--input-background);
+    color: var(--sheets-green-light);
+}
+/* ok buttons */
+.docs-gm .punch-animation-sidebar-play.jfk-button, .docs-gm .punch-animation-sidebar-stop.jfk-button,
+.docs-gm .waffle-filterbox-button-container .jfk-button-action, .docs-gm .docs-suggestiondialog-accept-container .jfk-button,
+.docs-gm .docs-suggestiondialog-accept-container .goog-flat-menu-button, .docs-gm .docs-offline-optinpromo-buttons .jfk-button-action {
+	background-color: var(--sheets-green);
+}

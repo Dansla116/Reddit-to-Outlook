@@ -1,0 +1,128 @@
+:root {
+	--link-color: #8AB4F8;
+}
+
+body {
+	background: #1F1F1F;
+    color: #FFF;
+}
+
+/* Header */
+.sfbg.nojsv,
+#hdtbSum,
+#appbar {
+	background: #272727;
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.45);
+}
+
+/* Search Input */
+.RNNXgb {
+	border: 1px solid #3C4043;
+	background: #121212
+}
+.gLFyf {
+	color: #E8EAED;
+}
+
+/* All / Maps / News / More */
+#hdtb-msb .hdtb-mitem.hdtb-msel {
+	border-bottom: 3px solid --link-color;
+	color: var(--link-color);
+}
+
+/* Footer */
+#fbar {
+	border: 1px solid #272727;
+	background: #272727;
+	box-shadow: 0 -2px 6px 0 rgba(0, 0, 0, 0.45);
+}
+
+/* Other Inputs on Screen */
+input, select, textarea,
+.dw-sb-cont .dw-sbi, .dw-sb-cont .dw-sb-btn {
+	color: white;
+	background: #121212;
+}
+
+/* Similar */
+.pdpvld {
+	color: #8BC09B;
+}
+
+
+/* Similar, Labels */
+.cO53qb {
+	border-color: #AAA;
+	background-color: black;
+    color: #AAA !important;
+}
+
+/* Similar, Clickable */
+.MR2UAc {
+	background-color: black;
+    color: white;
+}
+
+.MR2UAc:hover {
+	border-color: var(--link-color);
+	background-color: black;
+    color: var(--link-color);
+}
+
+/* Links */
+a:link, #prs a:visited, #prs a:active, .q:active, .q:visited,
+a.fl:link, .fl a, .flt, a.flt, .gl a:link {
+	color: #8AB4F8;
+}
+
+/* Visited Links */
+a:visited {
+	color: #CE8AF8;
+}
+
+/* Cached Arrows */
+.GHDvEf, .GHDvEf:hover, .GHDvEf.selected, .GHDvEf.selected:hover {
+	background-color: #1F1F1F;
+}
+.action-menu .mn-dwn-arw {
+	border-color: #AAAAAA #0000;
+}
+
+/* Everything else that should be white */
+#hdtb .hdtb-mitem a,
+#hdtb-msb #hdtb-more, #hdtb-msb #hdtb-tls,
+#resultStats,
+.a, cite, cite a:link, cite a:visited, .cite, .cite:link, #nygTcd>i, .bc a:link,
+.f,
+.s .st em, .st.s.std em,
+.s,
+.P1usbc,
+.gJBeNe {
+	color: #AAA;
+}
+
+/* Weather */
+.vk_c, .vk_cxp {
+	background-color: #000;
+}
+.vk_c, .vk_cxp, #rhs .fIcnad {
+	border: 1px solid #000;
+}
+.vk_bk,
+.vk_gy {
+	color: white !important;
+}
+
+.XOKJuc {
+	background-color: #008;
+    border-top-color: #8FF;
+}
+/* END Weather */
+
+/* Pagination */
+#foot #navcnt .cur {
+	color: white;
+}
+#foot #navcnt a {
+	color: #8AB4F8;
+}

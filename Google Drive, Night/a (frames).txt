@@ -1,0 +1,709 @@
+/*** Sidebar **********************************************************************************************************************************************************/
+
+/* Scrollbar */
+	div.a-da-Mf-B-lc::-webkit-scrollbar {
+		display: block;
+        width: 8px;
+	}
+        div.a-da-Mf-B-lc::-webkit-scrollbar-track {
+            background: #1C1C1C;
+        }
+        .PEfnhb::-webkit-scrollbar-thumb {
+        	border-radius: 0;
+            background: #1C1C1C; 
+        }
+        div.a-da-Mf-B-lc:hover::-webkit-scrollbar-thumb {
+            background: #474747;
+        }
+        
+/* "My Drive", "Computers", etc. Icons */
+svg.a-s-fa-Ha-pa > path:not([fill="none"]) {
+    fill: #888888;
+}
+/* "My Drive", "Computers", etc. Icons, Selected */
+.a-Ng-c-ha svg {
+	fill: #8CB3E9;
+}
+
+/* "My Drive", "Computers", etc. Text */
+.a-nEbBXb .a-U-J-x {
+	color: #FFFFFF;
+}
+
+/* "x GB of y GB used" Text */
+.ub-ml-Pr .USrqEe-ml-Pr-gi .cr-hTVF2c-r {
+	color: #FFFFFF;
+}
+
+/* Divider between "Trash" and "Backups" */
+div.a-U-ye::before,
+div.a-ji-Gd::before {
+    margin-right: 0px !important;
+    border-bottom-width: 0px !important;
+    height: .6px;
+    background-color: #333333;
+}
+
+/* Divider between "Backups" and "Storage" */
+div.USrqEe-ml-Pr-qc-j.ub-ml-Pr::before {
+    border-bottom-color: #333333;
+}
+
+/* All Locations */
+div.a-U-J:hover {
+	background-color: #474747 !important;
+}
+
+/* Selected Location */
+div.a-U-Li.a-U-xc.a-s-oe [aria-selected="true"] [role="link"] {
+	cursor: pointer;
+	background-color: #333333;
+}
+/* Selected Location Font */
+.a-dkl3Ye .a-U-ye-ha>.a-U-J>.a-U-J-x, .a-dkl3Ye .a-U-ye-ha>.a-U-J.a-U-J-Wc-uh>.a-U-J-x {
+	color: #8CB3E9;
+}
+
+div.a-U-Li.a-U-xc.a-s-oe [aria-selected="true"] [role="link"]:hover {
+	background-color: #555555;
+}
+
+/* Selected Location's non-selected children */
+div.a-U-Li.a-U-xc.a-s-oe [aria-selected="true"] [role="group"] > *,
+div.a-U-Li.a-U-xc.a-s-oe [aria-selected="true"] [role="treeitem"] > * {
+    background-color: #1C1C1C;
+}
+/********************************************************************************************************************************************************** Sidebar ***/
+
+/*** Content **********************************************************************/
+
+/********************************************************************** Content ***/
+
+form * input::placeholder {
+    color: #888888 !important;
+}
+
+/* Input Specification Dropdown Form */
+div.h-uj.a-Va-Zb-mb {
+    background-color: #343434;
+}
+div.h-uj.a-Va-Zb-mb * {
+    color: white !important;
+}
+div.h-uj.a-Va-Zb-mb * svg polygon {
+    fill: white;
+}
+
+/* Learn More */
+div#header {
+    background-color: #343434;
+}
+div#header > div.ghp-header-searchRow * {
+    background-color: #111111;
+    color: white;
+}
+body.ng-scope,
+body.ng-scope * {
+    background-color: #111111;
+    color: white;
+}
+body.ng-scope * button {
+    background-color: #343434 !important;
+}
+
+/* Google Apps & Notifications */
+a[aria-label*="Google apps"] *,
+a[aria-label*="Google notifications"] * {
+    opacity: 1;
+    color: white;
+}
+
+/* Google Apps Pop-up */
+div.gb_ga.gb_fa.gb_za.gb_ha.gb_g * {
+    background-color: #1c1c1c !important;
+    color: white !important;
+}
+/* Notifications Pop-up */
+
+div.MTPK1e.SSPGKf * {
+    background-color: #1c1c1c !important;
+}
+content.xjKiLb svg,
+div.S9oH6 svg {
+    color: white;
+    fill: white !important;
+}
+
+/* Help and Settings Buttons */
+div.gb_3e.gb_he.Hb-ja-Na svg,
+div.gb_3e.gb_he.Hb-ja-Na svg > path[d^="M12"],
+div.gb_3e.gb_he.Hb-ja-Na svg > path[d^="M19"] {
+	opacity: 1;
+    fill: white;
+}
+
+/************************************************************************************************************************************************************ Header ***/
+/*** Sub-header ********************************************************************************************************************************************************/
+/* Container */
+div.a-D-B-x {
+    background-color: #232323;
+}
+/* Current Location */
+.h-R-w-d.a-l-S-Pc-w-d {
+	color: #FFFFFF;
+}
+/* Current Location Hover */
+.a-dkl3Ye .a-l-S-Pc-w-d.h-R-w-d-W {
+	background-color: #474747;
+}
+/* Current Location Active */
+.a-dkl3Ye .a-l-S-Pc-w-d.h-R-w-d-pb {
+	background-color: #555555;
+    color: #FFFFFF;
+}
+
+div.a-D-B-x * div.a-s-tb-sc-Ja-Q-x.a-Ba-Ed.a-s-Ba-dj * {
+    opacity: 1;
+    color: white;
+}
+
+/* List/Grid View and Details Buttons */
+/* div.a-s-tb-pa.a-s-Ba-Ak-x g > path:nth-child(1),
+div.a-s-tb-pa.a-s-Ba-Ak-x svg > path:nth-child(1) {
+    fill: white;
+}*/
+
+/* "New" Button */
+div.a-D-B-Lc-j,
+div.a-ec-Gd.a-ec-Gd-Cs-mp-S {
+    margin-left: 0 !important;
+	color: #232323 !important;
+}
+
+button.RTMQvb.Kzazxf.fCmhtc.hc0pBf.x6jRSb.a-qb-d.h-sb-Ic.sXaDqb {
+    border: 1px solid #343434 !important;
+    background-color: #343434 !important;
+}
+
+button.RTMQvb.Kzazxf.fCmhtc.hc0pBf.x6jRSb.a-qb-d.h-sb-Ic.sXaDqb::before {
+	z-index: 1;
+}
+div.wO3c5d {
+	z-index: 1;
+}
+/* "New" Button Font */
+.a-D-gc-wKOTTc .a-ec-Gd button.RTMQvb {
+	color: #FFFFFF;
+}
+.a-D-gc-wKOTTc .a-ec-Gd button.RTMQvb
+div.uw8t2 {
+	z-index: 0;
+	background-color: #343434;
+}
+
+button.RTMQvb.Kzazxf.fCmhtc.hc0pBf.x6jRSb.a-qb-d.h-sb-Ic.sXaDqb:hover > div.wO3c5d {
+	color: #FFFFFF !important;
+}
+
+/* New Pop-up */
+div.h-w.a-w.a-w-Xi * {
+    background-color: #1c1c1c;
+    color: white;
+}
+
+/* White border */
+.a-D-gc-wKOTTc .a-s-Ba-Ak {
+	border-bottom-color: #232323;
+}
+
+/******************************************************************************************************************************************************* Sub-header ***/
+/*** Settings *********************************************************************************************************************************************************/
+/* Container */
+div.lb-k.ca-k.Hb-ja-hc {
+    border: none;
+}
+
+/* Non-selected sidebar */
+div.h-ra {
+    color: white;
+}
+div.h-ra:hover {
+    background-color: #474747 !important;
+}
+div.h-ra:hover > div.a-ra-Mb-j > div.a-ra-Mb {
+    border-left-color: #474747 !important;
+}
+
+/* Selected sidebar */
+div.h-ra.h-ra-W.h-ra-ha {
+    color: #4285f4;
+}
+div.h-ra.h-ra-ha.h-ra-W > div.a-ra-Mb-j > div.a-ra-Mb {
+    border-left-color: #4285f4;
+}
+div.h-ra.h-ra-ha.h-ra-W:hover > div.a-ra-Mb-j > div.a-ra-Mb {
+    border-left-color: #4285f4 !important;
+}
+
+/* Content Headers (to the left) */
+div.ca-k-wb-ga,
+div.a-fd-ba-Q-T {
+    color: white;
+}
+
+/* Explanation Text */
+div.ca-k-wb-M > div,
+div.ca-k-wb-Lb,
+div.a-fd-ba-lp {
+    color: #646464;
+}
+
+/* Density Selection */
+div.h-sb-Ic.h-R-w-d.g-Qb {
+    text-align: left;
+    background-color: #111111;
+}
+div.h-sb-Ic.h-R-w-d.g-Qb > div.h-sb-Ic.h-R-w-d-ff {
+    text-align: left;
+    color: #e3e3e3;
+}
+div.h-sb-Ic.h-R-w-d.g-Qb > div.h-sb-Ic.h-R-w-d-Re {
+    border-color: #e3e3e3 transparent;
+}
+
+/********************************************************************************************************************************************************* Settings ***/
+.a-s-tb-sc-Ja.a-s-tb-Kg.a-hrN2W-S-kl-Gd.a-s-tb-sc-Ja-J {
+	background-color: #1C1C1C;
+}
+
+.a-qc-Pe.gc-Kk7lMc {
+	max-width: calc(100%);
+}
+
+/*** Content Header ***************************************************************************************************************************************************/
+/* Removing Useless 64px Right Margin */
+.a-nEbBXb .a-t-j, .a-nEbBXb .a-nb-S-xf {
+	margin-right: 0;
+}
+/******* List View ****************************************************************************************************************************************************/
+/* Column Headers Container in "My Drive" */
+.a-Ra-Qc .aabwZd .N7iPof {
+	border-bottom-width: 0;
+	background-color: #1C1C1C;
+}
+/* Column Headers Container Everywhere Else */
+.a-Ra-Qc.a-nEbBXb .a-t-D {
+	border-bottom-width: 0;
+    padding-right: 8px;
+    background-color: #1C1C1C;
+}
+/* Restyled Font */
+.a-nEbBXb .a-t-D-cb,
+.a-nEbBXb body {
+	color: #FFFFFF;
+    font-weight: 400;
+}
+.iZz7md, 
+.iZz7md.dmHYMe {
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: 400;
+}
+/**************************************************************************************************************************************************** List View *******/
+/******* Grid View ****************************************************************************************************************************************************/
+/**************************************************************************************************************************************************** Grid View *******/
+/*************************************************************************************************************************************************** Content Header ***/
+/*** Content **********************************************************************************************************************************************************/
+/* Generally speaking, PEfnhb is for "My Drive" and .ad-gd-j.a-s-oe is for Everything Else */
+/* Make the whole thing dark */
+div.YEXPof, /* My Drive */
+.a-nEbBXb .a-t-j .a-gd-j { /* Everything Else */
+	background-color: #121212;
+}
+
+/* Scrollbar */
+	.PEfnhb::-webkit-scrollbar, /* "My Drive" */
+    .a-gd-j.a-s-oe::-webkit-scrollbar { /* Everything Else */
+		display: block;
+        width: 8px;
+	}
+        .PEfnhb::-webkit-scrollbar-track, /* "My Drive" */
+        .a-gd-j.a-s-oe::-webkit-scrollbar-track { /* Everything Else */
+            background-color: #121212 !important;
+        }
+        .PEfnhb::-webkit-scrollbar-thumb, /* "My Drive" */
+        .a-gd-j.a-s-oe::-webkit-scrollbar-thumb { /* Everything Else */
+            margin: 0;
+            border: 0;
+        	padding: 0;
+            background-color: #121212; 
+        }
+        	.PEfnhb:hover::-webkit-scrollbar-thumb, /* "My Drive" */
+            .a-gd-j.a-s-oe:hover::-webkit-scrollbar-thumb { /* Everything Else */
+        	    background-color: #474747;
+        	}
+
+/* Removing Useless 53.951px Right Padding */
+.PEfnhb .i6Fqyc { /* "My Drive" */
+	padding-right: 0;
+}
+
+/* Selected List Item not in "My Drive" */
+.a-nEbBXb .a-t-J-ha {
+	background-color: #333333;
+	color: #8CB3E9 !important;
+}
+.a-nEbBXb .a-t-J-ha .l-t-T-V>.l-Ab-T-r {
+	color: #8CB3E9;
+}
+
+/* List Item Font */
+.aabwZd .WYuW0e .M3pype[data-column-field="6"], .aabwZd .WYuW0e,	/* "My Drive" */
+.a-nEbBXb .l-t-T-V>.l-Ab-T-r, .a-nEbBXb .a-t-J { /* Everything Else */
+	color: #FFFFFF;
+}
+
+/* List Item Font, Selected */
+.aabwZd:not(.KBj6Qd) .GZwC2b .M3pype[data-column-field="6"], /* "My Drive" Name */
+.s55KNe:not(.KBj6Qd) .GZwC2b .jGNTYb, .aabwZd:not(.KBj6Qd) .GZwC2b { /* "My Drive" Other Columns */
+	color: #8CB3E9;
+}
+
+/******* List View ****************************************************************************************************************************************************/
+/* White borders */
+/* My Drive,              */
+.a-nEbBXb .a-t-cb,
+.a-Ra-Qc .aabwZd .WYuW0e {
+	border: 0px;
+}
+/**************************************************************************************************************************************************** List View *******/
+/*div.a-gd-j.a-s-oe.a-t-Bv {
+    background-color: #1c1c1c;
+}
+div.a-t-J-Rf * {
+    color: white !important;
+}
+div.a-t-J-Rf > *[aria-selected="false"]:hover {
+    cursor: pointer;
+    background-color: #3c3c3c;
+}
+div.a-t-J-Rf > *[aria-selected="true"] {
+    cursor: pointer;
+    background-color: #333333;
+}
+div.l-t-T-c-j::before {
+    display: none !important;
+}
+div.a-gd-j.a-s-oe {
+    border-color: #2e2e2e !important;
+}
+
+div.a-s-tb-pa[data-label="EmalEc"] {
+    border-left: 4px solid #2e2e2e;
+}*/
+/******* Grid View ****************************************************************************************************************************************************/
+/* TODO: Using nth-child(1) for folders and nth-child(2) for files. This gets messed up if there are no folders and the files container becomes nth-child(1) Fix that. */
+/* Folder Container */
+c-wiz.Zz99o:nth-child(1) div.iZmuQc {
+	grid-template-columns: repeat(auto-fill, minmax(208px, 1fr));
+}
+/* File Container */
+c-wiz.Zz99o:nth-child(2) div.iZmuQc {
+	grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+}
+c-wiz.WYuW0e.RDfNAe {
+	width: 100%;
+}
+c-wiz.PEfnhb[data-column-width-1="1"] c-wiz.Zz99o:nth-child(1) div.iZmuQc > c-wiz.WYuW0e {
+	padding: 2px;
+    height:  50px;
+    min-height: 0 !important;
+    width:  200px;
+}
+c-wiz.PEfnhb[data-column-width-1="1"] c-wiz.Zz99o:nth-child(2) div.iZmuQc > c-wiz.WYuW0e {
+	padding: 2px;
+    height:  110px;
+    min-height: 0 !important;
+    width:  100px;
+}
+
+/* Background for Folders and Items that don't have a thumbnail */
+.s55KNe .jGNTYb,
+.a-nEbBXb .l-u-Ab-zb {
+	background-color: #000000;
+}
+
+/* Color for Name of Folder or Item */
+.WYuW0e {
+	color: #FFFFFF;
+}
+
+div.YEXPof [role="row"]:hover,
+div.YEXPof [role="row"]:hover *,
+div.y-C-Ed-x [role="listitem"]:hover,
+div.y-C-Ed-x [role="listitem"]:hover * {
+	background-color: rgba(0, 0, 0, 0) !important;
+}
+
+/* Hover */
+div.YEXPof [role="row"]:hover, /* "My Drive" */
+div.a-t-J.a-Wa-ka.l-oi-cc.l-t-Q.a-t-J-yl:hover { /* Everywhere Else */
+	background-color: #474747 !important;
+}
+/* Selected Hover Everywhere Else */
+div.a-t-J.a-Wa-ka.l-oi-cc.l-t-Q.a-t-J-yl.a-t-J-ha.a-t-J-Vd-jh:hover {
+	background-color: #555555 !important;
+}
+
+	div.bSmy5 {
+    	height: 10px;
+        max-height: 20px;
+    	background-color: black;
+    }
+    
+    	/* Icon */
+    	div.bSmy5 > div.tohzcb {
+        	padding: 0;
+        }
+        
+        div.tohzcb::before {
+        	display: none !important;
+        }
+        
+        div.Q5txwe {
+        }
+
+/* Starred */
+.a-nEbBXb .l-u-Ab-T-j {
+	background-color: #000000;
+}
+.a-nEbBXb .l-u-V {
+	color: #FFFFFF;
+}
+
+
+/**************************************************************************************************************************************************** Grid View *******/
+
+/* Weird Whiteness at the Bottom */
+
+div.a-t-J-Rf {
+    width: 200%;
+}
+
+/* Content is Empty */
+div.a-s-tb-pa.a-zf-ja-j.a-ab-Mj,
+div.a-s-tb-pa.a-zf-ja-j.a-ab-Mj * {
+    background-color: #111111;
+}
+div.a-gd-j.a-s-oe {
+    border-bottom: 0 !important;
+    border-right: 0 !important;
+    background-color: #111111;
+}
+
+/* Item info at bottom of page */
+div.a-s-tb-sc-Ja-Q.a-s-tb-sc-Ja-Q-Nm.a-s-tb-Pe-Q {
+    border-left: 1px solid #2e2e2e;
+}
+
+/* Item location at bottom of page when searching. */
+div.a-S-dc.a-S-dc-Vf {
+    margin-right: 0px;
+    border-top: 1px solid #343434;
+    background-color: #111111;
+}
+div.a-S-dc.a-S-dc-Vf * {
+    color: white;
+}
+
+/* Content when search returns empty */
+div.ab-S-V,
+div.ab-S-Sg {
+    color: white;
+}
+
+/* Right Click Item Context Menu */
+div.a-w-x > * svg.a-s-fa-Ha-pa {
+    fill: white;
+}
+
+/********************************************************************************************************************************************************** Content ***/
+/*** Details **********************************************************************************************************************************************************/
+/* No Item Selected */
+.a-nEbBXb .a-ub-Gd {
+	background-color: #000000;
+}
+
+/* Item Thumbnail Background */
+.a-nEbBXb .l-Mg-wg-o .a-q-zb-j {
+	background-color: #000000;
+}
+
+div.a-ub-j.a-ub-j-hc.l-Mg-wg-sa.Hb-ja-hc.a-ub-pb {
+    padding-right: 10px;
+    background-color: #111111;
+}
+div.a-ub-Gd {
+    margin-left: 0px !important;
+    background-color: #111111;
+}
+div.a-ub-D,
+div.a-ub-D * {
+    background-color: #232323 !important;
+}
+div.a-ub-D *:not([aria-selected="true"]) {
+    color: white !important;
+}
+div.a-ub-sc-oa,
+div.a-ub-sc-oa * {
+    background-color: #111111;
+    color: white !important;
+}
+div.YEXPof [role="row"]:hover,
+div.YEXPof [role="row"]:hover *,
+div.y-C-Ed-x [role="listitem"]:hover,
+div.y-C-Ed-x [role="listitem"]:hover * {
+    cursor: pointer;
+    background-color: #3c3c3c;
+}
+div.YEXPof [role="row"][aria-selected="true"],
+div.YEXPof [role="row"][aria-selected="true"] * {
+	border: 0;
+	background-color: #333333;
+}
+
+div.y-C-lg.y-C-ra-ka {
+    height: 28.2px;
+}
+div.y-C-Ed-x [role="listitem"] svg {
+    margin-top: 3px;
+    opacity: 1;
+    fill: white;
+}
+
+/* Weird whiteness that popups when you scroll down. */
+div.y-E-gh-D {
+    display: none;
+}
+
+/********************************************************************************************************************************************************** Details ***/
+/*** Pop-up Dialogs ***************************************************************************************************************************************************/
+/* Dialog Background */
+.lb-k {
+	background-color: #232323;
+}
+/* Cancel button */
+.a-nEbBXb .lb-k-Gb > button {
+    background-color: #F44242;
+}
+
+/******* Share ********************************************************************************************************************************************************/
+/* Background colors and hiding stuff */
+div.lb-k-V.lb-k-V-xt.ea-Rc-k-hc-V,
+div.lb-k.ea-Rc-k,
+div.modal-dialog.data-dialog,
+div.modal-dialog-title.visible-title.modal-dialog-title-draggable,
+div.simple-sharing-contents,
+div.simple-sharing-contents > *,
+div.lb-k-V.lb-k-V-xt,
+div.modal-dialog-bg,
+div.modal-dialog-content,
+div.ia-invite-controls-area {
+    background-color: #232323;
+    opacity: 1 !important;
+}
+div.simple-sharing-people-heading {
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+}
+div.simple-sharing-button-bar {
+    margin-top: 0px;
+    padding-top: 40px;
+}
+
+/* Foreground text */
+label.slc-label,
+div.ss-heading,
+span.vpc-descriptions > div,
+span.apc-text > span,
+span.ia-add-people,
+div.ia-add-message-container > label,
+label.notification-options-label,
+label.ap-writers-can-edit-acl-desc,
+label.ap-download-item-desc {
+    color: #646464;
+}
+
+/* Input text */
+span.modal-dialog-title-text,
+span.lb-k-V-r,
+div.inviter-recipient-area textarea,
+div.simple-sharing-note textarea,
+input.slc-input.jfk-textinput,
+div.ac-row,
+b.ac-highlighted {
+    color: white;
+}
+
+/* "Enter name or email addresses..." Textbox */
+div.inviter-recipient-area,
+div.simple-sharing-note textarea,
+input.slc-input.jfk-textinput {
+    background-color: #111111;
+}
+
+/* Name/Email Suggestions */
+div.ac-renderer {
+    background-color: #343434;
+}
+div.ac-row.ac-active.active {
+    background-color: #4285f4;
+}
+
+/******************************************************************************************************************************************************** Share *******/
+/******* Rename *******************************************************************************************************************************************************/
+/* Background colors */
+div.lb-k.a-cg-k,
+div.lb-k-x {
+    background-color: #232323;
+}
+
+/* Foreground text */
+div.lb-k-x > label {
+    color: #646464;
+}
+
+/* Input text */
+input.lb-k-Kk.g-Gh {
+    background-color: #111111;
+    color: white;
+}
+
+button[name="cancel"]:hover {
+	box-shadow: 0px 0px 5px 5px #7A7A7A !important;
+}
+
+button[name="ok"] {
+	background-color: #B73232 !important;
+}
+button[name="ok"]:hover {
+	box-shadow: 0px 0px 5px 5px #5B1919 !important;
+}
+/******************************************************************************************************************************************************* Rename *******/
+/******* "This Folder Is In The Trash" ********************************************************************************************************************************/
+/* Background colors */
+div.lb-k.Rj-o-k {
+    background-color: #232323;
+}
+
+/* Foreground text */
+div.lb-k-x {
+	color: white;
+}
+
+/* Button */
+button[name="r"] {
+	background-color: #B73232 !important;
+}
+/******************************************************************************************************************************** "This Folder Is In The Trash" *******/
+/*************************************************************************************************************************************************** Pop-up Dialogs ***/

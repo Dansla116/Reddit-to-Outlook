@@ -1,0 +1,82 @@
+body {
+	color: #CCC;
+}
+
+.container {
+	background-color: #323130;
+}
+
+#content, #cronometerApp {
+	background-color: black;
+}
+
+.datePickerMonthSelector {
+	background: #080808;
+}
+
+.datePickerMonth {
+	color: white;
+}
+
+.datePickerWeekendLabel,
+.datePickerWeekdayLabel {
+	background-color: black;
+}
+
+.datePickerDay {
+	background-color: black;
+}
+
+.datePickerDayIsFiller {
+	background: #040404;
+}
+
+.diary-item-title {
+	background: #111;
+}
+
+.diary-item-content {
+	background: black;
+}
+
+rect[fill="#ffffff"] {
+	fill: black;
+}
+
+
+.prettyTable {
+	color: #DDD;
+}
+
+.prettyTable .prettyTable-header td {
+	background: #111;
+}
+
+.prettyTable tr {
+	background-color: black;
+}
+
+.prettyTable tr.evenrow {
+	background-color: #080808;
+}
+
+.diary_side_box {
+	background-color: black;
+}
+
+.GL-TVABCFY,
+.GL-TVABCDY {
+	width: unset;
+}
+
+.source-lbl-custom {
+	color: #AAF;
+}
+
+.prettyTable tr.select {
+	background-color: #006;
+}
+
+table[align="center"] {
+	width: calc(100% - 14px);
+}

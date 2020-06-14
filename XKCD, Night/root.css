@@ -1,0 +1,12 @@
+#main-wrapper {
+	background-color: #425A69;
+}
+
+#entry-wrapper,
+#entity-wrapper {
+	background-color: black;
+}
+
+article.entry {
+	filter: invert(1);
+}

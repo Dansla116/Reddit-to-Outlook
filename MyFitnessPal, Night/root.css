@@ -1,0 +1,244 @@
+/* 4/22/19 */
+body {
+	background: black;
+    color: #FFFFFF;
+}
+a, a:link, a:visited {
+	color: #0086E5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #85A9C1;
+}
+/*** Site-Wide Header ***************************************************************************************************/
+.globalTopNav-2GCw3 {
+	border-bottom-color: #2D2D2D !important;
+	background-color: #0072BF !important;
+}
+	.globalTopNav-2GCw3 > ul > li {
+    	border-right-color: #2D2D2D;
+    }
+
+		.globalTopNav-2GCw3 > ul > li > a > svg {
+    		filter: invert(1);
+    	}
+/*************************************************************************************************** Site-Wide Header ***/
+
+/***************************************************************************************************** Copied Selectors */
+/*** Food Diary *********************************************************************************************************/
+/* "You're Food Diary For:" */
+div.diary h1 {
+    color: #80AAC7;
+}
+
+/* Meal Headers */
+.main-title, .main-title-2, body#food-diary table.table0 tbody tr.meal_header td.first {
+    color: #80AAC7;
+}
+/********************************************************************************************************* Food Diary ***/
+
+/* Content */
+
+/* Your Daily Summary */
+div.body {
+	background-color: #232323 !important;
+}
+
+/* News Feed */
+div.entry-content {
+	background-color: #232323;
+}
+
+div.entry-body {
+	color: white;
+}
+
+div.ember-view.timeline-entry > div.ember-view > div.ember-view > div.ember-view {
+	background-color: #232323;
+}
+
+textarea {
+	background-color: black;
+    color: white;
+}
+
+div.ember-view {
+	color: white;
+}
+
+.__4a18a .ece-bubble {
+	background-color: black;
+}
+
+/* Stuff to the lest of News Feed */
+header, .__def1e {
+	background-color: #232323;
+}
+
+/* Tables */
+body#food-diary table.table0 tbody tr td a,
+body#food-add table.table0 tbody td,
+table.table0 tbody tr td {
+    color: white;
+}
+
+table.table0 tbody tr.bottom td {
+    color: #6094B9;
+}
+
+body#food-diary table.table0 tbody tr td a,
+body#food-add table.table0 tbody td,
+table.table0 tbody tr td {
+    color: white;
+}
+
+table.table0 tbody tr.bottom td {
+    color: #6094B9;
+}
+
+body#food-diary table.table0 tbody tr td,
+body#food-add table.table0 tbody td {
+	background: #232323;
+}
+
+body#food-diary table.table0 tbody tr.bottom td,
+body#food-diary table.table0 tbody tr.spacer *,
+body#food-diary table.table0 tr.total td.first,
+body#food-diary table.table0 tr.total td.empty,
+body#food-diary table.table0 tfoot tr td.first,
+body#food-diary table.table0 tfoot tr td.empty {
+	background: black;
+}
+
+body#food-diary table.table0 tbody tr.spacer td.empty,
+body#food-diary table.table0 tr.total td.empty,
+body#food-diary table.table0 tr.spacer td.first,
+body#food-diary table.table0 tfoot tr td:last-child {
+    border-right-color: #000;
+}
+
+body#excercise-diary table.table0 thead tr td.first {
+	color: #80AAC7;
+}
+
+body#food-add h3.secondary-title {
+	color: #DEDEDE;
+}
+
+body#food-diary table.table0 tbody tr.remaining td.positive {
+	color: #32CD32;
+}
+
+input.text, select.select {
+	background: #000;
+    color: white !important;
+    border: 0.5px solid white;
+}
+
+body#food-diary table.table0 tfoot tr td.extra {
+	background: #232323;
+    color: white;
+}
+
+/* Exercise */
+body#excercise-diary table.table0 tfoot tr td:first-child,
+body#excercise-diary table.table0 tfoot tr td.empty {
+	background: #000;
+}
+
+/* Water Notes */
+.water-notes-v2.block h4 {
+	color: #CCC;
+}
+
+/* Today's Food Notes */
+.water-notes-v2.block .note-container .note {
+	border: 1px solid white;
+	background-color: #232323;
+}
+
+/* Footer */
+.uacf-logo-wrapper {
+	background-color: #0E0E0E;
+}
+
+div#footer {
+	background-color: #0E0E0E;
+}
+
+/* Popups */
+#fancybox-content {
+	background-color: #343434;
+}
+
+#fancybox-content * {
+	filter: contrast(100%);
+}
+
+/* Forms */
+form#diarySetting h1,
+form#diarySetting, div.block-2,
+form#diarySetting p.cont-1 {
+	background: #232323;
+}
+
+/* Experimental */
+tr.meal_header {
+	border-bottom: 1px solid white !important;
+}
+
+table#cardio-diary > tbody,
+table#cardio-diary > tbody > tr,
+table#cardio-diary > tbody > tr * {
+	background-color: #343434 !important;
+    color: white !important;
+}
+
+div#nutritionWrap,
+table#meal-table td,
+table#mealTableTotal td {
+	background-color: #343434;
+}
+
+#settings div.block-1 {
+	background-color: #343434;
+}
+
+/* Deprecated Maybe? */
+
+/* Places */
+body#excerciseSearch div.block-1,
+body#excerciseSearch.searchadd div#content-block.block-4 div.col-2.block-3 {
+	background: #343434;
+}
+
+/* Tabs */
+ul.tabbed li.active,
+ul.tabbed li:hover {
+	background: #232323;
+    color: white;
+}
+
+ul.tabbed li.active a, ul.tabbed li:hover a {
+	color: white !important;
+}
+
+/* Profile */
+div#profile.block-1 {
+	background-color: #343434;
+}
+div#profile.block-1 div.col-2 h3 {
+	color: #87B9D5;
+}
+div.block-4#profile-block div#profile-friends ul li a.user-2 {
+	overflow-x: hidden;
+}
+
+/* Ad Space */
+div[style*="width: 300px; height: 250px;"] {
+	display: none;
+}
+
+img {
+	filter: grayscale(.75) brightness(.75);
+}

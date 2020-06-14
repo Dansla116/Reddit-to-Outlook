@@ -1,0 +1,17 @@
+#statsWidget {
+	position: fixed;
+    top: 0;
+    right: 100px;
+}
+
+.nom-buttons,
+.nomination-detail-buttons button, .nomination-header-buttons button,
+.h1, .h2, .h3, h1, h2, h3,
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+div#nom-table-container[style="overflow-anchor: none;overflow-y: auto;display: block;"] {
+	overflow-y: unset !important;
+}

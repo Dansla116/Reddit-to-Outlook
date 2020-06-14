@@ -11,6 +11,14 @@
     --trim-color: #8CB3E9;
     --icon-fill: #747474;
     --icon-fill-hover: #9C9C9C;
+    --foreground: #FFF;
+    --shadow: #000;
+    --border-color: #282828;
+}
+
+/* horizontal scrollbar on html root */
+::-webkit-scrollbar-track {
+	background-color: #000;
 }
 
 /* All Icons on the page that should be white */
@@ -266,9 +274,11 @@ button[aria-label="New"] {
 }
 
 /* Content Header */
-[guidedhelpid="main_container"] > div > div:first-child > c-wiz:first-child > div:nth-child(2) > c-wiz:first-child > div:first-child > c-wiz:first-child > div:first-child > div:first-child {
+.aabwZd .N7iPof {
 	background-color: var(--header-background);
+    border-bottom: 1px solid var(--border-color);
 }
+
 [guidedhelpid="main_container"] [data-column-field][data-column-width] {
 	color: white;
 }
@@ -312,6 +322,25 @@ c-wiz[role="grid"] > div > c-wiz > div > [aria-selected="true"] {
 		[data-target="doc"] [data-target="itemUploadDrop"] span {
     		color: white !important;
     	}
+        
+/* Scrollbar */
+.PEfnhb.NtyuW::-webkit-scrollbar {
+	width: 10px;
+    padding-right: 10px;
+    
+}
+    .PEfnhb.NtyuW::-webkit-scrollbar-thumb {
+        background: #575757; 
+    	margin-right: 10px;
+    }
+    .PEfnhb.NtyuW::-webkit-scrollbar-thumb:hover {
+        background: #808080;
+    }
+        
+/* removing extra right padding */
+.PEfnhb .i6Fqyc {
+	padding-right: 0;
+}
 
 /* removing ugly-ass white borders on every element */
 c-wiz[role="grid"] > div > c-wiz > div {
@@ -330,6 +359,20 @@ c-wiz[role="grid"] > div > c-wiz > div {
 
 [role="main"] [aria-selected="false"] {
 	background-color: var(--content-background);
+}
+
+/* file directory at bottom when you select an item */
+.a-S-dc {
+	margin-right: 0;
+	border-top: 1px solid var(--sidebar-background);
+    box-shadow: 0 10px 30px 30px black;
+}
+
+.a-S-dc.a-S-dc-Vg.sn-G {
+	background: var(--content-background);
+}
+.a-S-dc-Q-r {
+	color: var(--foreground);
 }
 /********************************************************************** Content ***/
 /*** Right Sidebar ****************************************************************/

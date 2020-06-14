@@ -1,0 +1,55 @@
+body > :not(header) {
+	display: none !important;
+}
+
+body > header {
+	height: 100vh;
+    background: #09473B;
+}
+
+header .container {
+	padding: 0;
+    height: 100vh;
+}
+
+#headerDiv {
+	display: none;
+}
+
+.jsoneditor-manual {
+	height: 100vh;
+}
+
+
+.ace_gutter-cell {
+	background-color: #1E1E1E;
+    color: #2B91AF;
+}
+
+.ace_content,
+.ace-jsoneditor .ace_marker-layer .ace_active-line {
+	background-color: #1E1E1E;
+}
+
+.ace-jsoneditor .ace_variable {
+	background-color: #1E1E1E;
+    color: #9CDCFE;
+}
+
+.ace_line,
+.ace-jsoneditor .ace_string,
+.ace-jsoneditor .ace_constant.ace_language{
+	background-color: #1E1E1E;
+    color: #C8C8C8;
+}
+
+.ace-jsoneditor .ace_indent-guide {
+    filter: brightness(0.4);
+}
+
+select.form-control {
+	border: 2px solid white;
+    border-radius: 0;
+	background-color: #09473B;
+    color: white;
+}

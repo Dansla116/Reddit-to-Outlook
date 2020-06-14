@@ -1,0 +1,53 @@
+/* 1/2/19 */
+/* Header */
+div.Header__Wrapper-cwuouQ, div.bbYkHy.djliRF {
+	background-color: #033163;
+}
+
+/* Navigation */
+div.Navbar__DesktopWrapper-jiGyXa, div.jXmhhY.bTBDKY {
+    background-color: #232323;
+    border-bottom-color: #343434;
+}
+
+/* Footer */
+div.Footer__Wrapper-jgZZNA, div.hvLrBO.bTBDKY {
+    background-color: #232323 !important;
+}
+
+/* Background */
+div.LayoutDesktop__Wrapper-ksSvka, div.fLgxBf.klYNQL {
+	background-color: black;
+}
+
+div.gmOPIV, div.ejcVRF, div.jdmxYg
+div.gmOPIV *, div.ejcVRF *, div.jdmxYg * {
+background-color: #232323;
+border-color: #343434;
+}
+
+/* Chart Recolors */
+svg.Chart__ChartSvg-bKQeqx.cZjfCo > g > path.eJvkmu {
+	fill: #cc8800;
+}
+svg.Chart__ChartSvg-bKQeqx.cZjfCo > g > path.eBxciD {
+	fill: #699933;
+}
+svg.Chart__ChartSvg-bKQeqx.cZjfCo > g > path.gstVHb {
+	fill: #42528a
+}
+svg.Chart__ChartSvg-bKQeqx.cZjfCo > g > path.cgnDkp {
+    fill: #666666
+}
+
+* {
+	color: #e4e4e4 !important;
+    font-weight: 200;
+}
+
+div.gUAdiw * {
+	color: #99ceff !important;
+}
+div.gUAdiw::after {
+	border-bottom-color: #99ceff;
+}

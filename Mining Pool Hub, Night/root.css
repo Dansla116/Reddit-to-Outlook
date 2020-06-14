@@ -1,0 +1,16 @@
+/* 1/2/19 */
+body {
+	background-color: black;
+}
+
+aside, h4, article {
+	background-color: #232323 !important;
+}
+
+body * {
+    color: white !important;
+}
+
+#homeTitle {
+	background-color: black;
+}

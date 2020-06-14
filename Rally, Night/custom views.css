@@ -1,0 +1,56 @@
+table[width="100%"] select#timeboxList {
+	border: 1px solid var(--rally-red);
+    padding: 1px 3px 2px 3px;
+    height: 17px;
+	font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important
+}
+
+table[width="100%"] div,
+table[width="100%"] td.lbl {
+	color: var(--front-white);
+}
+
+#timeEntry_div input {
+	border: 1px solid var(--rally-red);
+    padding: 1px 3px 2px 3px;
+    height: 17px;
+	font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important
+}
+
+#timeEntry_div input[type="button"] {
+    padding: 1px 7px 2px 7px;
+}
+
+#timeEntry_div input:hover {
+	border-color: var(--hover-blue);
+}
+
+.ejsc-hint {
+	background-color: var(--input-black);
+    opacity: 0.85;
+}
+
+/* Team Report */
+canvas {
+	filter: saturate(400%) hue-rotate(180deg) invert(100%) brightness(115%);
+}
+
+td[style="background-color: lime;"],
+td[style="background-color: lime"] {
+	background-color: #080 !important;
+}
+
+td[style="background-color: yellow"] {
+	background-color: #880 !important;
+}
+
+td[style="background-color:#FF6666;color:black;weight:bold;white-space:nowrap"] {
+	background-color: #A00 !important;
+    color: white !important;
+}
+
+.link-button-blue, .link-button-tan, .link-button-gray, .link-button-green, .link-button-red, .link-button-ltBlue, input[type="submit"].link-button-blue, .link-button-header, .link-button-blue-padded, .link-button-orange2 {
+	background-color: #000;
+	background-image: none;
+    color: white;
+}

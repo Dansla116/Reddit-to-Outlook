@@ -1,0 +1,498 @@
+/* 4/22/19 */
+/**********************************************************************************************************************************************************************/
+html::-webkit-scrollbar, 
+html *::-webkit-scrollbar {
+    width: 0;
+	background: transparent;
+}
+/*** Header ***********************************************************************************************************************************************************/
+header.mdl-layout__header {
+	min-height: 30px;
+    max-height: 30px;
+	background-color: #0874AA; 
+}
+
+    div.mdl-layout__header-row {
+        min-height: 30px;
+        max-height: 30px;
+    }
+
+		span.mdl-layout-title {
+        	margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        	font-family: "Segoe UI";
+            font-size: 9pt;
+            text-align: center;
+        }
+
+/* Peach Button */
+header .mdl-layout__header-row button:nth-child(4) {
+	position: absolute;
+    left: 50px;
+	filter: grayscale(1) contrast(0) brightness(0) invert(1);
+    transform: scale(.7);
+}
+
+/* Invite More People Button */
+header .mdl-layout__header-row button:nth-child(6) {
+	position: absolute;
+    left: 80px;
+}
+
+/* Notifications Button */
+header .mdl-layout__header-row button:nth-child(7) {
+	position: absolute;
+    left: 110px;
+}
+
+/**********************************************************************************************************************************************************************/
+/*** Common Icons and Elements ****************************************************************************************************************************************/
+/* New Post Button in Bottom Left Corner */
+.mdl-button--fab {
+	left: 0;
+	margin-left: 20px;
+    border: 1px solid #0874AA;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+	background-color: #EFF1F5;
+}
+
+#content > button {
+	background-color: #EFF1F5;
+}
+	#content > button > i {
+    	color: #0874AA;
+    }
+#content > button:hover {
+	background-color: #0874AA;
+}
+	#content > button:hover > i {
+    	color: #EFF1F5;
+    }
+
+
+/*.mdl-button--fab.mdl-button--colored:hover {
+    background-color: #0874AA;
+}
+.mdl-button--fab.mdl-button--colored:hover > i {
+    color: #FFFFFF;
+}
+
+	.mdl-button--fab.mdl-button--colored {
+	    background-color: #EFF1F5;
+		color: #0874AA;
+	}*/
+    
+    
+/**********************************************************************************************************************************************************************/
+/*** Global Friends Conversation **************************************************************************************************************************************/
+/* Overall Containers */
+.mdl-card.centered {
+	margin-top: 0;
+	margin-bottom: 0;
+	max-width: 100%;
+    box-shadow: 0 0 0;
+    background-color: #EFF1F5;
+}
+
+.explore .stream-connection {
+	min-height: 0;
+}
+/* Title Container */
+.mdl-card__title {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+/* Avatar */
+.explore .stream-connection .mdl-card__title .avatar {
+	position: relative;
+    top: 25px;
+	width: 30px;
+    height: 30px;
+}
+
+/* Name (& Comments) */
+.mdl-card__title-text {
+	position: relative;
+    left: 22px;
+	color: #93999D;
+    font-family: "Segoe UI";
+    font-size: 9pt;
+}
+
+/* Complete */
+.explore .stream-connection .connection-meta {
+	position: absolute;
+    right: 50px;
+	top: 35px;
+}
+.connection-meta > button {
+	color: #F2F2F3;
+    background-color: #E4E6E7;
+}
+
+/* Post Container */
+.friend, .post {
+	padding-top: 0;
+    padding-bottom: 0;
+	/*max-width: calc(100% - 157px);*/
+    box-shadow: 0 0 0;
+}
+.explore .stream-connection .post {
+}
+.explore .stream-connection .mdl-card__supporting-text {
+	position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+/* Post Content */
+.post > .items > .item > p {
+	color: #000000;
+	font-size: 10pt;
+    line-height: 14px;
+}
+
+/* Post Meta Container */
+.explore .stream-connection .post-meta {
+	right: 90px;
+    top: 0;
+}
+
+/* Time */
+.post .post-time {
+	position: relative;
+    left: 85px;
+    bottom: 10px;
+	color: #646D7D;
+}
+
+/* Like/Unlike */
+.post-meta > button {
+	color: #F2F2F3;
+    background-color: #E4E6E7;
+}
+.post .like-unlike {
+	left: 70px;
+    top: 10px;
+	color: #F2F2F3;
+}
+.post .like-unlike[is-liked] {
+	color: #0874AA;
+}
+
+/******* Making Images Sneaky *****************************************************************************************************************************************/
+div.item.item-image > img,
+div.item.item-gif > img,
+div.item-video > div,
+div.item.item-link img,
+div.item.item-music .music-player-inner {
+	max-width: 33%;
+    min-height: 0px;
+    max-height: 150px;
+    margin-left: 0 !important;
+    padding-left: 5px;
+    padding-right: 0;
+    padding-top: 5px;
+    padding-bottom: 0;
+    filter: brightness(20%);
+}
+
+div.item.item-image:hover > img,
+div.item.item-gif:hover > img,
+div.item-video:hover > div,
+div.item.item-link:hover img,
+div.item.item-music:hover .music-player-inner {
+	filter: brightness(50%);
+}
+
+div.item.item-image > img:hover,
+div.item.item-gif > img:hover,
+div.item.video > div:hover,
+div.item.item-link img:hover,
+div.item.item-music .music-player-inner:hover {
+	max-width: 50%;
+    min-height: unset;
+	max-height: unset;
+    filter: brightness(100%);
+}
+/**********************************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************************/
+/*** Single Friends Conversation **************************************************************************************************************************************/
+.view-scroll {
+	overflow-y: none;
+}
+
+.explore > .inner {
+	max-height: 100vh;
+	overflow-y: scroll;
+}
+	.explore > .inner::-webkit-scrollbar {
+        display: black;
+        width: 15px;
+	}
+
+div.posts {
+	max-height: calc(100vh - 193px);
+    overflow-y: scroll;
+}
+
+div.posts::-webkit-scrollbar {
+    width: 15px;
+}
+
+div.posts::-webkit-scrollbar-track {
+	background-color: #E4E6E9;
+}
+
+div.posts::-webkit-scrollbar-thumb {
+	border: 1px solid #ABABAB;
+	background-color: #FFFFFF;
+}
+	div.posts::-webkit-scrollbar-thumb:hover {
+		border: 1px solid #ABABAB;
+		background-color: #F0F0F0;
+	}
+
+div.posts::-webkit-scrollbar-button {
+	border: 1px solid #C4C4C4;
+	background-color: #FFFFFF;
+}
+	div.posts::-webkit-scrollbar-button {
+		border: 1px solid #878787;
+		background-color: #FFFFFF;
+	}
+/******* Sub-Header ***************************************************************************************************************************************************/
+/* Background */
+.profile header {
+	margin-bottom: 12px;
+    border-bottom: 1px solid #E4E6EB;
+	padding-top: 18px;
+    height: 48px;
+	background-image: unset;
+}
+
+/* Avatar */
+.profile header .avatar {
+	margin-left: 10px;
+    margin-right: 10px;
+	width: 30px;
+    height: 30px;
+}
+
+/* Handle & Name */
+.profile header h4, .profile header h3 {
+	margin-inline-end: 5px;
+	padding-top: 11px;
+    display: inline;
+	color: #16233A;
+    font-family: "Segoe UI";
+    font-size: 15pt;
+    font-weight: 400;
+}
+
+/* Bio */
+.profile header small {
+	padding-top: 4px;
+}
+
+/* Options */
+.profile header .opts {
+	top: 0;
+	bottom: unset;
+    padding-right: 0;
+}
+
+/* Wave / People / Lock / Unfollow */
+.profile header .opts button {
+	display: inline-block;
+    margin-right: 10px;
+    border: 1px solid #0874AA;
+    border-radius: 50%;
+    padding: 0;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+	color: #0874AA;
+}
+
+.profile header .opts button:hover,
+.profile header .opts button:hover > i {
+	background-color: #0874AA;
+    color: #FFFFFF;
+}
+/*************************************************************************************************************************************************** Sub-Header *******/
+/*** Posts ************************************************************************************************************************************************************/
+/* Background */
+#content, #login {
+	background-color: #EFF1F5;
+}
+/* Container */
+.friend, .post {
+	margin: 0;
+    padding: 0;
+	max-width: 100%;
+	background-color: #EFF1F5;
+}
+
+/* Avatar */
+.post .avatar {
+    position: absolute;
+    left: 9px;
+    width: 30px;
+    height: 30px;
+}
+
+.profile .post-meta {
+	right: 90px;
+}
+
+/* Post Content */
+.explore.view .post > .items > .item {
+	margin-left: 61px;
+    margin-right: 96px;
+    border-radius: 5px;
+	background-color: #FFFFFF;
+}
+
+/* Profile View Post Content */
+.profile.view .post > .items > .item.item-text,
+.profile.view .post > .items > .item.item-image,
+.profile.view .post > .items > .item.item-gif,
+.profile.view .post > .items > .item.item-link,
+.profile.view .post > .items > .item.item-music,
+.profile.view .post > .items > .item.item-video,
+.stream.view .post > .items .item .item,
+.stream.view .post > .items .item .item.item-image {
+	margin-left: 78px;
+	margin-right: 79px;
+    border-radius: 5px;
+	background-color: #C1D8E6;
+    font-size: 10pt;
+    line-height: 16px;
+}
+
+.stream.view .post > .items .like,
+.stream.view .post > .items .comment {
+	margin-left: 61px;
+    margin-right: 96px;
+    padding: 10px;
+	background-color: #FFFFFF;
+    font-size: 10pt;
+    line-height: 16px;
+}
+.stream.view .post > .avatar {
+	position: relative;
+    left: -97%;
+}
+
+/* Comments */
+.post > .comments {
+	border-top: 0;
+	max-width: 100%;
+}
+.post > .comments > .comment {
+	margin: 0;
+    margin-top: 20px;
+    border: 0;
+    padding: 0;
+}
+.post > .comments > .comment > p {
+	margin-left: 61px;
+    margin-right: 96px;
+    padding: 10px;
+	background-color: #FFFFFF;
+    font-size: 10pt;
+    line-height: 16px;
+}
+.post .comments author {
+	position: absolute;
+    left: 70px;
+    top: -15px;
+	color: #93999D;
+	opacity: 1;
+    font-size: 9pt;
+}
+
+/* Post New Comment */
+.post .post-new-comment {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	max-width: 100%;
+    background-color: #FFFFFF;
+}
+
+.mdl-textfield__input {
+	font-family: "Segoe UI";
+    font-size: 10pt;
+    line-height: 16px;
+}
+
+textarea::placeholder {
+	color: #FFFFFF;
+}
+
+.post .post-new-comment .mdl-button {
+	width: 30px;
+	height: 30px;
+	background-color: #0874AA;
+}
+.post .post-new-comment .mdl-button > i {
+	color: #FFFFFF;
+    transform: translate(-12px,-12px) scale(0.667);
+}
+/************************************************************************************************************************************** Single Friends Conversation ***/
+.post p {
+	font-size: 10pt;
+    line-height: 10pt;
+}
+/**********************************************************************************************************************************************************************/
+.friend > .avatar {
+	width: 40px;
+    height: 40px;
+}
+.friend > h4 {
+	position: relative;
+    left: 65px;
+    top: -12px;
+}
+
+.friend > footer {
+	padding-top: 0;
+    padding-bottom: 10px;
+}
+/**********************************************************************************************************************************************************************/
+iframe {
+	max-height: 150px;
+}
+
+h6 {
+	margin: 0;
+}
+
+.post .post-new-comment .mdl-textfield textarea {
+	border: 0;
+	height: 5px;
+	background-color: #EFF1F5;
+}
+
+.post .post-new-comment .mdl-textfield textarea:focus {
+	height: 50px;
+	background-color: #FFFFFF;
+}
+
+/*** Create Modal ****************************************************************************/
+.create.modal[showing]~* {
+	opacity: 1;
+	top: unset;
+    bottom: 0;
+    height: 85px;
+}
+
+.content.has-header {
+	top: 0;
+}

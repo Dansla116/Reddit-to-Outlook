@@ -1,0 +1,308 @@
+/**** Home Page ****/
+/* Search Box */
+.pure-form input[type=search] {
+	border-color: #666;
+    box-shadow: inset 0 0 0 1px #666;
+	background-color: black;
+    color: white;
+}
+
+/* Language Selector */
+.search-container .js-langpicker-label {
+	color: white;
+}
+.styled-select.js-enabled select {
+}
+
+/* Search button */
+.pure-button-primary-progressive {
+}
+
+/**** Header ****/
+#siteNotice {
+	display: none;
+}
+
+div#mw-head {
+	background: linear-gradient(to bottom, #101010 0%, #555555 99%, #FFFFFF 100%);
+}
+
+#p-logo a {
+	filter: grayscale(1) invert(1);
+}
+
+.vectorTabs .selected {
+	background: #101010;
+}
+
+	.vectorTabs .selected a,
+    .vectorTabs .selected a:visited {
+    	color: white;
+    }
+
+.vectorTabs li {
+	background: linear-gradient(to top, #101010 0%, #555555 99%, #FFFFFF 100%);
+}
+
+	.vectorTabs li a {
+		color: #83A2D6;
+    }
+    
+.mw-interlanguage-selector,
+.mw-interlanguage-selector:active {
+	background-color: #444;
+    color: #FFF;
+}
+
+.mw-interlanguage-selector:hover {
+	background-color: #666;
+    color: #FFF;
+}
+
+/**** General Stuff ****/
+body {
+	background-color: #101010;
+}
+
+    body * {
+    	font-family: helvetica !important;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+	color: #FFFFFF;
+}
+
+.mw-body, .parsoid-body {
+	background-color: #000000;
+    color: #DDDDDD;
+}
+
+a,
+#mw-panel .portal .body li a,
+.mw-parser-output a.external {
+	color: #83A2D6;
+}
+
+a:visited,
+.mw-parser-output a.external:visited {
+	color: #B683D6;
+}
+
+a.new, #p-personal a.new {
+	color: #DC8080;
+}
+
+/**** Primary Information / Table of Contents ****/
+.infobox,
+.tocnumber {
+	background-color: #222222;
+	color: #DDDDDD;
+}
+
+tr + tr > .navbox-abovebelow,
+tr + tr > .navbox-group,
+tr + tr > .navbox-image,
+tr + tr > .navbox-list {
+	border-color: #666;
+	background: black !important;
+}
+
+/**** Images/Tables ****/
+div.thumbinner,
+table.wikitable {
+	background-color: #222222;
+    color: #DDDDDD;
+}
+
+.toc, .mw-warning, .toccolours,
+table.wikitable > tr > th, table.wikitable > * > tr > th,
+table.ambox {
+	background-color: #14120F;
+    
+}
+
+/*td {
+	background-color: #000;
+}*/
+
+/* Link Popups */
+.mwe-popups {
+	background: #000;
+}
+
+	.mwe-popups .mwe-popups-extract {
+    	color: #DDD;
+    }
+
+		.mwe-popups .mwe-popups-extract[dir='ltr']:after {
+        	background-image: linear-gradient(to right, #0000, #000 50%)
+        }
+
+/**** Element-Specific Colors ****/
+/******* Colors ******************************/
+table[style*="color:#000"] {
+	color: #808080 !important
+}
+td[style*="color: black"] {
+	color: #DFDFDF !important;
+}
+
+td[style*="color: #2C2C2C"] {
+	color: #E5E5E5 !important; 
+}
+/****************************** Colors *******/
+
+/******* Backgrounds *************************/
+/* Default Table Shit */
+th {
+	background-color: #444 !important
+}
+
+tr:nth-child(2n) {
+	background-color: #000 !important
+}
+tr:nth-child(2n+1) {
+	background-color: #222 !important
+}
+/* END Default Table Shit */
+
+/* Grays */
+td[style*="background: #ececec"] {
+	background-color: #5C5C5C !important;
+}
+
+span[style*="background-color:#eee"] {
+	background-color: #444 !important;
+}
+
+th[style*="background:lightgrey"],
+td[style*="background:whitesmoke"] {
+	background-color: #444 !important;
+}
+
+table[style*="background-color:#f9f9f9"] {
+	background-color: #222 !important;
+}
+
+/*
+th[style*="background-color:#fff"],
+tr[style*="background-color:#fff"],
+tr[style*="background-color: rgb(255, 255, 255)"] {
+	background-color: #000 !important;
+}
+*/
+/* Reds */
+td[style*="background:#F99"] {
+	background-color: #804D4D !important;
+}
+
+td[style*="background: #FDD"] {
+	background-color: #806E6E !important;
+}
+
+/* Greens */
+td[style*="background: #99FF99"],
+td[style*="background:#9F9"] {
+	background-color: #4D804D !important;
+}
+
+/* Blues */
+th[style*="background-color: lightsteelblue"],
+th[style*="background: lightsteelblue"],
+th[style*="background-color: #b0c4de"] {
+	background-color: #58626F !important;
+}
+
+th[style*="background:#d1dbdf"] {
+	background-color: #696E6F !important;
+}
+
+th[style*="background:#DADCED;"] {
+	background-color: #6D6E76 !important;
+}
+
+td[style*="background:#E6E8FA;"] {
+	background-color: #73747D !important;
+}
+
+th[style*="background: #99c2ff"] {
+	background-color: #4D6180 !important;
+}
+
+th[style*="background-color:#ccccff"] {
+	background-color: #666680 !important;
+}
+
+table[style*="background: #f2f9ff"] {
+	background-color: #1E1F20 !important;
+}
+/************************* Backgrounds *******/
+
+/*** Navbox *******************************************************************************************************/
+div.navbox {
+	background-color: #020202 !important;
+}
+th.navbox-title {
+	background-color: #424A53 !important;
+}
+/******************************************************************************************************* Navbox ***/
+/*** Catagories ***************************************************************************************************/
+div#catlinks {
+	background-color: #5D5D5E
+}
+/*************************************************************************************************** Catagories ***/
+
+/**** Unique Stuff ****/
+/**** Band Lineup Timeline ****/
+img[usemap*="#timeline"] {
+	filter: hue-rotate(180deg) invert(100%);
+}
+
+div.mediaContainer {
+	filter: invert(100%);
+}
+/**** Music Scores ****/
+div.mw-ext-score img {
+	filter: invert(1);
+}
+
+/* Quote Box */
+.mw-parser-output .quotebox {
+	background-color: #222222 !important;
+}
+
+/* Code */
+code {
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+::selection {
+	background-color: #999;
+}
+
+
+body::-webkit-scrollbar {
+    visibility: hidden;
+	width: 10px;
+}
+
+body:hover::-webkit-scrollbar {
+	display: block;
+    visibility: visible;
+}
+
+body::-webkit-scrollbar-track {
+    background: #000;
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 8px;
+	background: black;
+    border-radius: 5px;
+}
+
+body:hover::-webkit-scrollbar-thumb {
+	background: #444;
+}

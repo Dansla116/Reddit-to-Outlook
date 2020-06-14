@@ -1,0 +1,336 @@
+/* 1/29/19 */
+/**********************************************************************************************************************************************************************/
+/*** Header and Generic Stuff *****************************************************************************************************************************************/
+/* Website Backgrounds */
+html body, body, body.s-page, .btf-content, .mainContent {
+	background-color: black;
+    background-image: unset !important;
+    color: white;
+}
+
+/* Header */
+header#gh, .sticky-header {
+	background-color: #232323;
+    color: #BFBFBF;
+}
+.page-title>h1, .m-middle-header__title {
+	background-color: black;
+	color: #BFBFBF;
+}
+
+#gh-top, #gh-gb {
+	border-bottom-color: #232323;
+	background-color: #232323;
+}
+
+/* Ads */
+.me-rtm.topRtm,
+div.leaderboard_ad,
+div[title="ADVERTISEMENT"] {
+	display: none;
+}
+
+/* Search Box at Top of Every Page */
+#gh-ac-box {
+	border-color: #232323;
+	background-color: #232323;
+}
+
+#gh-ac, #gh-ac:focus,
+input[type="text"] {
+	border: 1px solid #343434;
+	background-color: #111111;
+    color: #E3E3E3;
+}
+
+/* Links */
+a, a:focus,
+html a:link,
+a:active, a:link,
+.icard .item-title a,
+button.faux-link,
+.similar-items-panel .details .title a,
+#gh-topl a:hover, #gh-topl a, #gh-topl a, #gh-eb a:hover, #gh-topl a, #gh-eb a,
+.gh-eb-li-a{
+	color: #8CB3E9 !important;
+}
+
+.black-link a:visited {
+	color: #E38CE9;
+}
+
+/* White Buttons */
+
+/* Grey Buttons */
+button.btn, button.expand-btn, a.fake-btn, #gh-ug, button#gh-ug, .m-menu .menu__btn, .m-cta a.default.secondary, .m-cta button.default.secondary, .m-pills .carousel-item .pill-action {
+	border: 1px solid #232323;
+	background-color: #343434;
+    color: #8CB3E9;
+}
+
+/* Blue Buttons */
+button.btn--primary, button.expand-btn--primary, a.fake-btn--primary, button.gh-control,
+.m-cta a.default, .m-cta button.default, .m-pills .carousel-item.active .pill-action, .m-cta a.default.primary, .m-cta button.default.primary {
+	border: 1px solid #232323;
+	background-color: #22354F;
+    color: white;
+}
+
+/* Black Buttons */
+.m-cta a.default.primary[aria-disabled="true"], .m-cta button.default.primary[aria-disabled="true"], .m-cta button.default.secondary[aria-disabled="true"] {
+	border-color: #808080;
+	background-color: #000000;
+    color: #808080
+}
+
+/* White Text */
+.icard .item-info .item-price,
+.icard .item-info li .seller-name, .icard .item-info li .item-id, .icard .item-info li .item-timeLeft {
+	color: white;
+}
+
+/* Red Text */
+.NEGATIVE {
+	color: #D93025;
+}
+
+
+
+
+/* Footer */
+#glbfooter {
+	background-color: #232323;
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+	display: block;
+	width: 8px;
+}
+	body::-webkit-scrollbar-track {
+		background: #121212;
+	}
+	body::-webkit-scrollbar-thumb {
+		background: #474747;
+	}
+/**********************************************************************************************************************************************************************/
+/*** Search Results ***************************************************************************************************************************************************/
+.srp-river, .s-item, h3.s-item__title {
+	background-color: #121212;
+}
+
+.s-item__title {
+	margin-bottom: 0;
+    padding-bottom: 5px;
+}
+
+.s-item__info,
+.s-item .SECONDARY_INFO,
+.s-item__bids {
+	color: #898989;
+}
+.s-item__price {
+	color: #CCCCCC;
+}
+/**********************************************************************************************************************************************************************/
+/*** My eBay **********************************************************************************************************************************************************/
+#nav-bar, #nav-bar .nav-bar-inner .nav-title-wrap,
+#nav-bar .nav-bar-inner .carousel .viewport,
+#nav-bar .nav-bar-inner .carousel .buttons,
+#nav-bar .nav-bar-inner .carousel .overview li {
+	background-color: #232323;
+}
+
+#nav-bar .nav-bar-inner .carousel .overview li.selected {
+	background-color: #22354F;
+}
+
+div.category-carousel-r,
+body.summary-ui .my-container.item-list .ajax-wrap {
+	background-color: #121212;
+}
+
+div.result-set-r {
+	background-color: #121212;
+}
+
+.m-links-accordion ul li.selected {
+	background-color: #333333;
+}
+
+/**********************************************************************************************************************************************************************/
+/*** Purchase History *************************************************************************************************************************************************/
+.icard__header {
+	background-color: #424242;
+}
+.card, .dialog[role=dialog].card [role=document] {
+	background-color: #121212;
+}
+
+/* Buttons */
+.icard_items-actions .mactions button {
+	background-color: #343434;
+}
+/**********************************************************************************************************************************************************************/
+/*** Cart *************************************************************************************************************************************************************/
+div.cart-bucket-head.d-flex {
+	background-color: #424242;
+}
+div.cart-bucket-lineitem,
+.sfl-container,
+.cartsummary {
+	background-color: #121212;
+}
+
+/**********************************************************************************************************************************************************************/
+/*** Similar Items ****************************************************************************************************************************************************/
+span.cc-image-component,
+span.image-feed {
+	background-color: #121212;
+}
+
+.similar-items-panel .item-image-container {
+	border-color: #343434;
+}
+/**********************************************************************************************************************************************************************/
+/*** Item Page ********************************************************************************************************************************************************/
+.pnl {
+	color: white;
+}
+
+.pnl .msg {
+	background-color: #4F6A77;
+}
+
+/* Image */
+#PicturePanel div.img {
+	border-color: #343434;
+}
+td.img {
+	background-color: #000000;
+}
+
+/* Image Gallery */
+.vi-filmstp .lst.icon a.pic {
+	border-color: #343434;
+}
+td.tdThumb {
+	background-color: #000000;
+}
+
+/* Name */
+.it-ttl {
+	color: white;
+}
+
+/* Labels */
+.is .lable {
+	color: white;
+}
+
+/* Condition */
+.condText {
+	color: white;
+}
+
+/* Date & Time Ends */
+.vi-tm-left {
+	color: white;
+}
+
+/* Action Panel */
+.c-std, .c-std-bb,
+#why2buy, .w2b-brdr {
+	border-color: #343434;
+}
+.actPanel,
+.watchListCmp,
+.w2b {
+	background-color: #343434;
+}
+.addons-container {
+	background-color: #121212;
+}
+body #CenterPanel .actPanel .vi-price span, body #CenterPanel .actPanel .mm-dp div *,
+.vi-hd-ops .w2bsls .w2b-sgl {
+	color: white;
+}
+
+/* Shop With Confidence */
+div.vi-grBr {
+	border-color: #343434;
+}
+.vi-swc-wrapper {
+	background-color: #121212;
+}
+	.vi-swc-title h2,
+    .vi-swc-header,
+    .vi-swc-message {
+    	color: white;
+    }
+    
+/* Seller Information */
+div.c-std {
+	background-color: #121212;
+	box-shadow: none;
+}
+	.si-ttl {
+    	color: white;
+    }
+    .mbg a:link,
+    .fol-widget>a {
+		color: #8CB3E9 !important;
+    }
+    div.heartIcon {
+    	filter: brightness(250%);
+    }
+
+/* Containers */
+div.mfe-recos-container,
+.nav-tabs-m>li>a,
+.nav-tabs-m>.active>a, .nav-tabs-m>.active>a:hover,
+div.tab-content-m {
+	border: none;
+	box-shadow: none;
+	background-color: #121212;
+}
+div.mfe-recos-container *,
+div.tab-content-m * {
+	color: white;
+}
+
+/* Item Seller Description */
+#itmSellerDesc {
+	background-color: #807F77;
+}
+
+/* Other items with white padding */
+div.mfe-img-ct-inner {
+	background-color: #121212;
+}
+
+
+/**********************************************************************************************************************************************************************/
+/*** Final Touches ****************************************************************************************************************************************************/
+use {
+	filter: brightness(1000%);
+}
+/* Ebay Logo - I'm trying to be discrete */
+td.gh-td {
+	display: none;
+}
+
+/* Giant Moving Banner on Home Page - I'm trying to be discrete! */
+div.hl-module-full,
+hl-module-full-wide,
+hl-banner-carousel,
+hl-atf-module-js {
+	display: none;
+}
+
+
+/* Stupid Shit I'm Just Getting Rid Of */
+.m-product-tour {
+	display: none;
+}
+/**********************************************************************************************************************************************************************/
