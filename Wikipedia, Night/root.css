@@ -2,9 +2,9 @@
 /* Search Box */
 .pure-form input[type=search] {
 	border-color: #666;
-    box-shadow: inset 0 0 0 1px #666;
+	box-shadow: inset 0 0 0 1px #666;
 	background-color: black;
-    color: white;
+	color: white;
 }
 
 /* Language Selector */
@@ -36,9 +36,9 @@ div#mw-head {
 }
 
 	.vectorTabs .selected a,
-    .vectorTabs .selected a:visited {
-    	color: white;
-    }
+	.vectorTabs .selected a:visited {
+		color: white;
+	}
 
 .vectorTabs li {
 	background: linear-gradient(to top, #101010 0%, #555555 99%, #FFFFFF 100%);
@@ -46,17 +46,17 @@ div#mw-head {
 
 	.vectorTabs li a {
 		color: #83A2D6;
-    }
+	}
     
 .mw-interlanguage-selector,
 .mw-interlanguage-selector:active {
 	background-color: #444;
-    color: #FFF;
+	color: #FFF;
 }
 
 .mw-interlanguage-selector:hover {
 	background-color: #666;
-    color: #FFF;
+	color: #FFF;
 }
 
 /**** General Stuff ****/
@@ -64,9 +64,9 @@ body {
 	background-color: #101010;
 }
 
-    body * {
-    	font-family: helvetica !important;
-    }
+	body * {
+		font-family: helvetica !important;
+	}
 
 h1, h2, h3, h4, h5, h6 {
 	color: #FFFFFF;
@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mw-body, .parsoid-body {
 	background-color: #000000;
-    color: #DDDDDD;
+	color: #DDDDDD;
 }
 
 a,
@@ -111,7 +111,7 @@ tr + tr > .navbox-list {
 div.thumbinner,
 table.wikitable {
 	background-color: #222222;
-    color: #DDDDDD;
+	color: #DDDDDD;
 }
 
 .toc, .mw-warning, .toccolours,
@@ -131,10 +131,10 @@ table.ambox {
 }
 
 	.mwe-popups .mwe-popups-extract {
-    	color: #DDD;
-    }
+    		color: #DDD;
+	}
 
-		.mwe-popups .mwe-popups-extract[dir='ltr']:after {
+	.mwe-popups .mwe-popups-extract[dir='ltr']:after {
         	background-image: linear-gradient(to right, #0000, #000 50%)
         }
 
@@ -273,9 +273,9 @@ div.mw-ext-score img {
 
 /* Code */
 code {
-    background-color: black;
-    color: white;
-    border: none;
+	background-color: black;
+	color: white;
+	border: none;
 }
 
 ::selection {
@@ -284,23 +284,23 @@ code {
 
 
 body::-webkit-scrollbar {
-    visibility: hidden;
+	visibility: hidden;
 	width: 10px;
 }
 
 body:hover::-webkit-scrollbar {
 	display: block;
-    visibility: visible;
+	visibility: visible;
 }
 
 body::-webkit-scrollbar-track {
-    background: #000;
+	background: #000;
 }
 
 body::-webkit-scrollbar-thumb {
-    width: 8px;
+	width: 8px;
 	background: black;
-    border-radius: 5px;
+	border-radius: 5px;
 }
 
 body:hover::-webkit-scrollbar-thumb {
